@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+  <title>Dr. Kalam Aranthangi | Educational Consultancy</title>
+  <link rel="icon" type="image/jpeg" href="/kalam-emblem.jpg">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+
+    /* Infinite marquee animation */
+    @keyframes marquee-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      animation: marquee-scroll 32s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+    .icon-filled {
+      font-variation-settings: 'FILL' 1;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "error-container": "#ffdad6",
+            "surface-bright": "#f8f9ff",
+            "surface-dim": "#ccdbf3",
+            "surface-container": "#e6eeff",
+            "surface-sunlit": "#FEF3C7",
+            "on-background": "#0d1c2e",
+            "inverse-on-surface": "#eaf1ff",
+            "error": "#ba1a1a",
+            "tertiary": "#a73a00",
+            "on-secondary-fixed": "#131b2e",
+            "inverse-primary": "#ffb95f",
+            "surface-container-high": "#dce9ff",
+            "success-emerald": "#10B981",
+            "surface-container-highest": "#d5e3fc",
+            "surface-variant": "#d5e3fc",
+            "on-error-container": "#93000a",
+            "secondary-fixed-dim": "#bec6e0",
+            "on-tertiary-container": "#7a2800",
+            "primary-fixed-dim": "#ffb95f",
+            "outline": "#867461",
+            "surface-container-lowest": "#ffffff",
+            "background": "#f8f9ff",
+            "on-surface": "#0d1c2e",
+            "outline-variant": "#d8c3ad",
+            "trust-navy": "#090D16",
+            "secondary": "#565e74",
+            "on-error": "#ffffff",
+            "tertiary-fixed": "#ffdbce",
+            "on-secondary": "#ffffff",
+            "on-tertiary-fixed": "#370e00",
+            "surface-cream": "#FFFDF9",
+            "tertiary-fixed-dim": "#ffb599",
+            "on-primary-fixed": "#2a1700",
+            "on-surface-variant": "#534434",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#613b00",
+            "on-tertiary-fixed-variant": "#7f2b00",
+            "on-primary-fixed-variant": "#653e00",
+            "surface-container-low": "#eff4ff",
+            "secondary-fixed": "#dae2fd",
+            "primary": "#855300",
+            "on-tertiary": "#ffffff",
+            "inverse-surface": "#233144",
+            "primary-fixed": "#ffddb8",
+            "whatsapp-green": "#25D366",
+            "surface-tint": "#855300",
+            "tertiary-container": "#ff956b",
+            "border-subtle": "#E2E8F0",
+            "primary-container": "#f59e0b",
+            "on-secondary-fixed-variant": "#3f465c",
+            "surface": "#f8f9ff",
+            "secondary-container": "#dae2fd",
+            "on-secondary-container": "#5c647a"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px"
+          },
+          spacing: {
+            "space-xl": "2.5rem",
+            "space-xs": "0.25rem",
+            "gutter-mobile": "1rem",
+            "gutter": "1.5rem",
+            "space-lg": "1.5rem",
+            "margin-mobile": "1rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "margin": "2rem"
+          },
+          fontFamily: {
+            "body-md": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "display-hero-mobile": ["Plus Jakarta Sans"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "display-hero": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "metric-display": ["Plus Jakarta Sans"]
+          },
+          fontSize: {
+            "body-md": ["15px", { lineHeight: "24px", fontWeight: "400" }],
+            "label-sm": ["11px", { lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "700" }],
+            "headline-md": ["20px", { lineHeight: "28px", fontWeight: "600" }],
+            "display-hero-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "800" }],
+            "headline-xl-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700" }],
+            "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "display-hero": ["56px", { lineHeight: "64px", letterSpacing: "-0.03em", fontWeight: "800" }],
+            "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700" }],
+            "body-sm": ["13px", { lineHeight: "20px", fontWeight: "400" }],
+            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+            "label-lg": ["15px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }],
+            "metric-display": ["48px", { lineHeight: "52px", letterSpacing: "-0.03em", fontWeight: "800" }]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-background font-body-md text-body-md text-on-surface">
+
+<header class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"></header>
+
+<main class="w-full pt-20 bg-background">
+  <div class="flex flex-col w-full">
+
+    <!-- HERO SECTION WITH INTEGRATED LEAD FORM & CINEMATIC SPLIT -->
+
+    <!-- TRUST STATS & METRICS CREDENTIALS BAR -->
+    <section class="w-full bg-trust-navy text-surface-container-lowest py-space-xl relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-margin">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-space-lg text-center divide-y md:divide-y-0 md:divide-x divide-surface-container/10">
+          <div class="flex flex-col items-center p-space-sm">
+            <span class="font-metric-display text-metric-display text-primary-container">0%</span>
+            <span class="font-headline-md text-headline-md mt-space-xs">Visa &amp; Admission</span>
+            <span class="font-body-sm text-body-sm text-surface-container-high mt-1">Consistent success across premier intakes</span>
+          </div>
+          <div class="flex flex-col items-center p-space-sm">
+            <span class="font-metric-display text-metric-display text-primary-container">0+</span>
+            <span class="font-headline-md text-headline-md mt-space-xs">Students Placed</span>
+            <span class="font-body-sm text-body-sm text-surface-container-high mt-1">Across top medical, engineering &amp; B-schools</span>
+          </div>
+          <div class="flex flex-col items-center p-space-sm">
+            <span class="font-metric-display text-metric-display text-primary-container">0+</span>
+            <span class="font-headline-md text-headline-md mt-space-xs">Partner Institutions</span>
+            <span class="font-body-sm text-body-sm text-surface-container-high mt-1">Accredited colleges in India &amp; worldwide</span>
+          </div>
+          <div class="flex flex-col items-center p-space-sm">
+            <span class="font-metric-display text-metric-display text-primary-container">0%</span>
+            <span class="font-headline-md text-headline-md mt-space-xs">Honest Guidance</span>
+            <span class="font-body-sm text-body-sm text-surface-container-high mt-1">Transparent, zero hidden fees counselling</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RUNNING PARTNER INSTITUTIONS LOGO MARQUEE -->
+    <section class="w-full bg-surface-container-lowest border-y border-border-subtle py-8 relative overflow-hidden">
+      <!-- Gradient fade overlays -->
+      <div class="absolute left-0 top-0 bottom-0 w-28 bg-gradient-to-r from-surface-container-lowest to-transparent z-10 pointer-events-none"></div>
+      <div class="absolute right-0 top-0 bottom-0 w-28 bg-gradient-to-l from-surface-container-lowest to-transparent z-10 pointer-events-none"></div>
+
+      <!-- Marquee Track (Repeated for seamless loop) -->
+      <div class="animate-marquee flex items-center">
+        <!-- Set 1 -->
+        <div class="flex items-center gap-12 shrink-0 px-6">
+          <div class="h-16 w-44 flex items-center justify-center p-2 rounded-xl bg-surface-cream border border-border-subtle shadow-sm hover:scale-105 transition-transform duration-200">
+            <img src="/logos/dsec.png" alt="Dhanalakshmi Srinivasan Engineering College" title="Dhanalakshmi Srinivasan Engineering College" class="max-h-full max-w-full object-contain">
+          </div>
+          <div class="h-16 w-44 flex items-center justify-center p-2 rounded-xl bg-surface-cream border border-border-subtle shadow-sm hover:scale-105 transition-transform duration-200">
+            <img src="/logos/igce.png" alt="Indra Ganesan College of Engineering" title="Indra Ganesan College of Engineering" class="max-h-full max-w-full object-contain">
+          </div>
+          <div class="h-16 w-44 flex items-center justify-center p-2 rounded-xl bg-surface-cream border border-border-subtle shadow-sm hover:scale-105 transition-transform duration-200">
+            <img src="/logos/mam.png" alt="M.A.M. College of Engineering" title="M.A.M. College of Engineering" class="max-h-full max-w-full object-contain">
+          </div>
+          <div class="h-16 w-44 flex items-center justify-center p-2 rounded-xl bg-surface-cream border border-border-subtle shadow-sm hover:scale-105 transition-transform duration-200">
+            <img src="/logos/care.png" alt="CARE Group of Institutions" title="CARE Group of Institutions" class="max-h-full max-w-full object-contain">
+          </div>
+          <div class="h-16 w-44 flex items-center justify-center p-2 rounded-xl bg-surface-cream border border-border-subtle shadow-sm hover:scale-105 transition-transform duration-200">
+            <img src="/logos/shivani.png" alt="Shivani Engineering College" title="Shivani Engineering College" class="max-h-full max-w-full object-contain">
+          </div>
+          <div class="h-16 w-44 flex items-center justify-center p-2 rounded-xl bg-surface-cream border border-border-subtle shadow-sm hover:scale-105 transition-transform duration-200">
+            <img src="/logos/pmi.png" alt="Periyar Maniammai University" title="Periyar Maniammai University" class="max-h-full max-w-full object-contain">
+          </div>
+          <div class="h-16 w-44 flex items-center justify-center p-2 rounded-xl bg-surface-cream border border-border-subtle shadow-sm hover:scale-105 transition-transform duration-200">
+            <img src="/logos/krct.png" alt="K. Ramakrishnan College of Technology" title="K. Ramakrishnan College of Technology" class="max-h-full max-w-full object-contain">
+          </div>
+          <div class="h-16 w-44 flex items-center justify-center p-2 rounded-xl bg-surface-cream border border-border-subtle shadow-sm hover:scale-105 transition-transform duration-200">
+            <img src="/logos/oxford.png" alt="Oxford Engineering College" title="Oxford Engineering College" class="max-h-full max-w-full object-contain">
+          </div>
+        </div>
+
+        <!-- Set 2 (Exact Duplicate for seamless infinite loop) -->
+        <div class="flex items-center gap-12 shrink-0 px-6">
+          <div class="h-16 w-44 flex items-center justify-center p-2 rounded-xl bg-surface-cream border border-border-subtle shadow-sm hover:scale-105 transition-transform duration-200">
+            <img src="/logos/dsec.png" alt="Dhanalakshmi Srinivasan Engineering College" title="Dhanalakshmi Srinivasan Engineering College" class="max-h-full max-w-full object-contain">
+          </div>
+          <div class="h-16 w-44 flex items-center justify-center p-2 rounded-xl bg-surface-cream border border-border-subtle shadow-sm hover:scale-105 transition-transform duration-200">
+            <img src="/logos/igce.png" alt="Indra Ganesan College of Engineering" title="Indra Ganesan College of Engineering" class="max-h-full max-w-full object-contain">
+          </div>
+          <div class="h-16 w-44 flex items-center justify-center p-2 rounded-xl bg-surface-cream border border-border-subtle shadow-sm hover:scale-105 transition-transform duration-200">
+            <img src="/logos/mam.png" alt="M.A.M. College of Engineering" title="M.A.M. College of Engineering" class="max-h-full max-w-full object-contain">
+          </div>
+          <div class="h-16 w-44 flex items-center justify-center p-2 rounded-xl bg-surface-cream border border-border-subtle shadow-sm hover:scale-105 transition-transform duration-200">
+            <img src="/logos/care.png" alt="CARE Group of Institutions" title="CARE Group of Institutions" class="max-h-full max-w-full object-contain">
+          </div>
+          <div class="h-16 w-44 flex items-center justify-center p-2 rounded-xl bg-surface-cream border border-border-subtle shadow-sm hover:scale-105 transition-transform duration-200">
+            <img src="/logos/shivani.png" alt="Shivani Engineering College" title="Shivani Engineering College" class="max-h-full max-w-full object-contain">
+          </div>
+          <div class="h-16 w-44 flex items-center justify-center p-2 rounded-xl bg-surface-cream border border-border-subtle shadow-sm hover:scale-105 transition-transform duration-200">
+            <img src="/logos/pmi.png" alt="Periyar Maniammai University" title="Periyar Maniammai University" class="max-h-full max-w-full object-contain">
+          </div>
+          <div class="h-16 w-44 flex items-center justify-center p-2 rounded-xl bg-surface-cream border border-border-subtle shadow-sm hover:scale-105 transition-transform duration-200">
+            <img src="/logos/krct.png" alt="K. Ramakrishnan College of Technology" title="K. Ramakrishnan College of Technology" class="max-h-full max-w-full object-contain">
+          </div>
+          <div class="h-16 w-44 flex items-center justify-center p-2 rounded-xl bg-surface-cream border border-border-subtle shadow-sm hover:scale-105 transition-transform duration-200">
+            <img src="/logos/oxford.png" alt="Oxford Engineering College" title="Oxford Engineering College" class="max-h-full max-w-full object-contain">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSION & VISION SECTION (Image 2 Redesign) -->
+    <section class="w-full py-16 lg:py-24 bg-white relative overflow-hidden">
+      <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-10 items-center">
+
+          <!-- Left Column: Circular Dr. Kalam Emblem -->
+          <div class="lg:col-span-4 flex justify-center items-center">
+            <div class="w-64 h-64 sm:w-80 sm:h-80 lg:w-[350px] lg:h-[350px] rounded-full shadow-[0_12px_44px_rgba(26,110,244,0.12)] border-4 border-white bg-white overflow-hidden flex items-center justify-center hover:scale-105 transition-transform duration-300">
+              <img src="/kalam-emblem.jpg" alt="Dr. Kalam Educational and Employment Consultancy" class="w-full h-full object-cover">
+            </div>
+          </div>
+
+          <!-- Center Column: Headline, Description & Know More Button -->
+          <div class="lg:col-span-5 flex flex-col items-start justify-center pl-0 lg:pl-4">
+            <h2 class="text-2xl sm:text-3xl font-bold text-[#090D16] leading-snug tracking-tight mb-4">
+              Guiding Students Towards A<br>
+              Brighter Future
+            </h2>
+            <p class="text-[15px] sm:text-base text-[#5d6b82] leading-relaxed mb-8 max-w-[420px]">
+              We believe counselling should be honest, personalised, and free from pressure — students deserve clarity before commitment.
+            </p>
+            <a href="#about" class="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-[#f59e0b] hover:bg-[#d97706] text-[#090D16] font-bold text-[15px] shadow-sm hover:shadow transition-all duration-200 active:scale-95">
+              Know More
+            </a>
+          </div>
+
+          <!-- Right Column: Hexagon Cards (Mission & Vision) -->
+          <div class="lg:col-span-3 flex flex-col items-center justify-center gap-6 sm:gap-8">
+            <!-- Our Mission Hexagon (Purple) -->
+            <div class="relative w-[210px] h-[235px] flex items-center justify-center filter drop-shadow-md hover:scale-105 transition-transform duration-300">
+              <svg viewBox="0 0 220 250" class="absolute inset-0 w-full h-full">
+                <polygon points="110,5 215,62 215,188 110,245 5,188 5,62" fill="#6821a8"></polygon>
+              </svg>
+              <div class="relative z-10 flex flex-col items-center justify-center text-center px-5 py-4">
+                <svg class="w-8 h-8 text-white mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <circle cx="12" cy="12" r="6"></circle>
+                  <circle cx="12" cy="12" r="2" fill="currentColor"></circle>
+                </svg>
+                <h4 class="text-[12px] font-extrabold tracking-[0.14em] text-white uppercase mb-2">OUR MISSION</h4>
+                <p class="text-[11.5px] leading-relaxed text-white/90 max-w-[170px]">
+                  To help every student find a college and course that fits their ambition, ability, and future.
+                </p>
+              </div>
+            </div>
+
+            <!-- Our Vision Hexagon (Green) -->
+            <div class="relative w-[210px] h-[235px] flex items-center justify-center filter drop-shadow-md hover:scale-105 transition-transform duration-300">
+              <svg viewBox="0 0 220 250" class="absolute inset-0 w-full h-full">
+                <polygon points="110,5 215,62 215,188 110,245 5,188 5,62" fill="#059669"></polygon>
+              </svg>
+              <div class="relative z-10 flex flex-col items-center justify-center text-center px-5 py-4">
+                <svg class="w-8 h-8 text-white mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <h4 class="text-[12px] font-extrabold tracking-[0.14em] text-white uppercase mb-2">OUR VISION</h4>
+                <p class="text-[11.5px] leading-relaxed text-white/90 max-w-[170px]">
+                  To be India’s most trusted education consultancy for transparent counselling and admission support.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- STEP-BY-STEP APPROACH (5-STEP PROCESS) -->
+    <section class="w-full py-space-xl bg-background">
+      <div class="max-w-7xl mx-auto px-margin">
+        <div class="text-center max-w-2xl mx-auto mb-space-xl">
+          <h2 class="font-headline-xl text-headline-xl text-trust-navy mt-1">Our Proven 5-Step Process</h2>
+          <p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+            A seamless, structured roadmap that takes you from initial dilemma to confident campus enrollment.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-space-md relative">
+          <!-- Step 1 -->
+          <div class="flex flex-col items-center text-center p-space-md bg-surface-container-lowest rounded-2xl shadow-sm">
+            <div class="w-14 h-14 rounded-full bg-surface-sunlit text-primary-container flex items-center justify-center font-headline-md text-headline-md font-bold mb-space-sm shadow-sm">
+              01
+            </div>
+            <h3 class="font-headline-md text-headline-md text-trust-navy mb-space-xs">Understand</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">
+              We learn your goals, academic profile, and preferred study destinations.
+            </p>
+          </div>
+          <!-- Step 2 -->
+          <div class="flex flex-col items-center text-center p-space-md bg-surface-container-lowest rounded-2xl shadow-sm">
+            <div class="w-14 h-14 rounded-full bg-surface-sunlit text-primary-container flex items-center justify-center font-headline-md text-headline-md font-bold mb-space-sm shadow-sm">
+              02
+            </div>
+            <h3 class="font-headline-md text-headline-md text-trust-navy mb-space-xs">Guide</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">
+              Counsellors map career paths and recommend the right streams and degrees.
+            </p>
+          </div>
+          <!-- Step 3 -->
+          <div class="flex flex-col items-center text-center p-space-md bg-surface-container-lowest rounded-2xl shadow-sm">
+            <div class="w-14 h-14 rounded-full bg-primary-container text-surface-container-lowest flex items-center justify-center font-headline-md text-headline-md font-bold mb-space-sm shadow-md">
+              03
+            </div>
+            <h3 class="font-headline-md text-headline-md text-trust-navy mb-space-xs">Shortlist</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">
+              We curate colleges that match eligibility, budget, and location preferences.
+            </p>
+          </div>
+          <!-- Step 4 -->
+          <div class="flex flex-col items-center text-center p-space-md bg-surface-container-lowest rounded-2xl shadow-sm">
+            <div class="w-14 h-14 rounded-full bg-surface-sunlit text-primary-container flex items-center justify-center font-headline-md text-headline-md font-bold mb-space-sm shadow-sm">
+              04
+            </div>
+            <h3 class="font-headline-md text-headline-md text-trust-navy mb-space-xs">Assist</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">
+              From applications to documentation, we stay with you through every step.
+            </p>
+          </div>
+          <!-- Step 5 -->
+          <div class="flex flex-col items-center text-center p-space-md bg-surface-container-lowest rounded-2xl shadow-sm">
+            <div class="w-14 h-14 rounded-full bg-surface-sunlit text-primary-container flex items-center justify-center font-headline-md text-headline-md font-bold mb-space-sm shadow-sm">
+              05
+            </div>
+            <h3 class="font-headline-md text-headline-md text-trust-navy mb-space-xs">Support</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">
+              Local guardian support continues after admission for a smooth campus life.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- FEATURED COLLEGES ACROSS INDIA -->
+    <section class="w-full py-space-xl bg-background">
+      <div class="max-w-7xl mx-auto px-margin">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
+          <div>
+            <span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Top Institutions</span>
+            <h2 class="font-headline-xl text-headline-xl text-trust-navy mt-1">Explore Featured Colleges Across India</h2>
+          </div>
+          <a class="inline-flex items-center gap-space-xs text-primary font-label-lg text-label-lg hover:text-tertiary" href="#">
+            <span>View full list</span>
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+          <!-- College 1: Periyar Maniammai (PMIST) -->
+          <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col">
+            <div class="relative h-48 overflow-hidden bg-white flex items-center justify-center p-6 border-b border-gray-100">
+              <img alt="Periyar Maniammai Institute of Science & Technology" class="max-h-24 max-w-[75%] object-contain hover:scale-105 transition-transform duration-300" src="/logos/pmi.png">
+            </div>
+            <div class="p-space-md flex flex-col justify-between flex-1">
+              <div>
+                <h3 class="font-headline-md text-headline-md text-trust-navy">Periyar Maniammai Institute of Science &amp; Technology (PMIST)</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-1">
+                  <span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+                  Vallam, Thanjavur, Tamil Nadu
+                </p>
+              </div>
+              <div class="mt-space-md pt-space-xs flex items-center justify-between">
+                <span class="font-body-sm text-body-sm text-success-emerald font-semibold">NAAC 'A+' Accredited</span>
+                <a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:text-tertiary font-bold" href="#counselling-form">
+                  Apply Now <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- College 2: Dhanalakshmi Srinivasan -->
+          <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col">
+            <div class="relative h-48 overflow-hidden bg-white flex items-center justify-center p-6 border-b border-gray-100">
+              <img alt="Dhanalakshmi Srinivasan Engineering College" class="max-h-24 max-w-[75%] object-contain hover:scale-105 transition-transform duration-300" src="/logos/dsec.png">
+            </div>
+            <div class="p-space-md flex flex-col justify-between flex-1">
+              <div>
+                <h3 class="font-headline-md text-headline-md text-trust-navy">Dhanalakshmi Srinivasan Engineering College</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-1">
+                  <span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+                  Perambalur &amp; Tiruchirappalli, Tamil Nadu
+                </p>
+              </div>
+              <div class="mt-space-md pt-space-xs flex items-center justify-between">
+                <span class="font-body-sm text-body-sm text-success-emerald font-semibold">NBA &amp; NAAC 'A' Grade</span>
+                <a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:text-tertiary font-bold" href="#counselling-form">
+                  Apply Now <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- College 3: K. Ramakrishnan (KRCT) -->
+          <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col">
+            <div class="relative h-48 overflow-hidden bg-white flex items-center justify-center p-6 border-b border-gray-100">
+              <img alt="K. Ramakrishnan College of Technology" class="max-h-24 max-w-[75%] object-contain hover:scale-105 transition-transform duration-300" src="/logos/krct.png">
+            </div>
+            <div class="p-space-md flex flex-col justify-between flex-1">
+              <div>
+                <h3 class="font-headline-md text-headline-md text-trust-navy">K. Ramakrishnan College of Technology (KRCT)</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-1">
+                  <span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+                  Samayapuram, Tiruchirappalli, Tamil Nadu
+                </p>
+              </div>
+              <div class="mt-space-md pt-space-xs flex items-center justify-between">
+                <span class="font-body-sm text-body-sm text-success-emerald font-semibold">NAAC 'A+' Accredited</span>
+                <a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:text-tertiary font-bold" href="#counselling-form">
+                  Apply Now <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- College 4: CARE Group of Institutions -->
+          <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col">
+            <div class="relative h-48 overflow-hidden bg-white flex items-center justify-center p-6 border-b border-gray-100">
+              <img alt="CARE Group of Institutions" class="max-h-24 max-w-[75%] object-contain hover:scale-105 transition-transform duration-300" src="/logos/care.png">
+            </div>
+            <div class="p-space-md flex flex-col justify-between flex-1">
+              <div>
+                <h3 class="font-headline-md text-headline-md text-trust-navy">CARE Group of Institutions</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-1">
+                  <span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+                  Dindigul Road, Tiruchirappalli, Tamil Nadu
+                </p>
+              </div>
+              <div class="mt-space-md pt-space-xs flex items-center justify-between">
+                <span class="font-body-sm text-body-sm text-success-emerald font-semibold">CoA &amp; AICTE Approved</span>
+                <a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:text-tertiary font-bold" href="#counselling-form">
+                  Apply Now <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- College 5: M.A.M. College of Engineering -->
+          <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col">
+            <div class="relative h-48 overflow-hidden bg-white flex items-center justify-center p-6 border-b border-gray-100">
+              <img alt="M.A.M. College of Engineering & Technology" class="max-h-24 max-w-[75%] object-contain hover:scale-105 transition-transform duration-300" src="/logos/mam.png">
+            </div>
+            <div class="p-space-md flex flex-col justify-between flex-1">
+              <div>
+                <h3 class="font-headline-md text-headline-md text-trust-navy">M.A.M. College of Engineering &amp; Technology</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-1">
+                  <span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+                  Siruganur, Tiruchirappalli, Tamil Nadu
+                </p>
+              </div>
+              <div class="mt-space-md pt-space-xs flex items-center justify-between">
+                <span class="font-body-sm text-body-sm text-success-emerald font-semibold">Anna University Affiliated</span>
+                <a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:text-tertiary font-bold" href="#counselling-form">
+                  Apply Now <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- College 6: Indra Ganesan College of Engineering -->
+          <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col">
+            <div class="relative h-48 overflow-hidden bg-white flex items-center justify-center p-6 border-b border-gray-100">
+              <img alt="Indra Ganesan College of Engineering" class="max-h-24 max-w-[75%] object-contain hover:scale-105 transition-transform duration-300" src="/logos/igce.png">
+            </div>
+            <div class="p-space-md flex flex-col justify-between flex-1">
+              <div>
+                <h3 class="font-headline-md text-headline-md text-trust-navy">Indra Ganesan College of Engineering</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-1">
+                  <span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+                  Manikandam, Tiruchirappalli, Tamil Nadu
+                </p>
+              </div>
+              <div class="mt-space-md pt-space-xs flex items-center justify-between">
+                <span class="font-body-sm text-body-sm text-success-emerald font-semibold">Industry-Linked Campus</span>
+                <a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:text-tertiary font-bold" href="#counselling-form">
+                  Apply Now <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STUDENT & PARENT TESTIMONIALS -->
+    <section class="w-full py-space-xl bg-surface-cream overflow-hidden">
+      <div class="max-w-7xl mx-auto px-margin">
+        <div class="text-center max-w-2xl mx-auto mb-space-lg">
+          <span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Testimonials</span>
+          <h2 class="font-headline-xl text-headline-xl text-trust-navy mt-1">What Our Students &amp; Parents Say</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+          <!-- Add your testimonials here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGH-IMPACT PRE-FOOTER CONVERSION BANNER -->
+    <section class="w-full py-space-xl bg-trust-navy text-surface-container-lowest relative overflow-hidden">
+      <!-- Ambient backlights -->
+      <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-primary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="max-w-7xl mx-auto px-margin relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+          <!-- Content -->
+          <div class="lg:col-span-8 flex flex-col gap-space-md">
+            <h2 class="font-display-hero text-display-hero text-surface-container-lowest max-w-2xl">
+              Dreaming of the right college but still confused where to start?
+            </h2>
+            <p class="font-body-lg text-body-lg text-surface-container-high max-w-xl">
+              Get free counselling and a clear plan tailored to your goals. Honest answers to entrance ranks, quota questions, and career paths.
+            </p>
+            <div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+              <a class="inline-flex items-center gap-space-xs px-space-xl py-space-md bg-gradient-to-r from-primary-container to-tertiary text-surface-container-lowest rounded-xl font-label-lg text-label-lg shadow-lg hover:shadow-xl transition-all duration-200" href="#counselling-form">
+                <span>Get Free Counselling</span>
+                <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+              </a>
+              <a class="inline-flex items-center gap-space-xs px-space-xl py-space-md bg-whatsapp-green text-surface-container-lowest rounded-xl font-label-lg text-label-lg shadow-md hover:shadow-lg transition-all duration-200" href="https://wa.me/917667430388?text=Hi%2C%20I%20would%20like%20free%20counselling%20from%20Dr.%20Kalam%20Educational%20Consultancy%20Aranthangi." rel="noopener noreferrer" target="_blank">
+                <span class="material-symbols-outlined text-[20px]">chat</span>
+                <span>WhatsApp Us (+91 76674 30388)</span>
+              </a>
+            </div>
+          </div>
+          <!-- Student Visual Graphic Feature -->
+          <div class="lg:col-span-4 flex justify-center lg:justify-end">
+            <div class="relative w-72 sm:w-80">
+              <div class="absolute inset-0 bg-primary-container/20 rounded-full blur-2xl transform scale-90"></div>
+              <img alt="Student Partnered With Dr. Kalam Educational Consultancy Aranthangi" class="relative z-10 w-full h-auto object-contain drop-shadow-2xl" src="https://lh3.googleusercontent.com/aida/AEtjO1X7hSu3p6856MeXlRA7gvBFUzBnwB70Ku2a6d5pNbnbdWC7v4FHyIvz3GVIVQW2T0JVO6nS2ddrl94ry28bE4Lktq8lYuhwm0UnRo8jQiZ4euaGcWhrtFdWtBudFcPl6Smu08XzHS38dSRWLQX8U9uvyCXCuaLOVyIk_NAbiHcUzFyjnDkjHEv6tyPDf-F55VOQ3T80ZORxG6VfqWUsNTLkmXLnZ7zMZUB16A7d7iRvJfNpqjz8dC-6rPQ">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="w-full bg-surface-container-low text-on-surface pt-space-xl pb-space-lg">
+  <div class="max-w-7xl mx-auto px-margin">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-lg mb-space-xl">
+      <div class="lg:col-span-2 flex flex-col gap-space-sm">
+        <div class="flex items-center gap-space-sm">
+          <img alt="Dr. Kalam Educational Consultancy Aranthangi Logo" class="h-10 w-10 rounded-full object-cover shadow-sm" src="/kalam-emblem.jpg">
+          <span class="font-headline-md text-headline-md text-trust-navy tracking-tight">Dr. Kalam <span class="text-xs uppercase tracking-wider text-brand-blue font-bold block">Aranthangi</span></span>
+        </div>
+        <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Your Future | Our Guidance. Trusted education consultancy in Aranthangi for transparent counselling and admission support.</p>
+        <div class="flex flex-col gap-space-xs mt-space-sm">
+          <a class="inline-flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="mailto:studywala202226@gmail.com">
+            <span class="material-symbols-outlined text-[16px]">mail</span>studywala202226@gmail.com
+          </a>
+          <a class="inline-flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="tel:+917667430388">
+            <span class="material-symbols-outlined text-[16px]">call</span>+91 76674 30388
+          </a>
+        </div>
+        <div class="flex items-center gap-space-xs mt-space-sm">
+          <a class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:bg-primary-container hover:text-on-primary transition-colors" href="#">
+            <span class="material-symbols-outlined text-[16px]">public</span>
+          </a>
+          <a class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:bg-primary-container hover:text-on-primary transition-colors" href="#">
+            <span class="material-symbols-outlined text-[16px]">photo_camera</span>
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-col gap-space-xs">
+        <span class="font-label-lg text-label-lg text-on-surface mb-space-xs">Quick Links</span>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="#">Home</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="about-us" href="#">About Us</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Services</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="colleges" href="#">Colleges</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="contact-us" href="#">Contact Us</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="terms-and-conditions" href="#">Terms &amp; Conditions</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a>
+      </div>
+      <div class="flex flex-col gap-space-xs">
+        <span class="font-label-lg text-label-lg text-on-surface mb-space-xs">Services</span>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Admission Guidance</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Career Counselling</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">College Selection</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Application Assistance</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Local Guardian Support</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Course Selection</a>
+      </div>
+      <div class="flex flex-col gap-space-xs">
+        <span class="font-label-lg text-label-lg text-on-surface mb-space-xs">Courses</span>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="#">MBBS</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="#">MD / MS</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="#">Management (MBA)</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="#">Engineering (B.Tech)</a>
+      </div>
+    </div>
+    <div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant">
+      <p class="font-body-sm text-body-sm">© 2026 Dr. Kalam Educational Consultancy, Aranthangi. All rights reserved.</p>
+      <p class="font-body-sm text-body-sm">Developed by Arc pair studio.</p>
+    </div>
+  </div>
+</footer>
+
+<a class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-whatsapp-green text-surface-container-lowest rounded-full shadow-[0_20px_40px_-8px_rgba(9,13,22,0.16)] hover:scale-105 active:scale-95 transition-transform" href="https://wa.me/917667430388" rel="noopener noreferrer" target="_blank">
+  <span class="material-symbols-outlined text-[30px]">chat</span>
+</a>
+
+</body>
+</html>

@@ -1,32 +1,38 @@
-# kalam-website-
+# Dr. Kalam Educational Consultancy
 
-Dr. Kalam Educational Trust / Academy Website.
+A bilingual, multi-page education consultancy website for students and parents. The existing homepage remains the homepage; its navigation now opens dedicated pages for About, Services, Courses, Colleges and Contact.
 
-Currently, two official plugins are available:
+## Run locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```sh
+npm ci
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Vite serves the homepage at `/` and the interior pages at `/about.html`, `/services.html`, `/courses.html`, `/colleges.html` and `/contact.html`.
+
+## Build for hosting
+
+```sh
+npm run build
+npm run preview
+```
+
+The production site is written to `dist/`. Deploy the contents of that directory to a host that serves static HTML, CSS, JavaScript and files from `public/`.
+
+## Site features
+
+- Shared responsive navigation and footer for interior pages.
+- English and Tamil page content, with the language preference remembered in the browser.
+- Search filter for the featured college list.
+- Contact form that prepares an enquiry in WhatsApp. It does not submit data to a website backend.
+- The home page's existing content and visual layout are preserved; only navigation, contact destinations and the supplied Instagram URL were connected.
+
+## Content and launch notes
+
+- Do not add student names, photos, quotes, admission counts, success rates, partnerships, accreditations or guarantees without client-approved evidence.
+- Obtain permission from each student/parent (and a parent/guardian for minors) before publishing their photos, names or story. Collect the approved caption and course/college details with each image.
+- Confirm office address, operating hours, languages offered, fees, service scope, founder/counsellor background and policy wording with the client before final publication.
+- Admission rules, course availability, fees and deadlines change. Verify current details with the relevant institution or official authority.
+
+The `/src` React files are the earlier starter scaffold; the current site uses the HTML pages listed above.

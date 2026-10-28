@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
   <style>
@@ -61,6 +62,44 @@
       object-fit: cover;
       object-position: center top;
     }
+    .home-site-header { position:sticky;top:0;z-index:50;background:#ffffffed;backdrop-filter:blur(14px);border-bottom:1px solid #e4eaf2; }
+    .home-header { width:min(1160px,calc(100% - 40px));min-height:78px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:24px;position:relative; }
+    .home-site-header .home-brand { display:flex;align-items:center;gap:11px;color:#101b35;text-decoration:none;font:800 19px/1.1 'Plus Jakarta Sans',sans-serif;letter-spacing:-.04em;white-space:nowrap; }
+    .home-site-header .home-brand img { width:42px;height:42px;object-fit:cover;border-radius:50%;background:#fff; }
+    .home-site-header .home-brand small { display:block;margin-top:5px;color:#68758a;font:600 10px/1.2 'Plus Jakarta Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase; }
+    .home-nav-right { display:flex;align-items:center;gap:18px; }
+    .home-nav { display:flex;align-items:center;gap:25px; }
+    .home-menu { display: none; }
+    .home-nav a { white-space:nowrap;color:#48556a;text-decoration:none;font-size:14px;font-weight:600;padding:9px 0; }
+    .home-nav a:hover,.home-nav a:first-child { color:#1c63d5; }
+    .home-lang { display: inline-flex; align-items: center; gap: 3px; padding: 3px; border: 1px solid #e2e8f0; border-radius: 999px; background: white; }
+    .home-lang button { border: 0; border-radius: 999px; padding: 7px 10px; background: transparent; color: #526078; font: 700 12px 'Plus Jakarta Sans',sans-serif; cursor: pointer; }
+    .home-lang button[aria-pressed="true"] { color: white; background: #101828; }
+    body.home-lang-ta [data-home-lang="en"],body:not(.home-lang-ta) [data-home-lang="ta"] { display: none !important; }
+    .home-hero { width: min(1200px,calc(100% - 48px)); margin: 42px auto 58px; padding: clamp(26px,5vw,58px); display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: clamp(28px,6vw,72px); overflow: hidden; border: 1px solid #e5edf9; border-radius: 30px; background: radial-gradient(ellipse at 80% 15%,#e4efff 0,transparent 39%),linear-gradient(130deg,#f8faff,#fff 68%); box-shadow: 0 24px 60px #18375e12; }
+    .home-hero h1 { max-width: 680px; margin: 16px 0 18px; color: #101b35; font: 800 clamp(38px,5.1vw,62px)/1.08 'Plus Jakarta Sans',sans-serif; letter-spacing: -.045em; }
+    .home-hero p { max-width: 580px; color: #53627a; font-size: clamp(16px,1.6vw,19px); line-height: 1.7; }
+    .home-hero .eyebrow { color: #1c63d5; font-size: 11px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    .home-hero .home-visual { position: relative; min-height: 370px; display: grid; place-items: center; }
+    .home-hero .home-visual:before { content: ''; position: absolute; width: min(100%,390px); aspect-ratio: 1; border-radius: 50%; background: #e5efff; }
+    .home-hero .home-visual img { position: relative; z-index: 1; width: min(82%,330px); height: 390px; object-fit: cover; object-position: center top; border-radius: 190px 190px 26px 26px; box-shadow: 0 24px 48px #17345624; }
+    .home-quote { position:absolute;z-index:2;left:0;bottom:18px;width:min(290px,calc(100% - 12px));margin:0;padding:13px 15px 11px;border:1px solid #e8edf5;border-radius:15px;background:#fff;box-shadow:0 12px 32px #17345618;color:#25324a;font-family:'Noto Sans Tamil','Plus Jakarta Sans',sans-serif; }
+    .home-kural-slide { min-height:48px;margin:0;animation:kural-enter .35s ease both; }
+    .home-kural-slide blockquote { margin:0; }
+    .home-kural-slide p { margin:0;color:#101b35;font-size:12.5px;line-height:1.65;font-weight:500;font-style:italic; }
+    .home-kural-slide cite { display:block;margin-top:5px;color:#68758a;font-size:10px;font-style:normal; }
+    .home-kural-dots { display:flex;justify-content:flex-end;gap:5px;margin-top:6px; }
+    .home-kural-dots button { width:7px;height:7px;padding:0;border:0;border-radius:50%;background:#c7d2e1;cursor:pointer; }
+    .home-kural-dots button[aria-current="true"] { width:18px;border-radius:6px;background:#1c63d5; }
+    @keyframes kural-enter { from { opacity:.4;transform:translateX(5px); } to { opacity:1;transform:translateX(0); } }
+    @media(prefers-reduced-motion:reduce) { .home-kural-slide { animation:none; } }
+    .home-hero .btn-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
+    .home-hero .home-primary,.home-hero .home-secondary { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:48px; padding:12px 20px; border-radius:12px; text-decoration:none; font-size:14px; font-weight:700; }
+    .home-hero .home-primary { color:#fff; background:#1c63d5; box-shadow:0 10px 22px #1c63d533; }
+    .home-hero .home-secondary { color:#fff; border:1px solid #25d366; background:#25d366; box-shadow:0 10px 22px #25d3662e; }
+    .home-hero .home-secondary:hover { background:#1fb85a; border-color:#1fb85a; }
+    @media(max-width:900px) { .home-nav { gap:15px; } .home-hero { grid-template-columns:1fr .8fr; } }
+    @media(max-width:767px) { .home-header { min-height:70px;width:calc(100% - 30px); } .home-site-header .home-brand { font-size:17px; }.home-site-header .home-brand img{width:37px;height:37px}.home-nav { display:none;position:absolute;top:70px;left:0;right:0;padding:12px 22px 20px;background:white;box-shadow:0 16px 22px #152c4a12;flex-direction:column;align-items:stretch;gap:0; }.home-nav.open { display:flex; } .home-nav a { padding:11px 4px;border-bottom:1px solid #eff2f6; }.home-menu { display:inline-flex;align-items:center;justify-content:center;border:1px solid #e2e8f0;background:white;border-radius:10px;padding:8px 11px;color:#101b35; }.home-nav-right{gap:10px}.home-hero { width:calc(100% - 28px);margin:20px auto 38px;grid-template-columns:1fr;gap:24px;padding:28px 22px;border-radius:23px; }.home-hero h1 { font-size:clamp(38px,10vw,52px); }.home-hero .home-visual { min-height:310px; }.home-hero .home-visual img { height:315px;width:min(76%,290px); }.home-quote { left:0;bottom:8px;max-width:275px; } }
   </style>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <script id="tailwind-config">
@@ -185,48 +224,26 @@
 </head>
 <body class="bg-background font-body-md text-body-md text-on-surface">
 
-<header class="w-full bg-white z-50 sticky top-0 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
-  <div class="max-w-[1400px] mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
-    <!-- Brand Logo -->
-    <a href="#" class="flex items-center gap-1.5 text-2xl font-extrabold text-brand-blue tracking-tight hover:opacity-95 transition-opacity">
-      <span class="relative inline-flex items-center text-brand-blue font-black">
-        <!-- Graduation Cap SVG Accent -->
-        <svg class="w-5 h-5 absolute -top-2.5 -left-1 text-brand-blue transform -rotate-12" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 8.45L4.47 9 12 4.9 19.53 9 12 11.45zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"></path>
-        </svg>
-        Dr.&nbsp;Kalam
-      </span>
+<header class="home-site-header">
+  <div class="home-header">
+    <a href="/index.html" class="home-brand">
+      <img src="/kalam-emblem.jpg" alt="Dr. Kalam Educational Consultancy emblem">
+      <span>Dr. Kalam<small>Educational Consultancy</small></span>
     </a>
-
-    <!-- Navigation Links & Right Action -->
-    <div class="flex items-center gap-8 lg:gap-10">
-      <nav class="hidden md:flex items-center gap-7 lg:gap-8 font-medium text-[15px]">
-        <a href="#" class="relative text-neutral-heading font-semibold hover:text-brand-blue transition-colors duration-150 py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2.5px] after:bg-[#f59e0b] after:rounded-full">Home</a>
-        <a href="#" class="text-neutral-heading/80 hover:text-brand-blue transition-colors duration-150">About Us</a>
-        <a href="#" class="text-neutral-heading/80 hover:text-brand-blue transition-colors duration-150">Services</a>
-        <a href="#" class="inline-flex items-center gap-1 text-neutral-heading/80 hover:text-brand-blue transition-colors duration-150">
-          Courses
-          <svg class="w-3.5 h-3.5 text-neutral-heading/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </a>
-        <a href="#" class="text-neutral-heading/80 hover:text-brand-blue transition-colors duration-150">Colleges</a>
-        <a href="#" class="text-neutral-heading/80 hover:text-brand-blue transition-colors duration-150">Contact Us</a>
+    <div class="home-nav-right">
+      <nav id="home-navigation" aria-label="Primary navigation" class="home-nav">
+        <a href="/index.html"><span data-home-lang="en">Home</span><span data-home-lang="ta">முகப்பு</span></a>
+        <a href="/about.html"><span data-home-lang="en">About Us</span><span data-home-lang="ta">எங்களைப் பற்றி</span></a>
+        <a href="/services.html"><span data-home-lang="en">Services</span><span data-home-lang="ta">சேவைகள்</span></a>
+        <a href="/courses.html"><span data-home-lang="en">Courses</span><span data-home-lang="ta">பாடப்பிரிவுகள்</span></a>
+        <a href="/colleges.html"><span data-home-lang="en">Colleges</span><span data-home-lang="ta">கல்லூரிகள்</span></a>
+        <a href="/contact.html"><span data-home-lang="en">Contact Us</span><span data-home-lang="ta">தொடர்பு</span></a>
       </nav>
-      <div class="flex items-center gap-3">
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-8 h-8 rounded-full bg-[#1877f2] flex items-center justify-center text-white hover:opacity-90 transition-opacity shadow-sm">
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
-          </svg>
-        </a>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-8 h-8 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] flex items-center justify-center text-white hover:opacity-90 transition-opacity shadow-sm p-1.5">
-          <svg class="w-full h-full fill-none stroke-current stroke-[2]" viewBox="0 0 24 24">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-          </svg>
-        </a>
+      <div class="home-lang" role="group" aria-label="Choose language">
+        <button type="button" data-home-language="en" aria-pressed="true">EN</button>
+        <button type="button" data-home-language="ta" aria-pressed="false">தமிழ்</button>
       </div>
+      <button type="button" class="home-menu" aria-label="Open menu" aria-controls="home-navigation" aria-expanded="false">☰</button>
     </div>
   </div>
 </header>
@@ -234,70 +251,55 @@
 <main class="w-full bg-background">
   <div class="flex flex-col w-full">
 
-    <!-- BEGIN: HeroSection -->
-    <section class="w-full max-w-[1360px] mx-auto min-h-[580px] flex items-center px-6 lg:px-12 py-12 lg:py-16" data-purpose="hero-main-container">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center w-full">
-        <!-- BEGIN: HeroTextContent -->
-        <div class="lg:col-span-7 flex flex-col justify-center max-w-[620px] z-10" data-purpose="hero-text-content">
-          <!-- Main Headline -->
-          <h1 class="text-4xl sm:text-5xl lg:text-[3.55rem] font-extrabold text-neutral-heading tracking-tight leading-[1.14] mb-6">
-            Start Your Global Education Journey with <span class="text-brand-blue">Kalam</span>
-          </h1>
-          <!-- Supporting Subtitle Paragraph -->
-          <p class="text-base sm:text-lg text-neutral-body font-normal leading-relaxed mb-9 max-w-[560px]">
-            Empowering students to access world-class education through expert counselling, personalized academic planning, and trusted global partnerships.
-          </p>
-          <!-- Call to Action Buttons -->
-          <div class="flex flex-wrap items-center gap-4 sm:gap-5" data-purpose="hero-action-buttons">
-            <a aria-label="Get Started with Edugo" class="inline-flex items-center justify-center px-7 py-3 rounded-full bg-brand-blue text-white text-[15px] font-semibold hover:bg-brand-hover active:scale-[0.98] transition-all duration-200 shadow-sm focus:outline-none focus:ring-4 focus:ring-blue-200" href="#get-started" role="button">
-              Get Started
-            </a>
-            <a aria-label="Book a Call with an Edugo counselor" class="inline-flex items-center justify-center px-7 py-3 rounded-full border border-neutral-outline bg-transparent text-neutral-heading text-[15px] font-semibold hover:bg-neutral-50 active:scale-[0.98] transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-gray-100" href="#book-a-call" role="button">
-              Book a Call
-            </a>
+    <section class="home-hero" data-purpose="hero-main-container">
+      <div>
+        <span class="eyebrow"><span data-home-lang="en">Local guidance. Confident choices.</span><span data-home-lang="ta">உள்ளூர் வழிகாட்டல். நம்பிக்கையான தேர்வுகள்.</span></span>
+        <h1><span data-home-lang="en">A clearer path to the right college starts here.</span><span data-home-lang="ta">சரியான கல்லூரிக்கான தெளிவான பாதை இங்கே தொடங்குகிறது.</span></h1>
+        <p><span data-home-lang="en">Personalised education guidance for students and families in Aranthangi. Explore courses, compare colleges and understand your next steps with a counsellor.</span><span data-home-lang="ta">அரந்தாங்கி மாணவர்கள் மற்றும் குடும்பங்களுக்கான தனிப்பட்ட கல்வி வழிகாட்டல். பாடப்பிரிவுகளை ஆராய்ந்து, கல்லூரிகளை ஒப்பிட்டு, அடுத்த படிகளை ஆலோசகருடன் தெளிவுபடுத்துங்கள்.</span></p>
+        <div class="btn-row">
+          <a class="home-primary" href="/contact.html"><span data-home-lang="en">Talk to a counsellor</span><span data-home-lang="ta">ஆலோசகருடன் பேசுங்கள்</span> <span aria-hidden="true">→</span></a>
+          <a class="home-secondary" data-home-whatsapp href="https://wa.me/919976916786" target="_blank" rel="noopener noreferrer"><span data-home-lang="en">WhatsApp +91 99769 16786</span><span data-home-lang="ta">WhatsApp +91 99769 16786</span></a>
+        </div>
+      </div>
+      <div class="home-visual">
+        <img src="/hero-student.jpg" alt="Illustrative portrait of a student holding books">
+        <div class="home-quote" role="region" aria-label="Thirukkural for learning" aria-live="off">
+          <figure class="home-kural-slide" data-kural-slide="0"><blockquote lang="ta"><p>கற்க கசடறக் கற்பவை கற்றபின்<br>நிற்க அதற்குத் தக.</p></blockquote><figcaption><cite>திருவள்ளுவர் · திருக்குறள் 391</cite></figcaption></figure>
+          <figure class="home-kural-slide" data-kural-slide="1" hidden><blockquote lang="ta"><p>கண்ணுடையர் என்பவர் கற்றோர் முகத்திரண்டு<br>புண்ணுடையர் கல்லா தவர்.</p></blockquote><figcaption><cite>திருவள்ளுவர் · திருக்குறள் 393</cite></figcaption></figure>
+          <figure class="home-kural-slide" data-kural-slide="2" hidden><blockquote lang="ta"><p>கேடில் விழுச்செல்வம் கல்வி ஒருவற்கு<br>மாடல்ல மற்றை யவை.</p></blockquote><figcaption><cite>திருவள்ளுவர் · திருக்குறள் 400</cite></figcaption></figure>
+          <div class="home-kural-dots" role="group" aria-label="Choose a Thirukkural">
+            <button type="button" data-kural-go="0" aria-label="Show Thirukkural 391" aria-current="true"></button>
+            <button type="button" data-kural-go="1" aria-label="Show Thirukkural 393" aria-current="false"></button>
+            <button type="button" data-kural-go="2" aria-label="Show Thirukkural 400" aria-current="false"></button>
           </div>
         </div>
-        <!-- END: HeroTextContent -->
-
-        <!-- BEGIN: HeroVisualPresentation -->
-        <div class="lg:col-span-5 flex justify-center lg:justify-end items-center relative" data-purpose="hero-visual-content">
-          <div class="relative w-[320px] h-[320px] sm:w-[420px] sm:h-[420px] lg:w-[490px] lg:h-[490px] flex items-center justify-center">
-            <!-- Soft Pastel Light Blue Circular Backdrop Shape -->
-            <div aria-hidden="true" class="absolute inset-0 hero-circle-bg shadow-sm"></div>
-            <!-- Student Visual Layer perfectly positioned within circular framing -->
-            <div aria-label="Portrait of a smiling student holding books ready for global education" class="student-crop-wrapper z-10">
-              <img src="/hero-student.jpg" alt="Portrait of a smiling student holding books ready for global education" class="student-image" />
-            </div>
-          </div>
-        </div>
-        <!-- END: HeroVisualPresentation -->
       </div>
     </section>
     <!-- END: HeroSection -->
 
-    <!-- TRUST STATS & METRICS CREDENTIALS BAR -->
+    <!-- TRUST PRINCIPLES: factual, non-numeric proof points -->
     <section class="w-full bg-trust-navy text-surface-container-lowest py-space-xl relative overflow-hidden">
       <div class="max-w-7xl mx-auto px-margin">
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-space-lg text-center divide-y md:divide-y-0 md:divide-x divide-surface-container/10">
           <div class="flex flex-col items-center p-space-sm">
-            <span class="font-metric-display text-metric-display text-primary-container">0%</span>
-            <span class="font-headline-md text-headline-md mt-space-xs">Visa &amp; Admission</span>
-            <span class="font-body-sm text-body-sm text-surface-container-high mt-1">Consistent success across premier intakes</span>
+            <span class="font-headline-lg text-headline-lg text-primary-container">Since 2015</span>
+            <span class="font-headline-md text-headline-md mt-space-xs">Guidance rooted in Aranthangi</span>
+            <span class="font-body-sm text-body-sm text-surface-container-high mt-1">Supporting students and families as they explore higher education.</span>
           </div>
           <div class="flex flex-col items-center p-space-sm">
-            <span class="font-metric-display text-metric-display text-primary-container">0+</span>
-            <span class="font-headline-md text-headline-md mt-space-xs">Students Placed</span>
-            <span class="font-body-sm text-body-sm text-surface-container-high mt-1">Across top medical, engineering &amp; B-schools</span>
+            <span class="font-headline-lg text-headline-lg text-primary-container">Student-first</span>
+            <span class="font-headline-md text-headline-md mt-space-xs">Personal guidance</span>
+            <span class="font-body-sm text-body-sm text-surface-container-high mt-1">Start with the student's interests, subjects and goals.</span>
           </div>
           <div class="flex flex-col items-center p-space-sm">
-            <span class="font-metric-display text-metric-display text-primary-container">0+</span>
-            <span class="font-headline-md text-headline-md mt-space-xs">Partner Institutions</span>
-            <span class="font-body-sm text-body-sm text-surface-container-high mt-1">Accredited colleges in India &amp; worldwide</span>
+            <span class="font-headline-lg text-headline-lg text-primary-container">Family welcome</span>
+            <span class="font-headline-md text-headline-md mt-space-xs">Students &amp; parents</span>
+            <span class="font-body-sm text-body-sm text-surface-container-high mt-1">Bring your questions and compare options together.</span>
           </div>
           <div class="flex flex-col items-center p-space-sm">
-            <span class="font-metric-display text-metric-display text-primary-container">0%</span>
-            <span class="font-headline-md text-headline-md mt-space-xs">Honest Guidance</span>
-            <span class="font-body-sm text-body-sm text-surface-container-high mt-1">Transparent, zero hidden fees counselling</span>
+            <span class="font-headline-lg text-headline-lg text-primary-container">Clear steps</span>
+            <span class="font-headline-md text-headline-md mt-space-xs">Understand your options</span>
+            <span class="font-body-sm text-body-sm text-surface-container-high mt-1">Ask about eligibility, costs, deadlines and what to verify.</span>
           </div>
         </div>
       </div>
@@ -390,7 +392,7 @@
             <p class="text-[15px] sm:text-base text-[#5d6b82] leading-relaxed mb-8 max-w-[420px]">
               We believe counselling should be honest, personalised, and free from pressure — students deserve clarity before commitment.
             </p>
-            <a href="#about" class="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-[#f59e0b] hover:bg-[#d97706] text-[#090D16] font-bold text-[15px] shadow-sm hover:shadow transition-all duration-200 active:scale-95">
+            <a href="/about.html" class="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-[#f59e0b] hover:bg-[#d97706] text-[#090D16] font-bold text-[15px] shadow-sm hover:shadow transition-all duration-200 active:scale-95">
               Know More
             </a>
           </div>
@@ -513,7 +515,7 @@
             <span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Top Institutions</span>
             <h2 class="font-headline-xl text-headline-xl text-trust-navy mt-1">Explore Featured Colleges Across India</h2>
           </div>
-          <a class="inline-flex items-center gap-space-xs text-primary font-label-lg text-label-lg hover:text-tertiary" href="#">
+          <a class="inline-flex items-center gap-space-xs text-primary font-label-lg text-label-lg hover:text-tertiary" href="/colleges.html">
             <span>View full list</span>
             <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
           </a>
@@ -534,7 +536,7 @@
               </div>
               <div class="mt-space-md pt-space-xs flex items-center justify-between">
                 <span class="font-body-sm text-body-sm text-success-emerald font-semibold">NAAC 'A+' Accredited</span>
-                <a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:text-tertiary font-bold" href="#counselling-form">
+                <a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:text-tertiary font-bold" href="/contact.html">
                   Apply Now <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
                 </a>
               </div>
@@ -555,7 +557,7 @@
               </div>
               <div class="mt-space-md pt-space-xs flex items-center justify-between">
                 <span class="font-body-sm text-body-sm text-success-emerald font-semibold">NBA &amp; NAAC 'A' Grade</span>
-                <a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:text-tertiary font-bold" href="#counselling-form">
+                <a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:text-tertiary font-bold" href="/contact.html">
                   Apply Now <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
                 </a>
               </div>
@@ -576,7 +578,7 @@
               </div>
               <div class="mt-space-md pt-space-xs flex items-center justify-between">
                 <span class="font-body-sm text-body-sm text-success-emerald font-semibold">NAAC 'A+' Accredited</span>
-                <a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:text-tertiary font-bold" href="#counselling-form">
+                <a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:text-tertiary font-bold" href="/contact.html">
                   Apply Now <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
                 </a>
               </div>
@@ -597,7 +599,7 @@
               </div>
               <div class="mt-space-md pt-space-xs flex items-center justify-between">
                 <span class="font-body-sm text-body-sm text-success-emerald font-semibold">CoA &amp; AICTE Approved</span>
-                <a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:text-tertiary font-bold" href="#counselling-form">
+                <a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:text-tertiary font-bold" href="/contact.html">
                   Apply Now <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
                 </a>
               </div>
@@ -618,7 +620,7 @@
               </div>
               <div class="mt-space-md pt-space-xs flex items-center justify-between">
                 <span class="font-body-sm text-body-sm text-success-emerald font-semibold">Anna University Affiliated</span>
-                <a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:text-tertiary font-bold" href="#counselling-form">
+                <a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:text-tertiary font-bold" href="/contact.html">
                   Apply Now <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
                 </a>
               </div>
@@ -639,7 +641,7 @@
               </div>
               <div class="mt-space-md pt-space-xs flex items-center justify-between">
                 <span class="font-body-sm text-body-sm text-success-emerald font-semibold">Industry-Linked Campus</span>
-                <a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:text-tertiary font-bold" href="#counselling-form">
+                <a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:text-tertiary font-bold" href="/contact.html">
                   Apply Now <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
                 </a>
               </div>
@@ -649,15 +651,17 @@
       </div>
     </section>
 
-    <!-- STUDENT & PARENT TESTIMONIALS -->
-    <section class="w-full py-space-xl bg-surface-cream overflow-hidden">
+    <section class="w-full py-space-xl bg-surface-cream">
       <div class="max-w-7xl mx-auto px-margin">
         <div class="text-center max-w-2xl mx-auto mb-space-lg">
-          <span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Testimonials</span>
-          <h2 class="font-headline-xl text-headline-xl text-trust-navy mt-1">What Our Students &amp; Parents Say</h2>
+          <span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">A thoughtful first conversation</span>
+          <h2 class="font-headline-xl text-headline-xl text-trust-navy mt-1">Make the next decision with more clarity.</h2>
+          <p class="font-body-md text-body-md text-on-surface-variant">Bring your questions about course choices, college options, eligibility or the application process.</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
-          <!-- Add your testimonials here -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+          <article class="bg-white rounded-2xl border border-border-subtle p-6"><span class="material-symbols-outlined text-3xl text-primary">school</span><h3 class="font-headline-md text-headline-md text-trust-navy mt-3">Explore study paths</h3><p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Talk through interests, subjects and possible next steps.</p></article>
+          <article class="bg-white rounded-2xl border border-border-subtle p-6"><span class="material-symbols-outlined text-3xl text-primary">groups</span><h3 class="font-headline-md text-headline-md text-trust-navy mt-3">Include the family</h3><p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Parents and students can discuss priorities and concerns together.</p></article>
+          <article class="bg-white rounded-2xl border border-border-subtle p-6"><span class="material-symbols-outlined text-3xl text-primary">fact_check</span><h3 class="font-headline-md text-headline-md text-trust-navy mt-3">Know what to verify</h3><p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Check current fees, eligibility, recognition and deadlines with the institution.</p></article>
         </div>
       </div>
     </section>
@@ -674,16 +678,16 @@
               Dreaming of the right college but still confused where to start?
             </h2>
             <p class="font-body-lg text-body-lg text-surface-container-high max-w-xl">
-              Get free counselling and a clear plan tailored to your goals. Honest answers to entrance ranks, quota questions, and career paths.
+              Discuss your goals with a counsellor and get help understanding entrance ranks, quota questions, course options and next steps.
             </p>
             <div class="flex flex-wrap items-center gap-space-md pt-space-xs">
-              <a class="inline-flex items-center gap-space-xs px-space-xl py-space-md bg-gradient-to-r from-primary-container to-tertiary text-surface-container-lowest rounded-xl font-label-lg text-label-lg shadow-lg hover:shadow-xl transition-all duration-200" href="#counselling-form">
-                <span>Get Free Counselling</span>
+              <a class="inline-flex items-center gap-space-xs px-space-xl py-space-md bg-gradient-to-r from-primary-container to-tertiary text-surface-container-lowest rounded-xl font-label-lg text-label-lg shadow-lg hover:shadow-xl transition-all duration-200" href="/contact.html">
+                <span>Talk to a counsellor</span>
                 <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
               </a>
-              <a class="inline-flex items-center gap-space-xs px-space-xl py-space-md bg-whatsapp-green text-surface-container-lowest rounded-xl font-label-lg text-label-lg shadow-md hover:shadow-lg transition-all duration-200" href="https://wa.me/917667430388?text=Hi%2C%20I%20would%20like%20free%20counselling%20from%20Dr.%20Kalam%20Educational%20Consultancy%20Aranthangi." rel="noopener noreferrer" target="_blank">
+              <a class="inline-flex items-center gap-space-xs px-space-xl py-space-md bg-whatsapp-green text-surface-container-lowest rounded-xl font-label-lg text-label-lg shadow-md hover:shadow-lg transition-all duration-200" href="https://wa.me/919976916786?text=Hi%2C%20I%20would%20like%20to%20discuss%20education%20guidance%20with%20Dr.%20Kalam%20Educational%20Consultancy%20Aranthangi." rel="noopener noreferrer" target="_blank">
                 <span class="material-symbols-outlined text-[20px]">chat</span>
-                <span>WhatsApp Us (+91 76674 30388)</span>
+                <span>WhatsApp Us (+91 99769 16786)</span>
               </a>
             </div>
           </div>
@@ -691,7 +695,7 @@
           <div class="lg:col-span-4 flex justify-center lg:justify-end">
             <div class="relative w-72 sm:w-80">
               <div class="absolute inset-0 bg-primary-container/20 rounded-full blur-2xl transform scale-90"></div>
-              <img alt="Student Partnered With Dr. Kalam Educational Consultancy Aranthangi" class="relative z-10 w-full h-auto object-contain drop-shadow-2xl" src="https://lh3.googleusercontent.com/aida/AEtjO1X7hSu3p6856MeXlRA7gvBFUzBnwB70Ku2a6d5pNbnbdWC7v4FHyIvz3GVIVQW2T0JVO6nS2ddrl94ry28bE4Lktq8lYuhwm0UnRo8jQiZ4euaGcWhrtFdWtBudFcPl6Smu08XzHS38dSRWLQX8U9uvyCXCuaLOVyIk_NAbiHcUzFyjnDkjHEv6tyPDf-F55VOQ3T80ZORxG6VfqWUsNTLkmXLnZ7zMZUB16A7d7iRvJfNpqjz8dC-6rPQ">
+              <img alt="Illustrative portrait of a student holding books" class="relative z-10 w-full h-auto object-contain drop-shadow-2xl" src="/hero-student.jpg">
             </div>
           </div>
         </div>
@@ -711,47 +715,40 @@
         </div>
         <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Your Future | Our Guidance. Trusted education consultancy in Aranthangi for transparent counselling and admission support.</p>
         <div class="flex flex-col gap-space-xs mt-space-sm">
-          <a class="inline-flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="mailto:studywala202226@gmail.com">
-            <span class="material-symbols-outlined text-[16px]">mail</span>studywala202226@gmail.com
+          <a class="inline-flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="mailto:thasleemsrt.05@gmail.com">
+            <span class="material-symbols-outlined text-[16px]">mail</span>thasleemsrt.05@gmail.com
           </a>
-          <a class="inline-flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="tel:+917667430388">
-            <span class="material-symbols-outlined text-[16px]">call</span>+91 76674 30388
-          </a>
-        </div>
-        <div class="flex items-center gap-space-xs mt-space-sm">
-          <a class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:bg-primary-container hover:text-on-primary transition-colors" href="#">
-            <span class="material-symbols-outlined text-[16px]">public</span>
-          </a>
-          <a class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:bg-primary-container hover:text-on-primary transition-colors" href="#">
-            <span class="material-symbols-outlined text-[16px]">photo_camera</span>
+          <a class="inline-flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="tel:+919976916786">
+            <span class="material-symbols-outlined text-[16px]">call</span>+91 99769 16786
           </a>
         </div>
+        <a class="inline-flex mt-space-sm font-body-sm text-body-sm text-brand-blue hover:underline" href="https://www.instagram.com/kalam_educational_aranthangi/" target="_blank" rel="noopener noreferrer">Follow our Instagram ↗</a>
       </div>
       <div class="flex flex-col gap-space-xs">
         <span class="font-label-lg text-label-lg text-on-surface mb-space-xs">Quick Links</span>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="#">Home</a>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="about-us" href="#">About Us</a>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Services</a>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="colleges" href="#">Colleges</a>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="contact-us" href="#">Contact Us</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="/index.html">Home</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="about-us" href="/about.html">About Us</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/services.html">Services</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="colleges" href="/colleges.html">Colleges</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="contact-us" href="/contact.html">Contact Us</a>
         <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="terms-and-conditions" href="#">Terms &amp; Conditions</a>
         <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a>
       </div>
       <div class="flex flex-col gap-space-xs">
         <span class="font-label-lg text-label-lg text-on-surface mb-space-xs">Services</span>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Admission Guidance</a>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Career Counselling</a>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">College Selection</a>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Application Assistance</a>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Local Guardian Support</a>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Course Selection</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/services.html">Admission Guidance</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/services.html">Career Counselling</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/services.html">College Selection</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/services.html">Application Assistance</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/services.html">Local Guardian Support</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/services.html">Course Selection</a>
       </div>
       <div class="flex flex-col gap-space-xs">
         <span class="font-label-lg text-label-lg text-on-surface mb-space-xs">Courses</span>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="#">MBBS</a>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="#">MD / MS</a>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="#">Management (MBA)</a>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="#">Engineering (B.Tech)</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="/courses.html">MBBS</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="/courses.html">MD / MS</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="/courses.html">Management (MBA)</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="/courses.html">Engineering (B.Tech)</a>
       </div>
     </div>
     <div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant">
@@ -761,9 +758,68 @@
   </div>
 </footer>
 
-<a class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-whatsapp-green text-surface-container-lowest rounded-full shadow-[0_20px_40px_-8px_rgba(9,13,22,0.16)] hover:scale-105 active:scale-95 transition-transform" href="https://wa.me/917667430388" rel="noopener noreferrer" target="_blank">
+<a data-home-whatsapp class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-whatsapp-green text-surface-container-lowest rounded-full shadow-[0_20px_40px_-8px_rgba(9,13,22,0.16)] hover:scale-105 active:scale-95 transition-transform" href="https://wa.me/919976916786" rel="noopener noreferrer" target="_blank">
   <span class="material-symbols-outlined text-[30px]">chat</span>
 </a>
 
+<script>
+  (() => {
+    const languageButtons = document.querySelectorAll('[data-home-language]')
+    const saved = localStorage.getItem('kalam-language') === 'ta' ? 'ta' : 'en'
+    const setLanguage = (language) => {
+      const selected = language === 'ta' ? 'ta' : 'en'
+      document.body.classList.toggle('home-lang-ta', selected === 'ta')
+      document.documentElement.lang = selected
+      localStorage.setItem('kalam-language', selected)
+      languageButtons.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.homeLanguage === selected)))
+      const whatsappLinks = document.querySelectorAll('[data-home-whatsapp]')
+      const messages = {
+        en: 'Hello, I would like guidance about courses and college admissions from Dr. Kalam Educational Consultancy, Aranthangi.',
+        ta: 'வணக்கம், டாக்டர் கலாம் கல்வி ஆலோசனை மையம், அரந்தாங்கியில் பாடப்பிரிவுகள் மற்றும் கல்லூரி சேர்க்கை வழிகாட்டல் பற்றி பேச விரும்புகிறேன்.',
+      }
+      whatsappLinks.forEach((link) => { link.href = `https://wa.me/919976916786?text=${encodeURIComponent(messages[selected])}` })
+    }
+    languageButtons.forEach((button) => button.addEventListener('click', () => setLanguage(button.dataset.homeLanguage)))
+    const menu = document.querySelector('.home-menu')
+    menu?.addEventListener('click', () => {
+      const navigation = document.querySelector('#home-navigation')
+      const open = menu.getAttribute('aria-expanded') !== 'true'
+      menu.setAttribute('aria-expanded', String(open))
+      menu.setAttribute('aria-label', open ? 'Close menu' : 'Open menu')
+      menu.textContent = open ? '×' : '☰'
+      navigation?.classList.toggle('open', open)
+    })
+
+    const slides = [...document.querySelectorAll('[data-kural-slide]')]
+    const dots = [...document.querySelectorAll('[data-kural-go]')]
+    const carousel = document.querySelector('.home-quote')
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    let activeSlide = 0
+    let carouselTimer
+    let carouselPaused = false
+    const showKural = (index) => {
+      activeSlide = (index + slides.length) % slides.length
+      slides.forEach((slide, slideIndex) => { slide.hidden = slideIndex !== activeSlide })
+      dots.forEach((dot, dotIndex) => dot.setAttribute('aria-current', String(dotIndex === activeSlide)))
+      window.clearInterval(carouselTimer)
+      if (!reducedMotion && !carouselPaused && !document.hidden) {
+        carouselTimer = window.setInterval(() => showKural(activeSlide + 1), 6000)
+      }
+    }
+    dots.forEach((dot) => dot.addEventListener('click', () => showKural(Number(dot.dataset.kuralGo))))
+    carousel?.addEventListener('mouseenter', () => { carouselPaused = true; window.clearInterval(carouselTimer) })
+    carousel?.addEventListener('mouseleave', () => { carouselPaused = false; showKural(activeSlide) })
+    carousel?.addEventListener('focusin', () => { carouselPaused = true; window.clearInterval(carouselTimer) })
+    carousel?.addEventListener('focusout', (event) => {
+      if (!carousel.contains(event.relatedTarget)) { carouselPaused = false; showKural(activeSlide) }
+    })
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) window.clearInterval(carouselTimer)
+      else showKural(activeSlide)
+    })
+    if (slides.length) showKural(0)
+    setLanguage(saved)
+  })()
+</script>
 </body>
 </html>

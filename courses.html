@@ -1,31 +1,1241 @@
-<!doctype html>
-<html lang="en" class="lang-en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Explore study areas and course-selection support from Dr. Kalam Educational Consultancy in Aranthangi.">
-  <title data-title-ta="பாடப்பிரிவுகள் | டாக்டர் கலாம் கல்வி ஆலோசனை மையம்">Courses | Dr. Kalam Educational Consultancy</title>
-  <link rel="icon" href="/kalam-emblem.jpg"><link rel="stylesheet" href="/site.css"><script type="module" src="/site.js"></script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+  <title>Courses | Dr. Kalam Educational Consultancy</title>
+  <link rel="icon" type="image/jpeg" href="/images/kalam-emblem.jpg">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+
+    /* Infinite marquee animation */
+    @keyframes marquee-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      animation: marquee-scroll 32s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+    .icon-filled {
+      font-variation-settings: 'FILL' 1;
+    }
+
+    /* Soft light blue backdrop circle */
+    .hero-circle-bg {
+      background-color: #dbeafe;
+      border-radius: 9999px;
+      aspect-ratio: 1 / 1;
+    }
+    
+    .student-crop-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 9999px;
+    }
+
+    .student-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#1a6ef4',
+              hover: '#1357c9',
+              circle: '#dbeafe',
+            },
+            neutral: {
+              heading: '#101828',
+              body: '#5d6b82',
+              outline: '#1e293b'
+            },
+            "error-container": "#ffdad6",
+            "surface-bright": "#f8f9ff",
+            "surface-dim": "#ccdbf3",
+            "surface-container": "#e6eeff",
+            "surface-sunlit": "#FEF3C7",
+            "on-background": "#0d1c2e",
+            "inverse-on-surface": "#eaf1ff",
+            "error": "#ba1a1a",
+            "tertiary": "#a73a00",
+            "on-secondary-fixed": "#131b2e",
+            "inverse-primary": "#ffb95f",
+            "surface-container-high": "#dce9ff",
+            "success-emerald": "#10B981",
+            "surface-container-highest": "#d5e3fc",
+            "surface-variant": "#d5e3fc",
+            "on-error-container": "#93000a",
+            "secondary-fixed-dim": "#bec6e0",
+            "on-tertiary-container": "#7a2800",
+            "primary-fixed-dim": "#ffb95f",
+            "outline": "#867461",
+            "surface-container-lowest": "#ffffff",
+            "background": "#f8f9ff",
+            "on-surface": "#0d1c2e",
+            "outline-variant": "#d8c3ad",
+            "trust-navy": "#090D16",
+            "secondary": "#565e74",
+            "on-error": "#ffffff",
+            "tertiary-fixed": "#ffdbce",
+            "on-secondary": "#ffffff",
+            "on-tertiary-fixed": "#370e00",
+            "surface-cream": "#FFFDF9",
+            "tertiary-fixed-dim": "#ffb599",
+            "on-primary-fixed": "#2a1700",
+            "on-surface-variant": "#534434",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#613b00",
+            "on-tertiary-fixed-variant": "#7f2b00",
+            "on-primary-fixed-variant": "#653e00",
+            "surface-container-low": "#eff4ff",
+            "secondary-fixed": "#dae2fd",
+            "primary": "#855300",
+            "on-tertiary": "#ffffff",
+            "inverse-surface": "#233144",
+            "primary-fixed": "#ffddb8",
+            "whatsapp-green": "#25D366",
+            "surface-tint": "#855300",
+            "tertiary-container": "#ff956b",
+            "border-subtle": "#E2E8F0",
+            "primary-container": "#f59e0b",
+            "on-secondary-fixed-variant": "#3f465c",
+            "surface": "#f8f9ff",
+            "secondary-container": "#dae2fd",
+            "on-secondary-container": "#5c647a"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px"
+          },
+          spacing: {
+            "space-xl": "2.5rem",
+            "space-xs": "0.25rem",
+            "gutter-mobile": "1rem",
+            "gutter": "1.5rem",
+            "space-lg": "1.5rem",
+            "margin-mobile": "1rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "margin": "2rem"
+          },
+          fontFamily: {
+            "body-md": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "display-hero-mobile": ["Plus Jakarta Sans"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "display-hero": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "metric-display": ["Plus Jakarta Sans"]
+          },
+          fontSize: {
+            "body-md": ["15px", { lineHeight: "24px", fontWeight: "400" }],
+            "label-sm": ["11px", { lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "700" }],
+            "headline-md": ["20px", { lineHeight: "28px", fontWeight: "600" }],
+            "display-hero-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "800" }],
+            "headline-xl-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700" }],
+            "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "display-hero": ["56px", { lineHeight: "64px", letterSpacing: "-0.03em", fontWeight: "800" }],
+            "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700" }],
+            "body-sm": ["13px", { lineHeight: "20px", fontWeight: "400" }],
+            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+            "label-lg": ["15px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }],
+            "metric-display": ["48px", { lineHeight: "52px", letterSpacing: "-0.03em", fontWeight: "800" }]
+          }
+        }
+      }
+    };
+  </script>
 </head>
-<body><header class="site-header" data-site-header></header><main>
-  <section class="page-hero"><div class="wrap page-hero-grid"><div><div class="crumb"><a href="/index.html"><span data-lang="en">Home</span><span data-lang="ta">முகப்பு</span></a> / <span data-lang="en">Courses</span><span data-lang="ta">பாடப்பிரிவுகள்</span></div><span class="eyebrow"><span data-lang="en">Explore your options</span><span data-lang="ta">உங்கள் வாய்ப்புகளை ஆராயுங்கள்</span></span><h1 data-lang="en">Choose a course that fits your future.</h1><h1 data-lang="ta">உங்கள் எதிர்காலத்திற்குப் பொருந்தும் பாடப்பிரிவைத் தேர்வு செய்யுங்கள்.</h1><p class="lead" data-lang="en">Start with what interests you. Compare course pathways, entry requirements and college options before making a decision.</p><p class="lead" data-lang="ta">உங்களுக்கு ஆர்வமுள்ளவற்றிலிருந்து தொடங்குங்கள். முடிவெடுப்பதற்கு முன் பாடப்பாதைகள், சேர்க்கைத் தகுதி, கல்லூரி வாய்ப்புகளை ஒப்பிடுங்கள்.</p><div class="btn-row"><a class="btn" href="/contact.html"><span data-lang="en">Get course guidance</span><span data-lang="ta">பாடப்பிரிவு வழிகாட்டல் பெறுங்கள்</span> →</a></div></div><aside class="hero-note"><div class="note-icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Zm-5 0a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg></div><strong data-lang="en">Begin with the student, not the trend</strong><strong data-lang="ta">பிரபலத்தை விட மாணவரிலிருந்து தொடங்குங்கள்</strong><p data-lang="en">A popular course is not automatically the right course. Interests, academic preparation, cost and long-term plans all matter.</p><p data-lang="ta">பிரபலமான பாடப்பிரிவு என்பதால் அது சரியான தேர்வாகிவிடாது. ஆர்வம், கல்வித் தயாரிப்பு, செலவு, நீண்டகாலத் திட்டம் அனைத்தும் முக்கியம்.</p></aside></div></section>
-  <section class="section"><div class="wrap"><div class="section-head"><span class="eyebrow"><span data-lang="en">Study areas</span><span data-lang="ta">படிப்புத் துறைகள்</span></span><h2 data-lang="en">A starting point for your course search.</h2><h2 data-lang="ta">பாடப்பிரிவு தேடலுக்கான தொடக்கம்.</h2><p data-lang="en">These are broad areas listed in our current education guidance materials. Specific programmes and admissions depend on the institution and current rules.</p><p data-lang="ta">எங்கள் தற்போதைய கல்வி வழிகாட்டல் தகவல்களில் உள்ள பொதுவான துறைகள் இவை. குறிப்பிட்ட பாடத்திட்டமும் சேர்க்கையும் கல்வி நிறுவனம் மற்றும் நடைமுறை விதிகளைப் பொறுத்தது.</p></div>
-  <div class="grid-3">
-    <article class="card course-card"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></div><h3 data-lang="en">Medical &amp; health sciences</h3><h3 data-lang="ta">மருத்துவம் மற்றும் சுகாதார அறிவியல்</h3><p data-lang="en">Explore programmes such as MBBS, MD/MS, nursing and allied health courses.</p><p data-lang="ta">MBBS, MD/MS, செவிலியர் மற்றும் துணை சுகாதார அறிவியல் பாடப்பிரிவுகளை ஆராயுங்கள்.</p><a class="card-link" href="/contact.html"><span data-lang="en">Ask about medical courses</span><span data-lang="ta">மருத்துவப் படிப்புகள் பற்றி கேளுங்கள்</span> →</a></article>
-    <article class="card course-card gold"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div><h3 data-lang="en">Engineering &amp; technology</h3><h3 data-lang="ta">பொறியியல் மற்றும் தொழில்நுட்பம்</h3><p data-lang="en">Compare engineering pathways, specialisations and the colleges offering them.</p><p data-lang="ta">பொறியியல் படிப்புகள், சிறப்புத் துறைகள், அவற்றை வழங்கும் கல்லூரிகளை ஒப்பிடுங்கள்.</p><a class="card-link" href="/contact.html"><span data-lang="en">Discuss engineering</span><span data-lang="ta">பொறியியல் பற்றி பேசுங்கள்</span> →</a></article>
-    <article class="card course-card"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3h14v18H5zM9 3v18m6-18v18M5 8h14m-14 8h14"/></svg></div><h3 data-lang="en">Management &amp; business</h3><h3 data-lang="ta">மேலாண்மை மற்றும் வணிகம்</h3><p data-lang="en">Understand undergraduate and postgraduate options, including MBA pathways.</p><p data-lang="ta">MBA உள்ளிட்ட இளநிலை மற்றும் முதுநிலை வாய்ப்புகளைப் புரிந்து கொள்ளுங்கள்.</p><a class="card-link" href="/contact.html"><span data-lang="en">Explore management courses</span><span data-lang="ta">மேலாண்மை படிப்புகளை ஆராயுங்கள்</span> →</a></article>
-    <article class="card course-card"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m15 5 4 4M4 20l4-.8L19 8a2.8 2.8 0 0 0-4-4L4 15l-.8 4.5Z"/></svg></div><h3 data-lang="en">Arts, science &amp; commerce</h3><h3 data-lang="ta">கலை, அறிவியல் மற்றும் வணிகவியல்</h3><p data-lang="en">Consider degree choices that build academic depth and open different future pathways.</p><p data-lang="ta">ஆழமான கல்வியையும் பல்வேறு எதிர்காலப் பாதைகளையும் வழங்கும் பட்டப்படிப்புகளைப் பரிசீலியுங்கள்.</p><a class="card-link" href="/contact.html"><span data-lang="en">Explore degree options</span><span data-lang="ta">பட்டப்படிப்பு வாய்ப்புகளை ஆராயுங்கள்</span> →</a></article>
-    <article class="card course-card green"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/></svg></div><h3 data-lang="en">Nursing &amp; allied health</h3><h3 data-lang="ta">செவிலியர் மற்றும் துணை சுகாதாரப் படிப்புகள்</h3><p data-lang="en">Compare nursing and allied-health programmes with attention to eligibility and institution recognition.</p><p data-lang="ta">தகுதி மற்றும் கல்வி நிறுவன அங்கீகாரத்தை கவனத்தில் கொண்டு செவிலியர், துணை சுகாதாரப் படிப்புகளை ஒப்பிடுங்கள்.</p><a class="card-link" href="/contact.html"><span data-lang="en">Ask about health programmes</span><span data-lang="ta">சுகாதாரப் படிப்புகள் பற்றி கேளுங்கள்</span> →</a></article>
-    <article class="card course-card gold"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3 4 6v6c0 5 3.4 8.5 8 10 4.6-1.5 8-5 8-10V6l-8-3Zm-3 8 2 2 4-4"/></svg></div><h3 data-lang="en">Law &amp; education</h3><h3 data-lang="ta">சட்டம் மற்றும் கல்வியியல்</h3><p data-lang="en">Learn about law, teacher education and other professional study pathways.</p><p data-lang="ta">சட்டம், ஆசிரியர் பயிற்சி மற்றும் பிற தொழில்முறைப் படிப்புப் பாதைகள் பற்றி அறியுங்கள்.</p><a class="card-link" href="/contact.html"><span data-lang="en">Discuss other study paths</span><span data-lang="ta">பிற படிப்புப் பாதைகள் குறித்து பேசுங்கள்</span> →</a></article>
-  </div></div></section>
-  <section class="section soft"><div class="wrap">
-    <div class="section-head"><span class="eyebrow"><span data-lang="en">Before you choose</span><span data-lang="ta">தேர்வு செய்வதற்கு முன்</span></span><h2 data-lang="en">Compare the whole picture.</h2><h2 data-lang="ta">முழுப் படத்தையும் ஒப்பிடுங்கள்.</h2><p data-lang="en">A good course decision considers more than a title. Use these four checks to compare options with your family.</p><p data-lang="ta">ஒரு நல்ல பாடப்பிரிவு முடிவு பெயரை மட்டும் சார்ந்ததல்ல. குடும்பத்துடன் வாய்ப்புகளை ஒப்பிட இந்த நான்கு அம்சங்களையும் பாருங்கள்.</p></div>
-    <ol class="course-flow">
-      <li class="course-flow-step"><span class="course-flow-number">01</span><h3 data-lang="en">Interests &amp; strengths</h3><h3 data-lang="ta">ஆர்வமும் திறன்களும்</h3><p data-lang="en">Consider subjects, personal goals and preferred learning style.</p><p data-lang="ta">பாடங்கள், தனிப்பட்ட இலக்குகள், விருப்பமான கற்றல் முறையைப் பாருங்கள்.</p></li>
-      <li class="course-flow-step"><span class="course-flow-number">02</span><h3 data-lang="en">Cost &amp; location</h3><h3 data-lang="ta">செலவும் இடமும்</h3><p data-lang="en">Compare fees, living costs, travel and family needs.</p><p data-lang="ta">கட்டணம், வாழ்க்கைச் செலவு, பயணம், குடும்பத் தேவைகளை ஒப்பிடுங்கள்.</p></li>
-      <li class="course-flow-step"><span class="course-flow-number">03</span><h3 data-lang="en">Eligibility &amp; process</h3><h3 data-lang="ta">தகுதியும் செயல்முறையும்</h3><p data-lang="en">Check current requirements, deadlines and application routes.</p><p data-lang="ta">தற்போதைய தகுதி, காலக்கெடு, விண்ணப்ப வழிகளைச் சரிபாருங்கள்.</p></li>
-      <li class="course-flow-step"><span class="course-flow-number">04</span><h3 data-lang="en">Next steps</h3><h3 data-lang="ta">அடுத்த படிகள்</h3><p data-lang="en">Know what to verify and whom to contact before applying.</p><p data-lang="ta">விண்ணப்பிக்கும் முன் எதை உறுதிப்படுத்துவது, யாரைத் தொடர்புகொள்வது என்பதை அறியுங்கள்.</p></li>
-    </ol>
-  </div></section>
-  <section class="section"><div class="wrap disclaimer"><strong data-lang="en">Please verify current information:</strong><strong data-lang="ta">தற்போதைய தகவல்களைச் சரிபார்க்கவும்:</strong> <span data-lang="en">Course names, eligibility, recognition, entrance requirements, fees and admission dates may change. Confirm details with the relevant college or official counselling authority before applying.</span><span data-lang="ta">பாடப்பெயர்கள், தகுதி, அங்கீகாரம், நுழைவுத் தேர்வு, கட்டணம், சேர்க்கை தேதிகள் மாறக்கூடும். விண்ணப்பிக்கும் முன் சம்பந்தப்பட்ட கல்லூரி அல்லது அதிகாரப்பூர்வ கலந்தாய்வு ஆணையத்திடம் உறுதிப்படுத்துங்கள்.</span></div></section>
-  <section class="section soft"><div class="wrap cta"><div><h2 data-lang="en">Let's find the right questions first.</h2><h2 data-lang="ta">சரியான கேள்விகளிலிருந்து தொடங்குவோம்.</h2><p data-lang="en">Talk with us about your academic goals and course interests.</p><p data-lang="ta">உங்கள் கல்வி இலக்குகள் மற்றும் பாடப்பிரிவு ஆர்வங்கள் குறித்து பேசுங்கள்.</p></div><a class="btn gold" href="/contact.html"><span data-lang="en">Get in touch</span><span data-lang="ta">தொடர்பு கொள்ளுங்கள்</span> →</a></div></section>
-</main><footer class="site-footer" data-site-footer></footer><a class="float-wa" href="https://wa.me/919976916786" target="_blank" rel="noopener noreferrer"><span data-lang="en">WhatsApp us</span><span data-lang="ta">WhatsApp செய்யுங்கள்</span> ↗</a></body></html>
+<body class="bg-background font-body-md text-body-md text-on-surface flex flex-col min-h-screen">
+
+<header class="w-full bg-white z-50 sticky top-0 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+  <div class="w-full px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between">
+    <!-- Brand Logo -->
+    <a href="/index.html" class="inline-flex items-center hover:opacity-90 transition-opacity">
+      <img src="/kalam-logo.jpg" alt="Dr. Kalam Educational and Employment Consultancy" class="h-14 sm:h-16 md:h-18 lg:h-20 w-auto object-contain transition-all duration-200">
+    </a>
+
+    <!-- Navigation Links & Right Action -->
+    <div class="flex items-center gap-8 lg:gap-10">
+      <nav class="hidden md:flex items-center gap-7 lg:gap-8 font-medium text-[15px]">
+        <a href="/index.html" class="text-neutral-heading/80 hover:text-brand-blue transition-colors duration-150 py-1">Home</a>
+        <a href="/about.html" class="text-neutral-heading/80 hover:text-brand-blue transition-colors duration-150 py-1">About Us</a>
+        <a href="/courses.html" class="relative text-neutral-heading font-semibold hover:text-brand-blue transition-colors duration-150 py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2.5px] after:bg-[#f59e0b] after:rounded-full">Courses</a>
+        <a href="/colleges.html" class="text-neutral-heading/80 hover:text-brand-blue transition-colors duration-150 py-1">Colleges</a>
+        <a href="/contact.html" class="text-neutral-heading/80 hover:text-brand-blue transition-colors duration-150 py-1">Contact Us</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/919976916786" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-8 h-8 rounded-full bg-[#25D366] flex items-center justify-center text-white hover:opacity-90 transition-opacity shadow-sm">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/kalam_educational_aranthangi/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-8 h-8 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] flex items-center justify-center text-white hover:opacity-90 transition-opacity shadow-sm p-1.5">
+          <svg class="w-full h-full fill-none stroke-current stroke-[2]" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+        <button type="button" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-neutral-heading hover:bg-gray-100" id="home-mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile Navigation Menu -->
+  <div id="home-mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white px-6 py-4 space-y-3">
+    <a href="/index.html" class="block text-neutral-heading hover:text-brand-blue py-1">Home</a>
+    <a href="/about.html" class="block text-neutral-heading hover:text-brand-blue py-1">About Us</a>
+    <a href="/courses.html" class="block font-semibold text-brand-blue py-1">Courses</a>
+    <a href="/colleges.html" class="block text-neutral-heading hover:text-brand-blue py-1">Colleges</a>
+    <a href="/contact.html" class="block text-neutral-heading hover:text-brand-blue py-1">Contact Us</a>
+  </div>
+</header>
+
+<main class="flex-1 w-full bg-white relative overflow-hidden">
+  
+  <!-- Background Kalam Logo Watermarks (Small) -->
+  <div class="absolute top-20 left-1/2 -translate-x-1/2 pointer-events-none select-none overflow-hidden">
+    <img src="/images/kalam-emblem-circle.png" alt="" class="w-[180px] sm:w-[220px] md:w-[260px] h-auto object-contain opacity-10 mix-blend-multiply" />
+  </div>
+  <div class="absolute top-[35%] left-1/2 -translate-x-1/2 pointer-events-none select-none overflow-hidden">
+    <img src="/images/kalam-emblem-circle.png" alt="" class="w-[180px] sm:w-[220px] md:w-[260px] h-auto object-contain opacity-10 mix-blend-multiply" />
+  </div>
+  <div class="absolute top-[68%] left-1/2 -translate-x-1/2 pointer-events-none select-none overflow-hidden">
+    <img src="/images/kalam-emblem-circle.png" alt="" class="w-[180px] sm:w-[220px] md:w-[260px] h-auto object-contain opacity-10 mix-blend-multiply" />
+  </div>
+
+  <!-- Courses Section -->
+  <section class="w-full py-10 lg:py-14 px-4 sm:px-6 lg:px-10 xl:px-12 max-w-7xl 2xl:max-w-[1400px] mx-auto relative z-10">
+    <div id="courses-grid" class="w-full space-y-12">
+
+      <!-- 1. BE (BACHELOR OF ENGINEERING 4 YEARS) -->
+      <div class="category-section border-b border-gray-100 pb-12">
+        <div class="mb-6">
+          <h2 class="text-xl sm:text-2xl font-black text-gray-900 tracking-wide uppercase">
+            BE (BACHELOR OF ENGINEERING 4 YEARS)
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-10 items-center">
+          
+          <!-- Left: 2 Columns of BE Courses (16 + 16 disciplines) -->
+          <div class="lg:col-span-6 xl:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-x-5 xl:gap-x-7 gap-y-3.5">
+            
+            <!-- Column 1 (Left 16 Courses) -->
+            <div class="space-y-3.5">
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Aeronautical Engineering</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Marine / EEE / ECE / CSE</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Civil Engineering</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Information Technology (IT)</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Petroleum Engineering</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Chemical Engineering</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Agricultural Engineering</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Industrial Engineering</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Environmental Engineering</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Materials Engineering</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Food Technology</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Mechatronics</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Printing Technology</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Pharmaceutical Engineering</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Fermentation Technology</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Bioinformatics</span>
+              </div>
+            </div>
+
+            <!-- Column 2 (Middle 16 Courses) -->
+            <div class="space-y-3.5">
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Mechanical &amp; Automation</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Telecommunication and Networking</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Food Processing &amp; Preservation Technology</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Artificial Intelligence and Machine Learning</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Medical Electronics</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Aerospace Engineering</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Electronics &amp; Instrumentation Engineering</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Robotics &amp; Automation Engineering</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Tech-Communication Engineering</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Pharmaceutical Technology</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Bachelor of Architecture (B.Arch) (5 Years)</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Artificial Intelligence &amp; Data Science</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Textile Chemistry Engineering</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Industrial Engineering</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Information Science &amp; Network System</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Cyber Security</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: 3 Girls Image (Large & Prominent on Desktop) -->
+          <div class="lg:col-span-6 xl:col-span-6 flex items-center justify-center lg:justify-end pt-4 lg:pt-0 w-full">
+            <img 
+              src="/images/courses-students-clean.png?v=3" 
+              alt="Engineering, Medical, Science Students - Dr. Kalam Educational Consultancy" 
+              class="w-full max-w-[560px] lg:max-w-none xl:max-w-none h-auto object-contain" 
+            />
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2. ME (MASTER OF ENGINEERING) -->
+      <div class="category-section border-b border-gray-100 pb-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-10 items-center">
+          
+          <!-- Left: ME Student Image -->
+          <div class="lg:col-span-5 xl:col-span-5 flex items-center justify-center lg:justify-start">
+            <img 
+              src="/images/me-student.png?v=4" 
+              alt="ME Master of Engineering Postgraduate Student - Dr. Kalam Educational Consultancy" 
+              class="w-full max-w-[360px] sm:max-w-[400px] lg:max-w-[430px] xl:max-w-[460px] h-auto object-contain" 
+            />
+          </div>
+
+          <!-- Right: ME Courses Side with Heading -->
+          <div class="lg:col-span-7 xl:col-span-7 space-y-6">
+            <div>
+              <h2 class="text-xl sm:text-2xl font-black text-gray-900 tracking-wide uppercase">
+                ME (MASTER OF ENGINEERING)
+              </h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 xl:gap-x-8 gap-y-3.5">
+            
+            <!-- Column 1 (Left 11 Courses) -->
+            <div class="space-y-3.5">
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Engineering Design</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>CSE Engineering</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>CAD &amp; CAM</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>VLSI Design</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Embedded System</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Applied Electronics</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Thermal Engineering</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Aeronautical Engineering</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Environmental Engineering</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Structural Engineering</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Industrial Safety Engineering</span>
+              </div>
+            </div>
+
+            <!-- Column 2 (Right 11 Courses) -->
+            <div class="space-y-3.5">
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Automobile Engineering</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Manufacturing Engineering</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Communication System</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Bio Medical Engineering</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Construction Engineering &amp; Management</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>M.Tech Information Technology</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Power Electronics &amp; Drives</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Chemical Engineering</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Medical Equipment Technology</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Food Processing &amp; Engineering</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Master of Architecture (M.Arch)</span>
+              </div>
+            </div>
+
+          </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 3. ARTS & SCIENCE COURSES -->
+      <div class="category-section border-b border-gray-100 pb-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-10 items-center">
+          
+          <!-- Left: Arts & Science Courses with Heading -->
+          <div class="lg:col-span-7 xl:col-span-7 space-y-6">
+            <div>
+              <h2 class="text-xl sm:text-2xl font-black text-gray-900 tracking-wide uppercase">
+                ARTS &amp; SCIENCE (UG &amp; PG PROGRAMMES)
+              </h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 xl:gap-x-8 gap-y-3.5">
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>B.Sc Computer Science</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>B.Sc Information Technology</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>B.Sc Mathematics / Physics / Chemistry</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>B.Com (General / CA / CS)</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>BBA (Bachelor of Business Administration)</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>BCA (Bachelor of Computer Applications)</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>B.A (English Literature / Tamil / Economics)</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>M.Sc (Computer Science / IT / Maths)</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>M.Com (Commerce &amp; Finance)</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>M.A (English / Economics)</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>MSW (Master of Social Work)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Arts & Science Student Image -->
+          <div class="lg:col-span-5 xl:col-span-5 flex items-center justify-center lg:justify-end">
+            <img 
+              src="/images/arts-student.png?v=4" 
+              alt="Arts and Science College Student - Dr. Kalam Educational Consultancy" 
+              class="w-full max-w-[360px] sm:max-w-[400px] lg:max-w-[430px] xl:max-w-[460px] h-auto object-contain" 
+            />
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 4. ALLIED HEALTH SCIENCE AND RESEARCH (4 YEARS) -->
+      <div class="category-section border-b border-gray-100 pb-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-10 items-center">
+          
+          <!-- Left: Allied Health Student Image -->
+          <div class="lg:col-span-5 xl:col-span-5 flex items-center justify-center lg:justify-start">
+            <img 
+              src="/images/allied-health-student.png?v=4" 
+              alt="Allied Health Science & Research Student - Dr. Kalam Educational Consultancy" 
+              class="w-full max-w-[360px] sm:max-w-[400px] lg:max-w-[430px] xl:max-w-[460px] h-auto object-contain" 
+            />
+          </div>
+
+          <!-- Right: Allied Health Courses with Heading -->
+          <div class="lg:col-span-7 xl:col-span-7 space-y-6">
+            <div>
+              <h2 class="text-xl sm:text-2xl font-black text-gray-900 tracking-wide uppercase">
+                ALLIED HEALTH SCIENCE AND RESEARCH (4 YEARS)
+              </h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 xl:gap-x-8 gap-y-3.5">
+              <!-- Column 1 (7 Courses) -->
+              <div class="space-y-3.5">
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>B.Sc Radiography and Imaging Technology</span>
+                </div>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>Accident and Emergency Care Technology</span>
+                </div>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>Operation Theatre &amp; Anaesthesia Technology</span>
+                </div>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>Cardio Pulmonary Perfusion Care Technology</span>
+                </div>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>Dialysis Technology Cardiac Technology</span>
+                </div>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>Respiratory Therapy Optometry</span>
+                </div>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>Neuro Electro Physiology</span>
+                </div>
+              </div>
+
+              <!-- Column 2 (7 Courses) -->
+              <div class="space-y-3.5">
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>Nuclear Medicine Technology</span>
+                </div>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>Physician Assistant Micro Biology</span>
+                </div>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>Medical Laboratory Technology</span>
+                </div>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>Critical Care Technology</span>
+                </div>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>Fitness &amp; Life Style Modification</span>
+                </div>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>Audiology &amp; Speech Language Pathology</span>
+                </div>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>Bachelor of Science in Prosthetics &amp; Orthotics</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 5. MEDICAL & AYUSH MEDICINE & SURGERY -->
+      <div class="category-section border-b border-gray-100 pb-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-10 items-center">
+          
+          <!-- Left: Medical & AYUSH Courses with Heading -->
+          <div class="lg:col-span-7 xl:col-span-7 space-y-6">
+            <div>
+              <h2 class="text-xl sm:text-2xl font-black text-gray-900 tracking-wide uppercase">
+                MEDICAL &amp; AYUSH MEDICINE &amp; SURGERY
+              </h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 xl:gap-x-8 gap-y-3.5">
+              <!-- Column 1: Medical Degrees -->
+              <div class="space-y-3.5">
+                <span class="inline-block text-xs font-black uppercase text-brand-blue tracking-wider">Medical Degrees</span>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>MBBS (Domestic) 5 Years</span>
+                </div>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>MS (Abroad) 5 1/2 Years</span>
+                </div>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>BDS (Bachelor of Dental Surgery) 4+1 Years</span>
+                </div>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>MDS (Master of Dental Surgery) 3 Years</span>
+                </div>
+              </div>
+
+              <!-- Column 2: AYUSH Systems of Medicine -->
+              <div class="space-y-3.5">
+                <span class="inline-block text-xs font-black uppercase text-brand-blue tracking-wider">AYUSH Traditional Medicine</span>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>BHMS (Bachelor of Homeopathic Medicine &amp; Surgery)</span>
+                </div>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>BNYS (Naturopathy &amp; Yoga Science)</span>
+                </div>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>BSMS (Siddha Medicine &amp; Surgery)</span>
+                </div>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>BUMS (Unani Medicine &amp; Surgery)</span>
+                </div>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>BAMS (Ayurvedic Medicine &amp; Surgery)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Medical Student Doctor Image -->
+          <div class="lg:col-span-5 xl:col-span-5 flex items-center justify-center lg:justify-end">
+            <img 
+              src="/images/medical-student.png?v=4" 
+              alt="Medical & AYUSH Doctor Student - Dr. Kalam Educational Consultancy" 
+              class="w-full max-w-[360px] sm:max-w-[400px] lg:max-w-[430px] xl:max-w-[460px] h-auto object-contain" 
+            />
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 6. NURSING & PHARMACY -->
+      <div class="category-section border-b border-gray-100 pb-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-10 items-center">
+          
+          <!-- Left: Nursing Student Image -->
+          <div class="lg:col-span-5 xl:col-span-5 flex items-center justify-center lg:justify-start">
+            <img 
+              src="/images/nursing-student.png?v=4" 
+              alt="Nursing & Pharmacy Healthcare Student - Dr. Kalam Educational Consultancy" 
+              class="w-full max-w-[360px] sm:max-w-[400px] lg:max-w-[430px] xl:max-w-[460px] h-auto object-contain" 
+            />
+          </div>
+
+          <!-- Right: Nursing & Pharmacy Courses with Heading -->
+          <div class="lg:col-span-7 xl:col-span-7 space-y-6">
+            <div>
+              <h2 class="text-xl sm:text-2xl font-black text-gray-900 tracking-wide uppercase">
+                NURSING &amp; PHARMACY
+              </h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 xl:gap-x-8 gap-y-3.5">
+              <!-- Column 1: Nursing -->
+              <div class="space-y-3.5">
+                <span class="inline-block text-xs font-black uppercase text-brand-blue tracking-wider">Nursing Programmes</span>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>B.Sc., Nursing (4 Years)</span>
+                </div>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>M.Sc., Nursing (2 Years)</span>
+                </div>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>Post Basic B.Sc., Nursing (2 Years)</span>
+                </div>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>Diploma in Nursing (3 Years)</span>
+                </div>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>ANM (Auxiliary Nursing Midwifery) (2 Years)</span>
+                </div>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>GNM (General Nursing Midwifery) (3 1/2 Years)</span>
+                </div>
+              </div>
+
+              <!-- Column 2: Pharmacy -->
+              <div class="space-y-3.5">
+                <span class="inline-block text-xs font-black uppercase text-brand-blue tracking-wider">Pharmacy Programmes</span>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>Pharm-D (6 Years)</span>
+                </div>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>B-Pharmacy (4 Years)</span>
+                </div>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>D-Pharmacy (2 Years)</span>
+                </div>
+                <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                  <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                  <span>M-Pharm (2 Years)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 7. PHYSIOTHERAPY & OCCUPATIONAL THERAPY -->
+      <div class="category-section border-b border-gray-100 pb-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-10 items-center">
+          
+          <!-- Left: Physiotherapy Courses with Heading -->
+          <div class="lg:col-span-7 xl:col-span-7 space-y-6">
+            <div>
+              <h2 class="text-xl sm:text-2xl font-black text-gray-900 tracking-wide uppercase">
+                PHYSIOTHERAPY &amp; OCCUPATIONAL THERAPY
+              </h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 xl:gap-x-8 gap-y-3.5">
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>B.P.T - Bachelor of Physiotherapy (4 Years)</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>M.P.T - Master of Physical Therapy (2 Years)</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>B.O.T - Bachelor of Occupational Therapy (4 Yrs)</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>M.O.T - Master of Occupational Therapy (2 Yrs)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Physiotherapy Student Image -->
+          <div class="lg:col-span-5 xl:col-span-5 flex items-center justify-center lg:justify-end">
+            <img 
+              src="/images/physio-student.png?v=4" 
+              alt="Physiotherapy Student - Dr. Kalam Educational Consultancy" 
+              class="w-full max-w-[340px] sm:max-w-[380px] lg:max-w-[410px] xl:max-w-[440px] h-auto object-contain" 
+            />
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 8. MANAGEMENT STUDIES -->
+      <div class="category-section border-b border-gray-100 pb-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-10 items-center">
+          
+          <!-- Left: Management Studies Image -->
+          <div class="lg:col-span-5 xl:col-span-5 flex items-center justify-center lg:justify-start">
+            <img 
+              src="/images/management-student.png?v=4" 
+              alt="MBA & MCA Business Management Student - Dr. Kalam Educational Consultancy" 
+              class="w-full max-w-[360px] sm:max-w-[400px] lg:max-w-[430px] xl:max-w-[460px] h-auto object-contain" 
+            />
+          </div>
+
+          <!-- Right: Management Studies Courses with Heading -->
+          <div class="lg:col-span-7 xl:col-span-7 space-y-6">
+            <div>
+              <h2 class="text-xl sm:text-2xl font-black text-gray-900 tracking-wide uppercase">
+                MANAGEMENT STUDIES (MBA / MCA)
+              </h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 xl:gap-x-8 gap-y-3.5">
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>MBA (Master of Business Administration) 2 Years</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>MCA (Master of Computer Application) 2 Years</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>MBA (Integrated) 5 Years</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 9. DIPLOMA COURSES & SANITARY HEALTH INSPECTOR -->
+      <div class="category-section border-b border-gray-100 pb-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-10 items-center">
+          
+          <!-- Left: Diploma Courses with Heading -->
+          <div class="lg:col-span-7 xl:col-span-7 space-y-6">
+            <div>
+              <h2 class="text-xl sm:text-2xl font-black text-gray-900 tracking-wide uppercase">
+                DIPLOMA COURSES &amp; SANITARY INSPECTOR
+              </h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 xl:gap-x-8 gap-y-3.5">
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Chemical Engineering 5 Years</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Civil / Mech / Automobile / CSE</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>ECE / EEE / Architecture</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Petrochemical Engineering</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Fire Technology &amp; Safety Engineering</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Textile &amp; Textile Processing</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Garment Technology Processing</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Technical X-Ray Technology</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Medical Laboratory Technology</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Food Processing &amp; Preservation</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Diploma in Sanitary Health Inspector (2 Years) - Gents Only</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Public Health &amp; Municipal Sanitation Specialization</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Diploma Student Image -->
+          <div class="lg:col-span-5 xl:col-span-5 flex items-center justify-center lg:justify-end">
+            <img 
+              src="/images/diploma-student.png?v=4" 
+              alt="Diploma & Polytechnic Student - Dr. Kalam Educational Consultancy" 
+              class="w-full max-w-[360px] sm:max-w-[400px] lg:max-w-[430px] xl:max-w-[460px] h-auto object-contain" 
+            />
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 10. LAW COURSES -->
+      <div class="category-section border-b border-gray-100 pb-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-10 items-center">
+          
+          <!-- Left: Law Student Image -->
+          <div class="lg:col-span-5 xl:col-span-5 flex items-center justify-center lg:justify-start">
+            <img 
+              src="/images/law-student.png?v=4" 
+              alt="Law Advocate Student - Dr. Kalam Educational Consultancy" 
+              class="w-full max-w-[360px] sm:max-w-[400px] lg:max-w-[430px] xl:max-w-[460px] h-auto object-contain" 
+            />
+          </div>
+
+          <!-- Right: Law Courses with Heading -->
+          <div class="lg:col-span-7 xl:col-span-7 space-y-6">
+            <div>
+              <h2 class="text-xl sm:text-2xl font-black text-gray-900 tracking-wide uppercase">
+                LAW COURSES
+              </h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 xl:gap-x-8 gap-y-3.5">
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Bachelor of Law (5 Years)</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>Literally Legum Baccalaureus (LLB) (3 Years)</span>
+              </div>
+              <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                <span>BA.LLB (5 Years Integrated)</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 11. AGRICULTURE, EDUCATION & SPORTS -->
+      <div class="category-section pb-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-10 items-center">
+          
+          <!-- Left: Agriculture, Education & Sports Courses with Heading -->
+          <div class="lg:col-span-7 xl:col-span-7 space-y-6">
+            <div>
+              <h2 class="text-xl sm:text-2xl font-black text-gray-900 tracking-wide uppercase">
+                AGRICULTURE, EDUCATION &amp; SPORTS
+              </h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 xl:gap-x-8 gap-y-6">
+              
+              <!-- Agriculture -->
+              <div class="space-y-3">
+                <h3 class="text-xs font-bold text-blue-700 tracking-wider uppercase border-b border-gray-100 pb-1.5">
+                  Agriculture
+                </h3>
+                <div class="space-y-2.5">
+                  <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                    <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                    <span>B.Sc. Agriculture</span>
+                  </div>
+                  <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                    <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                    <span>B.Sc. Horticulture</span>
+                  </div>
+                  <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                    <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                    <span>Diploma in Agriculture</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Education -->
+              <div class="space-y-3">
+                <h3 class="text-xs font-bold text-blue-700 tracking-wider uppercase border-b border-gray-100 pb-1.5">
+                  Education
+                </h3>
+                <div class="space-y-2.5">
+                  <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                    <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                    <span>D.T.Ed Courses</span>
+                  </div>
+                  <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                    <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                    <span>B.Ed Courses</span>
+                  </div>
+                  <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                    <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                    <span>M.Ed Courses</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Sports -->
+              <div class="space-y-3 sm:col-span-2">
+                <h3 class="text-xs font-bold text-blue-700 tracking-wider uppercase border-b border-gray-100 pb-1.5">
+                  Sports Education
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5">
+                  <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                    <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                    <span>B.P.Ed (Physical Education)</span>
+                  </div>
+                  <div class="course-item flex items-center gap-2.5 text-[13.5px] sm:text-sm text-gray-900 font-semibold hover:text-brand-blue transition-colors">
+                    <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+                    <span>M.P.Ed (Physical Education)</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right: Agri & Education Student Image -->
+          <div class="lg:col-span-5 xl:col-span-5 flex items-center justify-center lg:justify-end">
+            <img 
+              src="/images/arts-agri-student.png?v=4" 
+              alt="Agriculture & Education College Student - Dr. Kalam Educational Consultancy" 
+              class="w-full max-w-[360px] sm:max-w-[400px] lg:max-w-[430px] xl:max-w-[460px] h-auto object-contain" 
+            />
+          </div>
+
+        </div>
+      </div>
+
+    <!-- End #courses-grid -->
+  </section>
+
+  <!-- Consultation Banner (Tamil & English CTA) -->
+  <section class="w-full bg-gradient-to-r from-[#003d99] via-brand-blue to-[#0052cc] py-12 px-4 sm:px-6 lg:px-12 text-white text-center">
+    <div class="max-w-4xl mx-auto space-y-4">
+      <span class="inline-block px-3.5 py-1 rounded-full bg-white/15 text-white text-xs font-semibold backdrop-blur-xs">
+        நேரடி சேர்க்கை & சிறந்த கல்லூரிகள்
+      </span>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight">
+        கல்லூரியில் சேர்வதற்கும், எங்களிடம் ஆலோசனை பெறுவதற்கும் அணுகவும்
+      </h2>
+      <p class="text-blue-100 text-sm sm:text-base max-w-2xl mx-auto">
+        Need assistance choosing the right course or college? Connect with Dr. Kalam Educational Consultancy for transparent admission counselling and scholarship support.
+      </p>
+      <div class="pt-3 flex flex-wrap items-center justify-center gap-4">
+        <a href="tel:+919976916786" class="inline-flex items-center gap-2 bg-white text-brand-blue font-bold px-6 py-3 rounded-xl shadow-md hover:bg-blue-50 transition-all text-sm">
+          <span>📞 Call: +91 99769 16786</span>
+        </a>
+        <a href="https://wa.me/919976916786?text=Hi%20Dr.%20Kalam%20Consultancy,%20I%20need%20admission%20guidance%20for%20courses." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold px-6 py-3 rounded-xl shadow-md transition-all text-sm">
+          <span>💬 WhatsApp Guidance</span>
+        </a>
+        <button type="button" class="open-application-modal inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-xl shadow-md transition-all text-sm cursor-pointer">
+          <span>📝 Apply Online</span>
+        </button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="w-full bg-surface-container-low text-on-surface pt-space-xl pb-space-lg">
+  <div class="max-w-7xl mx-auto px-margin">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-lg mb-space-xl">
+      <div class="lg:col-span-2 flex flex-col gap-space-sm">
+        <a href="/index.html" class="inline-flex items-center hover:opacity-90 transition-opacity mb-2">
+          <img src="/kalam-logo.jpg" alt="Dr. Kalam Educational and Employment Consultancy" class="h-12 w-auto object-contain rounded">
+        </a>
+        <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Your Future | Our Guidance. Trusted education consultancy in Aranthangi for transparent counselling and admission support.</p>
+        <div class="flex flex-col gap-space-xs mt-space-sm">
+          <a class="inline-flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="mailto:thasleemsrt.05@gmail.com">
+            <span class="material-symbols-outlined text-[16px]">mail</span>thasleemsrt.05@gmail.com
+          </a>
+          <a class="inline-flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="tel:+919976916786">
+            <span class="material-symbols-outlined text-[16px]">call</span>+91 99769 16786
+          </a>
+        </div>
+        <a class="inline-flex mt-space-sm font-body-sm text-body-sm text-brand-blue hover:underline" href="https://www.instagram.com/kalam_educational_aranthangi/" target="_blank" rel="noopener noreferrer">Follow our Instagram ↗</a>
+      </div>
+      <div class="flex flex-col gap-space-xs">
+        <span class="font-label-lg text-label-lg text-on-surface mb-space-xs">Quick Links</span>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="/index.html">Home</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="about-us" href="/about.html">About Us</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="colleges" href="/colleges.html">Colleges</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="contact-us" href="/contact.html">Contact Us</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="terms-and-conditions" href="#">Terms &amp; Conditions</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a>
+      </div>
+      <div class="flex flex-col gap-space-xs">
+        <span class="font-label-lg text-label-lg text-on-surface mb-space-xs">Services</span>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/contact.html">Admission Guidance</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/contact.html">Career Counselling</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/contact.html">College Selection</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/contact.html">Application Assistance</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/contact.html">Local Guardian Support</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/contact.html">Course Selection</a>
+      </div>
+      <div class="flex flex-col gap-space-xs">
+        <span class="font-label-lg text-label-lg text-on-surface mb-space-xs">Courses</span>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="/courses.html">MBBS</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="/courses.html">MD / MS</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="/courses.html">Management (MBA)</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="/courses.html">Engineering (B.Tech)</a>
+      </div>
+    </div>
+    <div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant">
+      <p class="font-body-sm text-body-sm">© 2026 Dr. Kalam Educational Consultancy, Aranthangi. All rights reserved.</p>
+      <p class="font-body-sm text-body-sm">Developed by Arc pair studio.</p>
+    </div>
+  </div>
+</footer>
+
+<a class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full shadow-[0_12px_28px_rgba(0,0,0,0.22)] hover:scale-110 active:scale-95 transition-transform bg-white overflow-hidden p-0.5 border-2 border-brand-blue" href="https://wa.me/919976916786" rel="noopener noreferrer" target="_blank" aria-label="Dr. Kalam Educational Consultancy">
+  <img src="/images/kalam-emblem.jpg" alt="Dr. Kalam Educational and Employment Consultancy" class="w-full h-full object-cover rounded-full">
+</a>
+
+<script>
+  (() => {
+    // Mobile navigation toggle
+    const mobileToggle = document.getElementById('home-mobile-toggle');
+    const mobileMenu = document.getElementById('home-mobile-menu');
+    mobileToggle?.addEventListener('click', () => {
+      const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+      mobileToggle.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu?.classList.toggle('hidden', expanded);
+    });
+  })();
+</script>
+<script src="/popup-form.js"></script>
+</body>
+</html>

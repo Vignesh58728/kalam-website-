@@ -1,25 +1,2058 @@
-<!doctype html>
-<html lang="en" class="lang-en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Browse selected colleges already featured in the Dr. Kalam Educational Consultancy website and ask for help comparing options.">
-  <title data-title-ta="கல்லூரிகள் | டாக்டர் கலாம் கல்வி ஆலோசனை மையம்">Colleges | Dr. Kalam Educational Consultancy</title>
-  <link rel="icon" href="/kalam-emblem.jpg"><link rel="stylesheet" href="/site.css"><script type="module" src="/site.js"></script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+  <title>Colleges | Dr. Kalam Educational Consultancy</title>
+  <link rel="icon" type="image/jpeg" href="/images/kalam-emblem.jpg">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+
+    /* Infinite marquee animation */
+    @keyframes marquee-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      animation: marquee-scroll 32s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+    .icon-filled {
+      font-variation-settings: 'FILL' 1;
+    }
+
+    /* Soft light blue backdrop circle */
+    .hero-circle-bg {
+      background-color: #dbeafe;
+      border-radius: 9999px;
+      aspect-ratio: 1 / 1;
+    }
+    
+    .student-crop-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 9999px;
+    }
+
+    .student-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#1a6ef4',
+              hover: '#1357c9',
+              circle: '#dbeafe',
+            },
+            neutral: {
+              heading: '#101828',
+              body: '#5d6b82',
+              outline: '#1e293b'
+            },
+            "error-container": "#ffdad6",
+            "surface-bright": "#f8f9ff",
+            "surface-dim": "#ccdbf3",
+            "surface-container": "#e6eeff",
+            "surface-sunlit": "#FEF3C7",
+            "on-background": "#0d1c2e",
+            "inverse-on-surface": "#eaf1ff",
+            "error": "#ba1a1a",
+            "tertiary": "#a73a00",
+            "on-secondary-fixed": "#131b2e",
+            "inverse-primary": "#ffb95f",
+            "surface-container-high": "#dce9ff",
+            "success-emerald": "#10B981",
+            "surface-container-highest": "#d5e3fc",
+            "surface-variant": "#d5e3fc",
+            "on-error-container": "#93000a",
+            "secondary-fixed-dim": "#bec6e0",
+            "on-tertiary-container": "#7a2800",
+            "primary-fixed-dim": "#ffb95f",
+            "outline": "#867461",
+            "surface-container-lowest": "#ffffff",
+            "background": "#f8f9ff",
+            "on-surface": "#0d1c2e",
+            "outline-variant": "#d8c3ad",
+            "trust-navy": "#090D16",
+            "secondary": "#565e74",
+            "on-error": "#ffffff",
+            "tertiary-fixed": "#ffdbce",
+            "on-secondary": "#ffffff",
+            "on-tertiary-fixed": "#370e00",
+            "surface-cream": "#FFFDF9",
+            "tertiary-fixed-dim": "#ffb599",
+            "on-primary-fixed": "#2a1700",
+            "on-surface-variant": "#534434",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#613b00",
+            "on-tertiary-fixed-variant": "#7f2b00",
+            "on-primary-fixed-variant": "#653e00",
+            "surface-container-low": "#eff4ff",
+            "secondary-fixed": "#dae2fd",
+            "primary": "#855300",
+            "on-tertiary": "#ffffff",
+            "inverse-surface": "#233144",
+            "primary-fixed": "#ffddb8",
+            "whatsapp-green": "#25D366",
+            "surface-tint": "#855300",
+            "tertiary-container": "#ff956b",
+            "border-subtle": "#E2E8F0",
+            "primary-container": "#f59e0b",
+            "on-secondary-fixed-variant": "#3f465c",
+            "surface": "#f8f9ff",
+            "secondary-container": "#dae2fd",
+            "on-secondary-container": "#5c647a"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px"
+          },
+          spacing: {
+            "space-xl": "2.5rem",
+            "space-xs": "0.25rem",
+            "gutter-mobile": "1rem",
+            "gutter": "1.5rem",
+            "space-lg": "1.5rem",
+            "margin-mobile": "1rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "margin": "2rem"
+          },
+          fontFamily: {
+            "body-md": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "display-hero-mobile": ["Plus Jakarta Sans"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "display-hero": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "metric-display": ["Plus Jakarta Sans"]
+          },
+          fontSize: {
+            "body-md": ["15px", { lineHeight: "24px", fontWeight: "400" }],
+            "label-sm": ["11px", { lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "700" }],
+            "headline-md": ["20px", { lineHeight: "28px", fontWeight: "600" }],
+            "display-hero-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "800" }],
+            "headline-xl-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700" }],
+            "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "display-hero": ["56px", { lineHeight: "64px", letterSpacing: "-0.03em", fontWeight: "800" }],
+            "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700" }],
+            "body-sm": ["13px", { lineHeight: "20px", fontWeight: "400" }],
+            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+            "label-lg": ["15px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }],
+            "metric-display": ["48px", { lineHeight: "52px", letterSpacing: "-0.03em", fontWeight: "800" }]
+          }
+        }
+      }
+    };
+  </script>
 </head>
-<body><header class="site-header" data-site-header></header><main>
-  <section class="page-hero"><div class="wrap page-hero-grid"><div><div class="crumb"><a href="/index.html"><span data-lang="en">Home</span><span data-lang="ta">முகப்பு</span></a> / <span data-lang="en">Colleges</span><span data-lang="ta">கல்லூரிகள்</span></div><span class="eyebrow"><span data-lang="en">Compare your options</span><span data-lang="ta">உங்கள் வாய்ப்புகளை ஒப்பிடுங்கள்</span></span><h1 data-lang="en">A college is more than a name.</h1><h1 data-lang="ta">கல்லூரி என்பது பெயர் மட்டுமல்ல.</h1><p class="lead" data-lang="en">Explore institutions already featured on our homepage. Ask us to compare your course, location and admission priorities, then verify current details with the college.</p><p class="lead" data-lang="ta">எங்கள் முகப்புப் பக்கத்தில் இடம்பெற்றுள்ள கல்வி நிறுவனங்களைப் பாருங்கள். பாடப்பிரிவு, இடம், சேர்க்கை முன்னுரிமைகளை ஒப்பிட்டு, தற்போதைய விவரங்களை கல்லூரியிடம் உறுதிப்படுத்த உதவி கேளுங்கள்.</p><div class="btn-row"><a class="btn" href="/contact.html"><span data-lang="en">Ask about college options</span><span data-lang="ta">கல்லூரி வாய்ப்புகள் பற்றி கேளுங்கள்</span> →</a></div></div><aside class="hero-note"><div class="note-icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-6v-7h-4v7H4a1 1 0 0 1-1-1V10Z"/></svg></div><strong data-lang="en">A shortlist should fit your family</strong><strong data-lang="ta">குடும்பத்திற்குப் பொருந்தும் பட்டியல்</strong><p data-lang="en">Compare course availability, eligibility, location, total cost and student support—not just the institution name.</p><p data-lang="ta">பாடப்பிரிவு கிடைப்பது, தகுதி, இடம், மொத்த செலவு, மாணவர் ஆதரவு ஆகியவற்றை ஒப்பிடுங்கள்; கல்லூரிப் பெயரை மட்டும் பார்க்க வேண்டாம்.</p></aside></div></section>
-  <section class="section"><div class="wrap"><div class="section-head"><span class="eyebrow"><span data-lang="en">Featured in the current website</span><span data-lang="ta">தற்போதைய இணையதளத்தில் இடம்பெற்றவை</span></span><h2 data-lang="en">Start with these institutions.</h2><h2 data-lang="ta">இந்த கல்வி நிறுவனங்களிலிருந்து தொடங்குங்கள்.</h2><p data-lang="en">Use the search to narrow this list by name or location. This is an introductory selection, not a complete or live admissions directory.</p><p data-lang="ta">பெயர் அல்லது இடத்தின் அடிப்படையில் பட்டியலைச் சுருக்க தேடலைப் பயன்படுத்துங்கள். இது தொடக்கத் தேர்வு மட்டுமே; முழுமையான அல்லது நேரடி சேர்க்கை பட்டியல் அல்ல.</p></div>
-    <div class="filter-row"><input class="search" type="search" data-college-search data-lang="en" aria-label="Search colleges" placeholder="Search by college or location"><input class="search" type="search" data-college-search data-lang="ta" aria-label="கல்லூரிகளைத் தேடுங்கள்" placeholder="கல்லூரி அல்லது இடத்தின் பெயரைத் தேடுங்கள்"><a class="btn outline" style="color:var(--navy);border-color:var(--line)" href="https://www.google.com/maps/search/colleges+Tamil+Nadu" target="_blank" rel="noopener noreferrer"><span data-lang="en">Explore the area ↗</span><span data-lang="ta">பகுதியைக் காணுங்கள் ↗</span></a></div>
-    <div class="grid-3" id="college-list">
-      <article class="card college-card" data-college-card><div class="college-logo"><img src="/logos/pmi.png" alt="Periyar Maniammai Institute of Science & Technology logo"></div><div class="college-body"><h3>Periyar Maniammai Institute of Science &amp; Technology (PMIST)</h3><p class="location" data-lang="en">Vallam, Thanjavur, Tamil Nadu</p><p class="location" data-lang="ta">வல்லம், தஞ்சாவூர், தமிழ்நாடு</p><a class="card-link" href="/contact.html"><span data-lang="en">Discuss this option</span><span data-lang="ta">இந்த வாய்ப்பைப் பற்றி பேசுங்கள்</span> →</a></div></article>
-      <article class="card college-card" data-college-card><div class="college-logo"><img src="/logos/dsec.png" alt="Dhanalakshmi Srinivasan Engineering College logo"></div><div class="college-body"><h3>Dhanalakshmi Srinivasan Engineering College</h3><p class="location" data-lang="en">Perambalur / Tiruchirappalli, Tamil Nadu</p><p class="location" data-lang="ta">பெரம்பலூர் / திருச்சிராப்பள்ளி, தமிழ்நாடு</p><a class="card-link" href="/contact.html"><span data-lang="en">Discuss this option</span><span data-lang="ta">இந்த வாய்ப்பைப் பற்றி பேசுங்கள்</span> →</a></div></article>
-      <article class="card college-card" data-college-card><div class="college-logo"><img src="/logos/krct.png" alt="K. Ramakrishnan College of Technology logo"></div><div class="college-body"><h3>K. Ramakrishnan College of Technology (KRCT)</h3><p class="location" data-lang="en">Samayapuram, Tiruchirappalli, Tamil Nadu</p><p class="location" data-lang="ta">சமயபுரம், திருச்சிராப்பள்ளி, தமிழ்நாடு</p><a class="card-link" href="/contact.html"><span data-lang="en">Discuss this option</span><span data-lang="ta">இந்த வாய்ப்பைப் பற்றி பேசுங்கள்</span> →</a></div></article>
-      <article class="card college-card" data-college-card><div class="college-logo"><img src="/logos/care.png" alt="CARE Group of Institutions logo"></div><div class="college-body"><h3>CARE Group of Institutions</h3><p class="location" data-lang="en">Dindigul Road, Tiruchirappalli, Tamil Nadu</p><p class="location" data-lang="ta">திண்டுக்கல் சாலை, திருச்சிராப்பள்ளி, தமிழ்நாடு</p><a class="card-link" href="/contact.html"><span data-lang="en">Discuss this option</span><span data-lang="ta">இந்த வாய்ப்பைப் பற்றி பேசுங்கள்</span> →</a></div></article>
-      <article class="card college-card" data-college-card><div class="college-logo"><img src="/logos/mam.png" alt="M.A.M. College of Engineering & Technology logo"></div><div class="college-body"><h3>M.A.M. College of Engineering &amp; Technology</h3><p class="location" data-lang="en">Siruganur, Tiruchirappalli, Tamil Nadu</p><p class="location" data-lang="ta">சிறுகனூர், திருச்சிராப்பள்ளி, தமிழ்நாடு</p><a class="card-link" href="/contact.html"><span data-lang="en">Discuss this option</span><span data-lang="ta">இந்த வாய்ப்பைப் பற்றி பேசுங்கள்</span> →</a></div></article>
-      <article class="card college-card" data-college-card><div class="college-logo"><img src="/logos/igce.png" alt="Indra Ganesan College of Engineering logo"></div><div class="college-body"><h3>Indra Ganesan College of Engineering</h3><p class="location" data-lang="en">Manikandam, Tiruchirappalli, Tamil Nadu</p><p class="location" data-lang="ta">மணிகண்டம், திருச்சிராப்பள்ளி, தமிழ்நாடு</p><a class="card-link" href="/contact.html"><span data-lang="en">Discuss this option</span><span data-lang="ta">இந்த வாய்ப்பைப் பற்றி பேசுங்கள்</span> →</a></div></article>
-      <div class="empty-state" data-empty-state><span data-lang="en">No matching colleges. Try another name or location.</span><span data-lang="ta">பொருந்தும் கல்லூரிகள் இல்லை. வேறு பெயர் அல்லது இடத்தைத் தேடுங்கள்.</span></div>
+<body class="bg-background font-body-md text-body-md text-on-surface flex flex-col min-h-screen">
+
+<header class="w-full bg-white z-50 sticky top-0 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+  <div class="w-full px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between">
+    <!-- Brand Logo -->
+    <a href="/index.html" class="inline-flex items-center hover:opacity-90 transition-opacity">
+      <img src="/kalam-logo.jpg" alt="Dr. Kalam Educational and Employment Consultancy" class="h-14 sm:h-16 md:h-18 lg:h-20 w-auto object-contain transition-all duration-200">
+    </a>
+
+    <!-- Navigation Links & Right Action -->
+    <div class="flex items-center gap-8 lg:gap-10">
+      <nav class="hidden md:flex items-center gap-7 lg:gap-8 font-medium text-[15px]">
+        <a href="/index.html" class="text-neutral-heading/80 hover:text-brand-blue transition-colors duration-150 py-1">Home</a>
+        <a href="/about.html" class="text-neutral-heading/80 hover:text-brand-blue transition-colors duration-150 py-1">About Us</a>
+        <a href="/courses.html" class="text-neutral-heading/80 hover:text-brand-blue transition-colors duration-150 py-1">Courses</a>
+        <a href="/colleges.html" class="relative text-neutral-heading font-semibold hover:text-brand-blue transition-colors duration-150 py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2.5px] after:bg-[#f59e0b] after:rounded-full">Colleges</a>
+        <a href="/contact.html" class="text-neutral-heading/80 hover:text-brand-blue transition-colors duration-150 py-1">Contact Us</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/919976916786" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-8 h-8 rounded-full bg-[#25D366] flex items-center justify-center text-white hover:opacity-90 transition-opacity shadow-sm">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/kalam_educational_aranthangi/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-8 h-8 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] flex items-center justify-center text-white hover:opacity-90 transition-opacity shadow-sm p-1.5">
+          <svg class="w-full h-full fill-none stroke-current stroke-[2]" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+        <button type="button" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-neutral-heading hover:bg-gray-100" id="home-mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
     </div>
-    <div class="disclaimer" style="margin-top:23px"><strong data-lang="en">Please verify before applying:</strong><strong data-lang="ta">விண்ணப்பிக்கும் முன் உறுதிப்படுத்துங்கள்:</strong> <span data-lang="en">Course availability, affiliation, recognition, fees, cut-offs and seats can change. College logos and names are shown for identification; this listing alone does not indicate a formal partnership or endorsement. Confirm current information with the college and official authorities.</span><span data-lang="ta">பாடப்பிரிவு கிடைப்பது, இணைப்பு, அங்கீகாரம், கட்டணம், கட்-ஆஃப், இடங்கள் மாறக்கூடும். அடையாளத்திற்காக கல்லூரிப் பெயர்களும் லோகோக்களும் காட்டப்படுகின்றன; இதுவே அதிகாரப்பூர்வ கூட்டாண்மை அல்லது அங்கீகாரம் எனப் பொருளல்ல. தற்போதைய தகவல்களை கல்லூரி மற்றும் அதிகாரப்பூர்வ அமைப்புகளிடம் உறுதிப்படுத்துங்கள்.</span></div>
-  </div></section>
-  <section class="section soft"><div class="wrap cta"><div><h2 data-lang="en">Need a shortlist for your goals?</h2><h2 data-lang="ta">உங்கள் இலக்குகளுக்கான கல்லூரிப் பட்டியல் தேவையா?</h2><p data-lang="en">Share the course you're considering and what matters to your family.</p><p data-lang="ta">நீங்கள் பரிசீலிக்கும் பாடப்பிரிவையும் குடும்பத்திற்கு முக்கியமான அம்சங்களையும் பகிருங்கள்.</p></div><a class="btn gold" href="/contact.html"><span data-lang="en">Start a conversation</span><span data-lang="ta">உரையாடலைத் தொடங்குங்கள்</span> →</a></div></section>
-</main><footer class="site-footer" data-site-footer></footer><a class="float-wa" href="https://wa.me/919976916786" target="_blank" rel="noopener noreferrer"><span data-lang="en">WhatsApp us</span><span data-lang="ta">WhatsApp செய்யுங்கள்</span> ↗</a></body></html>
+  </div>
+  <!-- Mobile Navigation Menu -->
+  <div id="home-mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white px-6 py-4 space-y-3">
+    <a href="/index.html" class="block text-neutral-heading hover:text-brand-blue py-1">Home</a>
+    <a href="/about.html" class="block text-neutral-heading hover:text-brand-blue py-1">About Us</a>
+    <a href="/courses.html" class="block text-neutral-heading hover:text-brand-blue py-1">Courses</a>
+    <a href="/colleges.html" class="block font-semibold text-brand-blue py-1">Colleges</a>
+    <a href="/contact.html" class="block text-neutral-heading hover:text-brand-blue py-1">Contact Us</a>
+  </div>
+</header>
+
+<main class="flex-1 w-full bg-white relative overflow-hidden">
+
+  <!-- Background Kalam Logo Watermarks -->
+  <div class="absolute top-24 left-1/2 -translate-x-1/2 pointer-events-none select-none overflow-hidden">
+    <img src="/images/kalam-emblem-circle.png" alt="" class="w-[500px] sm:w-[650px] lg:w-[820px] h-auto object-contain opacity-15 sm:opacity-20 mix-blend-multiply filter contrast-125" />
+  </div>
+  <div class="absolute top-[30%] left-1/2 -translate-x-1/2 pointer-events-none select-none overflow-hidden">
+    <img src="/images/kalam-emblem-circle.png" alt="" class="w-[500px] sm:w-[650px] lg:w-[820px] h-auto object-contain opacity-15 sm:opacity-20 mix-blend-multiply filter contrast-125" />
+  </div>
+  <div class="absolute top-[60%] left-1/2 -translate-x-1/2 pointer-events-none select-none overflow-hidden">
+    <img src="/images/kalam-emblem-circle.png" alt="" class="w-[500px] sm:w-[650px] lg:w-[820px] h-auto object-contain opacity-15 sm:opacity-20 mix-blend-multiply filter contrast-125" />
+  </div>
+  <div class="absolute top-[85%] left-1/2 -translate-x-1/2 pointer-events-none select-none overflow-hidden">
+    <img src="/images/kalam-emblem-circle.png" alt="" class="w-[500px] sm:w-[650px] lg:w-[820px] h-auto object-contain opacity-15 sm:opacity-20 mix-blend-multiply filter contrast-125" />
+  </div>
+
+    <!-- Colleges Content Section -->
+    <section class="w-full py-12 lg:py-16 bg-white overflow-hidden relative z-10">
+      <div class="w-full">
+                <!-- ================= TOP UNIVERSITIES & MEDICAL INSTITUTIONS IN TAMIL NADU ================= -->
+        <div class="mb-16">
+          <!-- Section Heading -->
+          <div class="text-center mb-6 pb-3 border-b border-gray-100 max-w-4xl mx-auto px-4">
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-neutral-heading tracking-tight">Top Universities & Medical Institutions in Tamil Nadu</h3>
+          </div>
+
+          <div class="relative overflow-hidden w-full py-4">
+            <!-- Marquee Track (Right to Left) -->
+            <div class="animate-marquee flex items-center gap-6 sm:gap-8 hover:[animation-play-state:paused]" style="animation-duration: 32s;">
+              <!-- Set 1 -->
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Amrita Vishwa Vidyapeetham">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/amrita.png" alt="Amrita Vishwa Vidyapeetham" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Amrita Vishwa Vidyapeetham
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Sri Ramachandra Institute of Higher Education">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/sri-ramachandra.png" alt="Sri Ramachandra Institute of Higher Education" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Sri Ramachandra Institute of Higher Education
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Chettinad Academy of Research and Education">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/chettinad.png" alt="Chettinad Academy of Research and Education" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Chettinad Academy of Research and Education
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Stella Maris College (Autonomous)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/stella-maris.png" alt="Stella Maris College (Autonomous)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Stella Maris College (Autonomous)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Amrita Vishwa Vidyapeetham">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/amrita.png" alt="Amrita Vishwa Vidyapeetham" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Amrita Vishwa Vidyapeetham
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Sri Ramachandra Institute of Higher Education">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/sri-ramachandra.png" alt="Sri Ramachandra Institute of Higher Education" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Sri Ramachandra Institute of Higher Education
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Chettinad Academy of Research and Education">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/chettinad.png" alt="Chettinad Academy of Research and Education" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Chettinad Academy of Research and Education
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Stella Maris College (Autonomous)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/stella-maris.png" alt="Stella Maris College (Autonomous)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Stella Maris College (Autonomous)
+              </span>
+            </a>
+              <!-- Set 2 (Seamless loop) -->
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Amrita Vishwa Vidyapeetham">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/amrita.png" alt="Amrita Vishwa Vidyapeetham" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Amrita Vishwa Vidyapeetham
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Sri Ramachandra Institute of Higher Education">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/sri-ramachandra.png" alt="Sri Ramachandra Institute of Higher Education" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Sri Ramachandra Institute of Higher Education
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Chettinad Academy of Research and Education">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/chettinad.png" alt="Chettinad Academy of Research and Education" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Chettinad Academy of Research and Education
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Stella Maris College (Autonomous)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/stella-maris.png" alt="Stella Maris College (Autonomous)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Stella Maris College (Autonomous)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Amrita Vishwa Vidyapeetham">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/amrita.png" alt="Amrita Vishwa Vidyapeetham" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Amrita Vishwa Vidyapeetham
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Sri Ramachandra Institute of Higher Education">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/sri-ramachandra.png" alt="Sri Ramachandra Institute of Higher Education" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Sri Ramachandra Institute of Higher Education
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Chettinad Academy of Research and Education">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/chettinad.png" alt="Chettinad Academy of Research and Education" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Chettinad Academy of Research and Education
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Stella Maris College (Autonomous)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/stella-maris.png" alt="Stella Maris College (Autonomous)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Stella Maris College (Autonomous)
+              </span>
+            </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= BANGALORE REGION COLLEGES ================= -->
+        <div class="mb-16">
+          <!-- Section Heading -->
+          <div class="text-center mb-6 pb-3 border-b border-gray-100 max-w-4xl mx-auto px-4">
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-neutral-heading tracking-tight">Bangalore Region Colleges</h3>
+          </div>
+
+          <div class="relative overflow-hidden w-full py-4">
+            <!-- Marquee Track (Right to Left) -->
+            <div class="animate-marquee flex items-center gap-6 sm:gap-8 hover:[animation-play-state:paused]" style="animation-duration: 38s;">
+              <!-- Set 1 -->
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="CHRIST (Deemed to be University)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/christ.png" alt="CHRIST (Deemed to be University)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                CHRIST (Deemed to be University)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Ramaiah Institute of Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/ramaiah.png" alt="Ramaiah Institute of Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Ramaiah Institute of Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="PES University">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/pes.png" alt="PES University" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                PES University
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Dayananda Sagar University (DSU)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/dayananda-sagar.png" alt="Dayananda Sagar University (DSU)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Dayananda Sagar University (DSU)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Acharya Institutes">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/acharya.png" alt="Acharya Institutes" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Acharya Institutes
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Jain (Deemed-to-be University)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/jain.png" alt="Jain (Deemed-to-be University)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Jain (Deemed-to-be University)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="St. Joseph's University">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/st-josephs.png" alt="St. Joseph's University" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                St. Joseph's University
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Presidency University">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/presidency.png" alt="Presidency University" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Presidency University
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="East Point Group of Institutions">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/east-point.png" alt="East Point Group of Institutions" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                East Point Group of Institutions
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="R R Institutions">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/rr-institutions.png" alt="R R Institutions" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                R R Institutions
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="S-VYASA (Deemed to be University)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/svyasa.png" alt="S-VYASA (Deemed to be University)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                S-VYASA (Deemed to be University)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Apollo Institute of Engineering &amp; Tech">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/apollo.png" alt="Apollo Institute of Engineering &amp; Tech" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Apollo Institute of Engineering &amp; Tech
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="REVA University">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/reva.png" alt="REVA University" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                REVA University
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Garden City University">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/garden-city.png" alt="Garden City University" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Garden City University
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Harsha Institutions">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/harsha.png" alt="Harsha Institutions" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Harsha Institutions
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Alliance University">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/alliance.png" alt="Alliance University" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Alliance University
+              </span>
+            </a>
+              <!-- Set 2 (Seamless loop) -->
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="CHRIST (Deemed to be University)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/christ.png" alt="CHRIST (Deemed to be University)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                CHRIST (Deemed to be University)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Ramaiah Institute of Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/ramaiah.png" alt="Ramaiah Institute of Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Ramaiah Institute of Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="PES University">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/pes.png" alt="PES University" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                PES University
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Dayananda Sagar University (DSU)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/dayananda-sagar.png" alt="Dayananda Sagar University (DSU)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Dayananda Sagar University (DSU)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Acharya Institutes">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/acharya.png" alt="Acharya Institutes" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Acharya Institutes
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Jain (Deemed-to-be University)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/jain.png" alt="Jain (Deemed-to-be University)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Jain (Deemed-to-be University)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="St. Joseph's University">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/st-josephs.png" alt="St. Joseph's University" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                St. Joseph's University
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Presidency University">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/presidency.png" alt="Presidency University" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Presidency University
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="East Point Group of Institutions">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/east-point.png" alt="East Point Group of Institutions" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                East Point Group of Institutions
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="R R Institutions">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/rr-institutions.png" alt="R R Institutions" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                R R Institutions
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="S-VYASA (Deemed to be University)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/svyasa.png" alt="S-VYASA (Deemed to be University)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                S-VYASA (Deemed to be University)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Apollo Institute of Engineering &amp; Tech">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/apollo.png" alt="Apollo Institute of Engineering &amp; Tech" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Apollo Institute of Engineering &amp; Tech
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="REVA University">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/reva.png" alt="REVA University" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                REVA University
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Garden City University">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/garden-city.png" alt="Garden City University" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Garden City University
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Harsha Institutions">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/harsha.png" alt="Harsha Institutions" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Harsha Institutions
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Alliance University">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/alliance.png" alt="Alliance University" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Alliance University
+              </span>
+            </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= CHENNAI REGION COLLEGES ================= -->
+        <div class="mb-16">
+          <!-- Section Heading -->
+          <div class="text-center mb-6 pb-3 border-b border-gray-100 max-w-4xl mx-auto px-4">
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-neutral-heading tracking-tight">Chennai Region Colleges</h3>
+          </div>
+
+          <div class="relative overflow-hidden w-full py-4">
+            <!-- Marquee Track (Right to Left) -->
+            <div class="animate-marquee flex items-center gap-6 sm:gap-8 hover:[animation-play-state:paused]" style="animation-duration: 44s;">
+              <!-- Set 1 -->
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="SRM Institute of Science and Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/srm.png" alt="SRM Institute of Science and Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                SRM Institute of Science and Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="VIT Chennai (Vellore Institute of Technology)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/vit.png" alt="VIT Chennai (Vellore Institute of Technology)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                VIT Chennai (Vellore Institute of Technology)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="SSN College of Engineering">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/ssn.png" alt="SSN College of Engineering" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                SSN College of Engineering
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Shiv Nadar University Chennai">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/snu.png" alt="Shiv Nadar University Chennai" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Shiv Nadar University Chennai
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Sathyabama Institute of Science and Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/sathyabama.png" alt="Sathyabama Institute of Science and Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Sathyabama Institute of Science and Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Saveetha University (SIMATS)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/saveetha-univ.png" alt="Saveetha University (SIMATS)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Saveetha University (SIMATS)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Rajalakshmi Institute of Technology (RIT)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/rit.png" alt="Rajalakshmi Institute of Technology (RIT)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Rajalakshmi Institute of Technology (RIT)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Sri Sairam Engineering College">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/sairam.png" alt="Sri Sairam Engineering College" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Sri Sairam Engineering College
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Hindustan Institute of Tech & Science (HITS)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/hindustan.png" alt="Hindustan Institute of Tech & Science (HITS)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Hindustan Institute of Tech & Science (HITS)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="B.S. Abdur Rahman Crescent Institute">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/crescent.png" alt="B.S. Abdur Rahman Crescent Institute" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                B.S. Abdur Rahman Crescent Institute
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Dr. M.G.R. Educational & Research Institute">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/mgr.png" alt="Dr. M.G.R. Educational & Research Institute" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Dr. M.G.R. Educational & Research Institute
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Vels University (VISTAS)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/vels.png" alt="Vels University (VISTAS)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Vels University (VISTAS)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Vel Tech Rangarajan Dr. Sagunthala R&D Institute">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/veltech.png" alt="Vel Tech Rangarajan Dr. Sagunthala R&D Institute" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Vel Tech Rangarajan Dr. Sagunthala R&D Institute
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Bharath Institute of Higher Education (BIHER)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/bharath.png" alt="Bharath Institute of Higher Education (BIHER)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Bharath Institute of Higher Education (BIHER)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="AMET University (Maritime Education & Training)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/amet.png" alt="AMET University (Maritime Education & Training)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                AMET University (Maritime Education & Training)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Aarupadai Veedu Institute of Technology (AVIT)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/avit.png" alt="Aarupadai Veedu Institute of Technology (AVIT)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Aarupadai Veedu Institute of Technology (AVIT)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Loyola Institute of Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/loyola.png" alt="Loyola Institute of Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Loyola Institute of Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Meenakshi Sundararajan Engineering College">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/meenakshi.png" alt="Meenakshi Sundararajan Engineering College" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Meenakshi Sundararajan Engineering College
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Dhanalakshmi Srinivasan College of Engg & Tech">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/dsec-chennai.png" alt="Dhanalakshmi Srinivasan College of Engg & Tech" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Dhanalakshmi Srinivasan College of Engg & Tech
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="PERI Institute of Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/peri.png" alt="PERI Institute of Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                PERI Institute of Technology
+              </span>
+            </a>
+              <!-- Set 2 (Seamless loop) -->
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="SRM Institute of Science and Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/srm.png" alt="SRM Institute of Science and Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                SRM Institute of Science and Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="VIT Chennai (Vellore Institute of Technology)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/vit.png" alt="VIT Chennai (Vellore Institute of Technology)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                VIT Chennai (Vellore Institute of Technology)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="SSN College of Engineering">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/ssn.png" alt="SSN College of Engineering" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                SSN College of Engineering
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Shiv Nadar University Chennai">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/snu.png" alt="Shiv Nadar University Chennai" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Shiv Nadar University Chennai
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Sathyabama Institute of Science and Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/sathyabama.png" alt="Sathyabama Institute of Science and Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Sathyabama Institute of Science and Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Saveetha University (SIMATS)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/saveetha-univ.png" alt="Saveetha University (SIMATS)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Saveetha University (SIMATS)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Rajalakshmi Institute of Technology (RIT)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/rit.png" alt="Rajalakshmi Institute of Technology (RIT)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Rajalakshmi Institute of Technology (RIT)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Sri Sairam Engineering College">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/sairam.png" alt="Sri Sairam Engineering College" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Sri Sairam Engineering College
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Hindustan Institute of Tech & Science (HITS)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/hindustan.png" alt="Hindustan Institute of Tech & Science (HITS)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Hindustan Institute of Tech & Science (HITS)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="B.S. Abdur Rahman Crescent Institute">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/crescent.png" alt="B.S. Abdur Rahman Crescent Institute" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                B.S. Abdur Rahman Crescent Institute
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Dr. M.G.R. Educational & Research Institute">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/mgr.png" alt="Dr. M.G.R. Educational & Research Institute" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Dr. M.G.R. Educational & Research Institute
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Vels University (VISTAS)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/vels.png" alt="Vels University (VISTAS)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Vels University (VISTAS)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Vel Tech Rangarajan Dr. Sagunthala R&D Institute">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/veltech.png" alt="Vel Tech Rangarajan Dr. Sagunthala R&D Institute" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Vel Tech Rangarajan Dr. Sagunthala R&D Institute
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Bharath Institute of Higher Education (BIHER)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/bharath.png" alt="Bharath Institute of Higher Education (BIHER)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Bharath Institute of Higher Education (BIHER)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="AMET University (Maritime Education & Training)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/amet.png" alt="AMET University (Maritime Education & Training)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                AMET University (Maritime Education & Training)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Aarupadai Veedu Institute of Technology (AVIT)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/avit.png" alt="Aarupadai Veedu Institute of Technology (AVIT)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Aarupadai Veedu Institute of Technology (AVIT)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Loyola Institute of Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/loyola.png" alt="Loyola Institute of Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Loyola Institute of Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Meenakshi Sundararajan Engineering College">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/meenakshi.png" alt="Meenakshi Sundararajan Engineering College" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Meenakshi Sundararajan Engineering College
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Dhanalakshmi Srinivasan College of Engg & Tech">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/dsec-chennai.png" alt="Dhanalakshmi Srinivasan College of Engg & Tech" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Dhanalakshmi Srinivasan College of Engg & Tech
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="PERI Institute of Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/peri.png" alt="PERI Institute of Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                PERI Institute of Technology
+              </span>
+            </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= COIMBATORE REGION - TOP ENGINEERING COLLEGES ================= -->
+        <div class="mb-16">
+          <!-- Section Heading -->
+          <div class="text-center mb-6 pb-3 border-b border-gray-100 max-w-4xl mx-auto px-4">
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-neutral-heading tracking-tight">Coimbatore Region Colleges</h3>
+          </div>
+
+          <div class="relative overflow-hidden w-full py-4">
+            <!-- Marquee Track (Right to Left) -->
+            <div class="animate-marquee flex items-center gap-6 sm:gap-8 hover:[animation-play-state:paused]" style="animation-duration: 45s;">
+              <!-- Set 1 -->
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="PSG College of Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/psg.png" alt="PSG College of Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                PSG College of Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Kumaraguru College of Technology (KCT)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/kct.png" alt="Kumaraguru College of Technology (KCT)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Kumaraguru College of Technology (KCT)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Sri Krishna College of Engg & Tech (SKCET)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/skcet.png" alt="Sri Krishna College of Engg & Tech (SKCET)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Sri Krishna College of Engg & Tech (SKCET)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Sri Ramakrishna Engineering College (SREC)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/srec.png" alt="Sri Ramakrishna Engineering College (SREC)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Sri Ramakrishna Engineering College (SREC)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Karpagam College of Engineering">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/karpagam.png" alt="Karpagam College of Engineering" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Karpagam College of Engineering
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Karpagam Institute of Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/karpagam.png" alt="Karpagam Institute of Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Karpagam Institute of Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Rathinam Technical Campus">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/rathinam.png" alt="Rathinam Technical Campus" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Rathinam Technical Campus
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Hindusthan College of Engg & Tech (HICET)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/hicet.png" alt="Hindusthan College of Engg & Tech (HICET)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Hindusthan College of Engg & Tech (HICET)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Coimbatore Institute of Engg & Tech (CIET)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/ciet.png" alt="Coimbatore Institute of Engg & Tech (CIET)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Coimbatore Institute of Engg & Tech (CIET)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Nehru Institute of Engg & Tech (NIET)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/nehru.png" alt="Nehru Institute of Engg & Tech (NIET)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Nehru Institute of Engg & Tech (NIET)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Adithya Institute of Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/adithya.png" alt="Adithya Institute of Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Adithya Institute of Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Dhaanish Ahmed Institute of Technology (DAIT)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/dait.svg" alt="Dhaanish Ahmed Institute of Technology (DAIT)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Dhaanish Ahmed Institute of Technology (DAIT)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Suguna College of Engineering">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/suguna.svg" alt="Suguna College of Engineering" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Suguna College of Engineering
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="KIT - Kalaignarkarunanidhi Institute of Tech">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/kit.png" alt="KIT - Kalaignarkarunanidhi Institute of Tech" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                KIT - Kalaignarkarunanidhi Institute of Tech
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="PPG Institute of Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/ppg.svg" alt="PPG Institute of Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                PPG Institute of Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Study World College of Engineering">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/study-world.png" alt="Study World College of Engineering" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Study World College of Engineering
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="United Institute of Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/united.png" alt="United Institute of Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                United Institute of Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Dhanalakshmi Srinivasan College of Engg">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/dsec-cbe.png" alt="Dhanalakshmi Srinivasan College of Engg" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Dhanalakshmi Srinivasan College of Engg
+              </span>
+            </a>
+              <!-- Set 2 (Seamless loop) -->
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="PSG College of Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/psg.png" alt="PSG College of Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                PSG College of Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Kumaraguru College of Technology (KCT)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/kct.png" alt="Kumaraguru College of Technology (KCT)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Kumaraguru College of Technology (KCT)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Sri Krishna College of Engg & Tech (SKCET)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/skcet.png" alt="Sri Krishna College of Engg & Tech (SKCET)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Sri Krishna College of Engg & Tech (SKCET)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Sri Ramakrishna Engineering College (SREC)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/srec.png" alt="Sri Ramakrishna Engineering College (SREC)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Sri Ramakrishna Engineering College (SREC)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Karpagam College of Engineering">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/karpagam.png" alt="Karpagam College of Engineering" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Karpagam College of Engineering
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Karpagam Institute of Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/karpagam.png" alt="Karpagam Institute of Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Karpagam Institute of Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Rathinam Technical Campus">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/rathinam.png" alt="Rathinam Technical Campus" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Rathinam Technical Campus
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Hindusthan College of Engg & Tech (HICET)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/hicet.png" alt="Hindusthan College of Engg & Tech (HICET)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Hindusthan College of Engg & Tech (HICET)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Coimbatore Institute of Engg & Tech (CIET)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/ciet.png" alt="Coimbatore Institute of Engg & Tech (CIET)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Coimbatore Institute of Engg & Tech (CIET)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Nehru Institute of Engg & Tech (NIET)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/nehru.png" alt="Nehru Institute of Engg & Tech (NIET)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Nehru Institute of Engg & Tech (NIET)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Adithya Institute of Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/adithya.png" alt="Adithya Institute of Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Adithya Institute of Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Dhaanish Ahmed Institute of Technology (DAIT)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/dait.svg" alt="Dhaanish Ahmed Institute of Technology (DAIT)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Dhaanish Ahmed Institute of Technology (DAIT)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Suguna College of Engineering">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/suguna.svg" alt="Suguna College of Engineering" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Suguna College of Engineering
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="KIT - Kalaignarkarunanidhi Institute of Tech">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/kit.png" alt="KIT - Kalaignarkarunanidhi Institute of Tech" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                KIT - Kalaignarkarunanidhi Institute of Tech
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="PPG Institute of Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/ppg.svg" alt="PPG Institute of Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                PPG Institute of Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Study World College of Engineering">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/study-world.png" alt="Study World College of Engineering" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Study World College of Engineering
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="United Institute of Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/united.png" alt="United Institute of Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                United Institute of Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Dhanalakshmi Srinivasan College of Engg">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/dsec-cbe.png" alt="Dhanalakshmi Srinivasan College of Engg" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Dhanalakshmi Srinivasan College of Engg
+              </span>
+            </a>
+            </div>
+          </div>
+<div class="h-3"></div>
+          <div class="relative overflow-hidden w-full py-4">
+            <!-- Marquee Track (Right to Left) -->
+            <div class="animate-marquee flex items-center gap-6 sm:gap-8 hover:[animation-play-state:paused]" style="animation-duration: 40s;">
+              <!-- Set 1 -->
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Arjun College of Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/arjun.png" alt="Arjun College of Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Arjun College of Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Christ The King Engineering College">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/ckec.png" alt="Christ The King Engineering College" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Christ The King Engineering College
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Easa College of Engineering & Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/easa.png" alt="Easa College of Engineering & Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Easa College of Engineering & Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Sree Sakthi Engineering College">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/sree-sakthi.png" alt="Sree Sakthi Engineering College" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Sree Sakthi Engineering College
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Info Institute of Engineering">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/info.png" alt="Info Institute of Engineering" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Info Institute of Engineering
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="KPR Institute of Engineering and Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/kpr.png" alt="KPR Institute of Engineering and Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                KPR Institute of Engineering and Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="RVS College of Engineering and Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/rvs.png" alt="RVS College of Engineering and Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                RVS College of Engineering and Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="VSB Engineering College">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/vsb.png" alt="VSB Engineering College" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                VSB Engineering College
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="P.A. College of Engineering & Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/pacet.png" alt="P.A. College of Engineering & Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                P.A. College of Engineering & Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Sri Ranganathar Institute of Engg & Tech">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/sriet.png" alt="Sri Ranganathar Institute of Engg & Tech" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Sri Ranganathar Institute of Engg & Tech
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Dr. N.G.P. Institute of Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/dr-ngp.png" alt="Dr. N.G.P. Institute of Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Dr. N.G.P. Institute of Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="SNS College of Engineering">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/sns.png" alt="SNS College of Engineering" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                SNS College of Engineering
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Sri Eshwar College of Engineering">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/sece.png" alt="Sri Eshwar College of Engineering" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Sri Eshwar College of Engineering
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Sri Shakthi Institute of Engg & Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/sri-shakthi.png" alt="Sri Shakthi Institute of Engg & Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Sri Shakthi Institute of Engg & Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="JCT College of Engineering and Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/jct.png" alt="JCT College of Engineering and Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                JCT College of Engineering and Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Park College of Engineering & Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/park.png" alt="Park College of Engineering & Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Park College of Engineering & Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Sri Krishna College of Technology (SKCT)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/skct.png" alt="Sri Krishna College of Technology (SKCT)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Sri Krishna College of Technology (SKCT)
+              </span>
+            </a>
+              <!-- Set 2 (Seamless loop) -->
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Arjun College of Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/arjun.png" alt="Arjun College of Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Arjun College of Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Christ The King Engineering College">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/ckec.png" alt="Christ The King Engineering College" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Christ The King Engineering College
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Easa College of Engineering & Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/easa.png" alt="Easa College of Engineering & Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Easa College of Engineering & Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Sree Sakthi Engineering College">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/sree-sakthi.png" alt="Sree Sakthi Engineering College" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Sree Sakthi Engineering College
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Info Institute of Engineering">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/info.png" alt="Info Institute of Engineering" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Info Institute of Engineering
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="KPR Institute of Engineering and Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/kpr.png" alt="KPR Institute of Engineering and Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                KPR Institute of Engineering and Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="RVS College of Engineering and Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/rvs.png" alt="RVS College of Engineering and Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                RVS College of Engineering and Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="VSB Engineering College">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/vsb.png" alt="VSB Engineering College" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                VSB Engineering College
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="P.A. College of Engineering & Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/pacet.png" alt="P.A. College of Engineering & Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                P.A. College of Engineering & Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Sri Ranganathar Institute of Engg & Tech">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/sriet.png" alt="Sri Ranganathar Institute of Engg & Tech" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Sri Ranganathar Institute of Engg & Tech
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Dr. N.G.P. Institute of Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/dr-ngp.png" alt="Dr. N.G.P. Institute of Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Dr. N.G.P. Institute of Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="SNS College of Engineering">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/sns.png" alt="SNS College of Engineering" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                SNS College of Engineering
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Sri Eshwar College of Engineering">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/sece.png" alt="Sri Eshwar College of Engineering" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Sri Eshwar College of Engineering
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Sri Shakthi Institute of Engg & Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/sri-shakthi.png" alt="Sri Shakthi Institute of Engg & Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Sri Shakthi Institute of Engg & Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="JCT College of Engineering and Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/jct.png" alt="JCT College of Engineering and Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                JCT College of Engineering and Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Park College of Engineering & Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/park.png" alt="Park College of Engineering & Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Park College of Engineering & Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Sri Krishna College of Technology (SKCT)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/skct.png" alt="Sri Krishna College of Technology (SKCT)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Sri Krishna College of Technology (SKCT)
+              </span>
+            </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= NAMAKKAL AND SALEM REGION COLLEGES ================= -->
+        <div class="mb-16">
+          <!-- Section Heading -->
+          <div class="text-center mb-6 pb-3 border-b border-gray-100 max-w-4xl mx-auto px-4">
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-neutral-heading tracking-tight">Namakkal and Salem Region Colleges</h3>
+          </div>
+
+          <div class="relative overflow-hidden w-full py-4">
+            <!-- Marquee Track (Right to Left) -->
+            <div class="animate-marquee flex items-center gap-6 sm:gap-8 hover:[animation-play-state:paused]" style="animation-duration: 36s;">
+              <!-- Set 1 -->
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Paavai Engineering College (Paavai Group)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/paavai.png" alt="Paavai Engineering College (Paavai Group)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Paavai Engineering College (Paavai Group)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Gnanamani Educational Institutions">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/gnanamani.png" alt="Gnanamani Educational Institutions" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Gnanamani Educational Institutions
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Muthayammal Engineering Institutions">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/muthayammal.png" alt="Muthayammal Engineering Institutions" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Muthayammal Engineering Institutions
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Mahendra Educational Institutions">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/mahendra.png" alt="Mahendra Educational Institutions" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Mahendra Educational Institutions
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Excel Group Institutions">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/excel.png" alt="Excel Group Institutions" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Excel Group Institutions
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Selvam College of Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/selvam.png" alt="Selvam College of Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Selvam College of Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="JKKN College of Engineering & Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/jkkn.png" alt="JKKN College of Engineering & Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                JKKN College of Engineering & Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Dr. J.K.K. Munirajah Educational Institutions">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/jkkmunirajah.png" alt="Dr. J.K.K. Munirajah Educational Institutions" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Dr. J.K.K. Munirajah Educational Institutions
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Annapoorana Engineering College">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/annapoorana.png" alt="Annapoorana Engineering College" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Annapoorana Engineering College
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Vivekanandha Educational Institutions">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/vivekanandha.png" alt="Vivekanandha Educational Institutions" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Vivekanandha Educational Institutions
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="K.S. Rangasamy College of Technology (KSR)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/ksr.png" alt="K.S. Rangasamy College of Technology (KSR)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                K.S. Rangasamy College of Technology (KSR)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Erode Sengunthar Engineering College">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/erode-sengunthar.png" alt="Erode Sengunthar Engineering College" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Erode Sengunthar Engineering College
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="AVS Engineering College">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/avs.png" alt="AVS Engineering College" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                AVS Engineering College
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Ganesh College of Engineering">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/ganesh.png" alt="Ganesh College of Engineering" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Ganesh College of Engineering
+              </span>
+            </a>
+              <!-- Set 2 (Seamless loop) -->
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Paavai Engineering College (Paavai Group)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/paavai.png" alt="Paavai Engineering College (Paavai Group)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Paavai Engineering College (Paavai Group)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Gnanamani Educational Institutions">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/gnanamani.png" alt="Gnanamani Educational Institutions" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Gnanamani Educational Institutions
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Muthayammal Engineering Institutions">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/muthayammal.png" alt="Muthayammal Engineering Institutions" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Muthayammal Engineering Institutions
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Mahendra Educational Institutions">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/mahendra.png" alt="Mahendra Educational Institutions" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Mahendra Educational Institutions
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Excel Group Institutions">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/excel.png" alt="Excel Group Institutions" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Excel Group Institutions
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Selvam College of Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/selvam.png" alt="Selvam College of Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Selvam College of Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="JKKN College of Engineering & Technology">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/jkkn.png" alt="JKKN College of Engineering & Technology" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                JKKN College of Engineering & Technology
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Dr. J.K.K. Munirajah Educational Institutions">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/jkkmunirajah.png" alt="Dr. J.K.K. Munirajah Educational Institutions" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Dr. J.K.K. Munirajah Educational Institutions
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Annapoorana Engineering College">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/annapoorana.png" alt="Annapoorana Engineering College" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Annapoorana Engineering College
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Vivekanandha Educational Institutions">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/vivekanandha.png" alt="Vivekanandha Educational Institutions" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Vivekanandha Educational Institutions
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="K.S. Rangasamy College of Technology (KSR)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/ksr.png" alt="K.S. Rangasamy College of Technology (KSR)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                K.S. Rangasamy College of Technology (KSR)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Erode Sengunthar Engineering College">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/erode-sengunthar.png" alt="Erode Sengunthar Engineering College" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Erode Sengunthar Engineering College
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="AVS Engineering College">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/avs.png" alt="AVS Engineering College" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                AVS Engineering College
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Ganesh College of Engineering">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/ganesh.png" alt="Ganesh College of Engineering" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Ganesh College of Engineering
+              </span>
+            </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= TRICHY REGION COLLEGES ================= -->
+        <div class="mb-16">
+          <!-- Section Heading -->
+          <div class="text-center mb-6 pb-3 border-b border-gray-100 max-w-4xl mx-auto px-4">
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-neutral-heading tracking-tight">Trichy Region Colleges</h3>
+          </div>
+
+          <div class="relative overflow-hidden w-full py-4">
+            <!-- Marquee Track (Right to Left) -->
+            <div class="animate-marquee flex items-center gap-6 sm:gap-8 hover:[animation-play-state:paused]" style="animation-duration: 28s;">
+              <!-- Set 1 -->
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Dhanalakshmi Srinivasan Engineering College">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/dsec.png" alt="Dhanalakshmi Srinivasan Engineering College" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Dhanalakshmi Srinivasan Engineering College
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="K. Ramakrishnan College of Technology (KRCT)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/krct.png" alt="K. Ramakrishnan College of Technology (KRCT)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                K. Ramakrishnan College of Technology (KRCT)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Periyar Maniammai Institute of Science & Tech (PMIST)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/pmi.png" alt="Periyar Maniammai Institute of Science & Tech (PMIST)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Periyar Maniammai Institute of Science & Tech (PMIST)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="CARE Group of Institutions">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/care.png" alt="CARE Group of Institutions" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                CARE Group of Institutions
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Indra Ganesan College of Engineering">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/igce.png" alt="Indra Ganesan College of Engineering" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Indra Ganesan College of Engineering
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="M.A.M. College of Engineering">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/mam.png" alt="M.A.M. College of Engineering" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                M.A.M. College of Engineering
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Shivani Engineering College">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/shivani.png" alt="Shivani Engineering College" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Shivani Engineering College
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Oxford Engineering College">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/oxford.png" alt="Oxford Engineering College" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Oxford Engineering College
+              </span>
+            </a>
+              <!-- Set 2 (Seamless loop) -->
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Dhanalakshmi Srinivasan Engineering College">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/dsec.png" alt="Dhanalakshmi Srinivasan Engineering College" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Dhanalakshmi Srinivasan Engineering College
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="K. Ramakrishnan College of Technology (KRCT)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/krct.png" alt="K. Ramakrishnan College of Technology (KRCT)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                K. Ramakrishnan College of Technology (KRCT)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Periyar Maniammai Institute of Science & Tech (PMIST)">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/pmi.png" alt="Periyar Maniammai Institute of Science & Tech (PMIST)" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Periyar Maniammai Institute of Science & Tech (PMIST)
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="CARE Group of Institutions">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/care.png" alt="CARE Group of Institutions" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                CARE Group of Institutions
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Indra Ganesan College of Engineering">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/igce.png" alt="Indra Ganesan College of Engineering" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Indra Ganesan College of Engineering
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="M.A.M. College of Engineering">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/mam.png" alt="M.A.M. College of Engineering" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                M.A.M. College of Engineering
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Shivani Engineering College">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/shivani.png" alt="Shivani Engineering College" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Shivani Engineering College
+              </span>
+            </a>
+            <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-6 py-2 group hover:scale-110 transition-transform duration-200 cursor-pointer" title="Oxford Engineering College">
+              <div class="h-16 sm:h-20 w-44 sm:w-52 flex items-center justify-center">
+                <img src="/images/logos/oxford.png" alt="Oxford Engineering College" class="max-h-16 sm:max-h-20 max-w-full w-auto object-contain">
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-neutral-heading group-hover:text-brand-blue transition-colors mt-2 text-center max-w-[200px] truncate block">
+                Oxford Engineering College
+              </span>
+            </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<footer class="w-full bg-surface-container-low text-on-surface pt-space-xl pb-space-lg">
+  <div class="max-w-7xl mx-auto px-margin">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-lg mb-space-xl">
+      <div class="lg:col-span-2 flex flex-col gap-space-sm">
+        <a href="/index.html" class="inline-flex items-center hover:opacity-90 transition-opacity mb-2">
+          <img src="/kalam-logo.jpg" alt="Dr. Kalam Educational and Employment Consultancy" class="h-12 w-auto object-contain rounded">
+        </a>
+        <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Your Future | Our Guidance. Trusted education consultancy in Aranthangi for transparent counselling and admission support.</p>
+        <div class="flex flex-col gap-space-xs mt-space-sm">
+          <a class="inline-flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="mailto:thasleemsrt.05@gmail.com">
+            <span class="material-symbols-outlined text-[16px]">mail</span>thasleemsrt.05@gmail.com
+          </a>
+          <a class="inline-flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="tel:+919976916786">
+            <span class="material-symbols-outlined text-[16px]">call</span>+91 99769 16786
+          </a>
+        </div>
+        <a class="inline-flex mt-space-sm font-body-sm text-body-sm text-brand-blue hover:underline" href="https://www.instagram.com/kalam_educational_aranthangi/" target="_blank" rel="noopener noreferrer">Follow our Instagram ↗</a>
+      </div>
+      <div class="flex flex-col gap-space-xs">
+        <span class="font-label-lg text-label-lg text-on-surface mb-space-xs">Quick Links</span>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="/index.html">Home</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="about-us" href="/about.html">About Us</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="colleges" href="/colleges.html">Colleges</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="contact-us" href="/contact.html">Contact Us</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="terms-and-conditions" href="#">Terms &amp; Conditions</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a>
+      </div>
+      <div class="flex flex-col gap-space-xs">
+        <span class="font-label-lg text-label-lg text-on-surface mb-space-xs">Services</span>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/contact.html">Admission Guidance</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/contact.html">Career Counselling</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/contact.html">College Selection</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/contact.html">Application Assistance</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/contact.html">Local Guardian Support</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/contact.html">Course Selection</a>
+      </div>
+      <div class="flex flex-col gap-space-xs">
+        <span class="font-label-lg text-label-lg text-on-surface mb-space-xs">Courses</span>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="/courses.html">MBBS</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="/courses.html">MD / MS</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="/courses.html">Management (MBA)</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="/courses.html">Engineering (B.Tech)</a>
+      </div>
+    </div>
+    <div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant">
+      <p class="font-body-sm text-body-sm">© 2026 Dr. Kalam Educational Consultancy, Aranthangi. All rights reserved.</p>
+      <p class="font-body-sm text-body-sm">Developed by Arc pair studio.</p>
+    </div>
+  </div>
+</footer>
+
+<a class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full shadow-[0_12px_28px_rgba(0,0,0,0.22)] hover:scale-110 active:scale-95 transition-transform bg-white overflow-hidden p-0.5 border-2 border-brand-blue" href="https://wa.me/919976916786" rel="noopener noreferrer" target="_blank" aria-label="Dr. Kalam Educational Consultancy">
+  <img src="/images/kalam-emblem.jpg" alt="Dr. Kalam Educational and Employment Consultancy" class="w-full h-full object-cover rounded-full">
+</a>
+
+<script>
+  (() => {
+    // Mobile navigation toggle
+    const mobileToggle = document.getElementById('home-mobile-toggle');
+    const mobileMenu = document.getElementById('home-mobile-menu');
+    mobileToggle?.addEventListener('click', () => {
+      const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+      mobileToggle.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu?.classList.toggle('hidden', expanded);
+    });
+
+    // 5 Blank Black Images Auto-Slider (Left to Right)
+    const track = document.getElementById('hero-slides-track');
+    if (!track) return;
+
+    let currentIndex = 0;
+    const totalSlides = 5;
+
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }, 3200);
+  })();
+</script>
+<script src="/popup-form.js"></script>
+</body>
+</html>

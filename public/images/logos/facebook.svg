@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 136 32" class="h-8 w-auto">
+  <path fill="#1877F2" d="M32 16c0-8.837-7.163-16-16-16S0 7.163 0 16c0 7.988 5.854 14.61 13.5 15.803V20.625h-4.063V16H13.5v-3.52c0-4.01 2.389-6.225 6.043-6.225 1.75 0 3.58.313 3.58.313v3.937h-2.017c-1.988 0-2.607 1.234-2.607 2.5V16h4.437l-.71 4.625h-3.727v11.178C26.146 30.61 32 23.988 32 16z"/>
+  <text x="40" y="22" font-family="Plus Jakarta Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-weight="700" font-size="18" fill="#1877F2" letter-spacing="-0.5">facebook</text>
+</svg>
+

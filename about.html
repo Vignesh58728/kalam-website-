@@ -1,51 +1,508 @@
-<!doctype html>
-<html lang="en" class="lang-en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Learn about Dr. Kalam Educational Consultancy, our mission, vision and student-first approach to education guidance in Aranthangi.">
-  <title data-title-ta="எங்களைப் பற்றி | டாக்டர் கலாம் கல்வி ஆலோசனை மையம்">About us | Dr. Kalam Educational Consultancy</title>
-  <link rel="icon" href="/kalam-emblem.jpg"><link rel="stylesheet" href="/site.css"><script type="module" src="/site.js"></script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+  <title>About Us | Dr. Kalam Educational Consultancy</title>
+  <link rel="icon" type="image/jpeg" href="/images/kalam-emblem.jpg">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+
+    /* Infinite marquee animation */
+    @keyframes marquee-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      animation: marquee-scroll 24s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+    .icon-filled {
+      font-variation-settings: 'FILL' 1;
+    }
+
+    /* Soft light blue backdrop circle */
+    .hero-circle-bg {
+      background-color: #dbeafe;
+      border-radius: 9999px;
+      aspect-ratio: 1 / 1;
+    }
+    
+    .student-crop-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 9999px;
+    }
+
+    .student-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#1a6ef4',
+              hover: '#1357c9',
+              circle: '#dbeafe',
+            },
+            neutral: {
+              heading: '#101828',
+              body: '#5d6b82',
+              outline: '#1e293b'
+            },
+            "error-container": "#ffdad6",
+            "surface-bright": "#f8f9ff",
+            "surface-dim": "#ccdbf3",
+            "surface-container": "#e6eeff",
+            "surface-sunlit": "#FEF3C7",
+            "on-background": "#0d1c2e",
+            "inverse-on-surface": "#eaf1ff",
+            "error": "#ba1a1a",
+            "tertiary": "#a73a00",
+            "on-secondary-fixed": "#131b2e",
+            "inverse-primary": "#ffb95f",
+            "surface-container-high": "#dce9ff",
+            "success-emerald": "#10B981",
+            "surface-container-highest": "#d5e3fc",
+            "surface-variant": "#d5e3fc",
+            "on-error-container": "#93000a",
+            "secondary-fixed-dim": "#bec6e0",
+            "on-tertiary-container": "#7a2800",
+            "primary-fixed-dim": "#ffb95f",
+            "outline": "#867461",
+            "surface-container-lowest": "#ffffff",
+            "background": "#f8f9ff",
+            "on-surface": "#0d1c2e",
+            "outline-variant": "#d8c3ad",
+            "trust-navy": "#090D16",
+            "secondary": "#565e74",
+            "on-error": "#ffffff",
+            "tertiary-fixed": "#ffdbce",
+            "on-secondary": "#ffffff",
+            "on-tertiary-fixed": "#370e00",
+            "surface-cream": "#FFFDF9",
+            "tertiary-fixed-dim": "#ffb599",
+            "on-primary-fixed": "#2a1700",
+            "on-surface-variant": "#534434",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#613b00",
+            "on-tertiary-fixed-variant": "#7f2b00",
+            "on-primary-fixed-variant": "#653e00",
+            "surface-container-low": "#eff4ff",
+            "secondary-fixed": "#dae2fd",
+            "primary": "#855300",
+            "on-tertiary": "#ffffff",
+            "inverse-surface": "#233144",
+            "primary-fixed": "#ffddb8",
+            "whatsapp-green": "#25D366",
+            "surface-tint": "#855300",
+            "tertiary-container": "#ff956b",
+            "border-subtle": "#E2E8F0",
+            "primary-container": "#f59e0b",
+            "on-secondary-fixed-variant": "#3f465c",
+            "surface": "#f8f9ff",
+            "secondary-container": "#dae2fd",
+            "on-secondary-container": "#5c647a"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px"
+          },
+          spacing: {
+            "space-xl": "2.5rem",
+            "space-xs": "0.25rem",
+            "gutter-mobile": "1rem",
+            "gutter": "1.5rem",
+            "space-lg": "1.5rem",
+            "margin-mobile": "1rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "margin": "2rem"
+          },
+          fontFamily: {
+            "body-md": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "display-hero-mobile": ["Plus Jakarta Sans"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "display-hero": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "metric-display": ["Plus Jakarta Sans"]
+          },
+          fontSize: {
+            "body-md": ["15px", { lineHeight: "24px", fontWeight: "400" }],
+            "label-sm": ["11px", { lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "700" }],
+            "headline-md": ["20px", { lineHeight: "28px", fontWeight: "600" }],
+            "display-hero-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "800" }],
+            "headline-xl-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700" }],
+            "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "display-hero": ["56px", { lineHeight: "64px", letterSpacing: "-0.03em", fontWeight: "800" }],
+            "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700" }],
+            "body-sm": ["13px", { lineHeight: "20px", fontWeight: "400" }],
+            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+            "label-lg": ["15px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }],
+            "metric-display": ["48px", { lineHeight: "52px", letterSpacing: "-0.03em", fontWeight: "800" }]
+          }
+        }
+      }
+    };
+  </script>
 </head>
-<body>
-  <header class="site-header" data-site-header></header>
-  <main>
-    <section class="page-hero"><div class="wrap page-hero-grid">
-      <div><div class="crumb"><a href="/index.html"><span data-lang="en">Home</span><span data-lang="ta">முகப்பு</span></a> / <span data-lang="en">About us</span><span data-lang="ta">எங்களைப் பற்றி</span></div>
-        <span class="eyebrow"><span data-lang="en">A clearer path to higher education</span><span data-lang="ta">உயர்கல்விக்கான தெளிவான பாதை</span></span>
-        <h1 data-lang="en">Good guidance helps every family decide with confidence.</h1><h1 data-lang="ta">நல்ல வழிகாட்டல் ஒவ்வொரு குடும்பமும் நம்பிக்கையுடன் முடிவெடுக்க உதவும்.</h1>
-        <p class="lead" data-lang="en">Choosing a course and college can feel overwhelming. Dr. Kalam Educational Consultancy helps students and parents understand their options and take the next step with greater clarity.</p>
-        <p class="lead" data-lang="ta">பாடப்பிரிவையும் கல்லூரியையும் தேர்வு செய்வது சிக்கலாகத் தோன்றலாம். டாக்டர் கலாம் கல்வி ஆலோசனை மையம், மாணவர்களும் பெற்றோர்களும் தங்கள் வாய்ப்புகளைப் புரிந்து கொண்டு தெளிவாக அடுத்த படி எடுக்க உதவுகிறது.</p>
-        <div class="btn-row"><a class="btn" href="/contact.html"><span data-lang="en">Talk to a counsellor</span><span data-lang="ta">ஆலோசகரிடம் பேசுங்கள்</span><span aria-hidden="true">→</span></a><a class="btn outline" style="color:var(--navy);border-color:var(--line)" href="/services.html"><span data-lang="en">Explore our services</span><span data-lang="ta">எங்கள் சேவைகளைப் பாருங்கள்</span></a></div>
+<body class="bg-background font-body-md text-body-md text-on-surface flex flex-col min-h-screen">
+
+<header class="w-full bg-white z-50 sticky top-0 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+  <div class="w-full px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between">
+    <!-- Brand Logo -->
+    <a href="/index.html" class="inline-flex items-center hover:opacity-90 transition-opacity">
+      <img src="/kalam-logo.jpg" alt="Dr. Kalam Educational and Employment Consultancy" class="h-14 sm:h-16 md:h-18 lg:h-20 w-auto object-contain transition-all duration-200">
+    </a>
+
+    <!-- Navigation Links & Right Action -->
+    <div class="flex items-center gap-8 lg:gap-10">
+      <nav class="hidden md:flex items-center gap-7 lg:gap-8 font-medium text-[15px]">
+        <a href="/index.html" class="text-neutral-heading/80 hover:text-brand-blue transition-colors duration-150 py-1">Home</a>
+        <a href="/about.html" class="relative text-neutral-heading font-semibold hover:text-brand-blue transition-colors duration-150 py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2.5px] after:bg-[#f59e0b] after:rounded-full">About Us</a>
+        <a href="/courses.html" class="text-neutral-heading/80 hover:text-brand-blue transition-colors duration-150 py-1">Courses</a>
+        <a href="/colleges.html" class="text-neutral-heading/80 hover:text-brand-blue transition-colors duration-150 py-1">Colleges</a>
+        <a href="/contact.html" class="text-neutral-heading/80 hover:text-brand-blue transition-colors duration-150 py-1">Contact Us</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/919976916786" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-8 h-8 rounded-full bg-[#25D366] flex items-center justify-center text-white hover:opacity-90 transition-opacity shadow-sm">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/kalam_educational_aranthangi/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-8 h-8 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] flex items-center justify-center text-white hover:opacity-90 transition-opacity shadow-sm p-1.5">
+          <svg class="w-full h-full fill-none stroke-current stroke-[2]" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+        <button type="button" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-neutral-heading hover:bg-gray-100" id="home-mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
       </div>
-      <aside class="hero-note"><div class="note-icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m12 2 2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4L12 2Z"/></svg></div><strong data-lang="en">Advice shaped around the student</strong><strong data-lang="ta">மாணவரை மையமாகக் கொண்ட ஆலோசனை</strong><p data-lang="en">We begin by listening to the student's interests, academic background and plans, then talk through suitable options with the family.</p><p data-lang="ta">முதலில் மாணவரின் ஆர்வம், கல்விப் பின்னணி, திட்டங்களைப் புரிந்து கொண்டு, குடும்பத்துடன் பொருத்தமான வாய்ப்புகளைப் பேசுகிறோம்.</p></aside>
-    </div></section>
-    <section class="section soft"><div class="wrap grid-3">
-      <!-- The year follows the consultancy's user-provided public Instagram profile bio. -->
-      <article class="card"><div class="icon">2015</div><h3 data-lang="en">Guidance since 2015</h3><h3 data-lang="ta">2015 முதல் வழிகாட்டல்</h3><p data-lang="en">Supporting students and families as they explore education choices.</p><p data-lang="ta">கல்வித் தேர்வுகளை ஆராயும் மாணவர்கள் மற்றும் குடும்பங்களுக்கு ஆதரவு.</p></article>
-      <article class="card gold"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Zm-5 0a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg></div><h3 data-lang="en">Rooted in Aranthangi</h3><h3 data-lang="ta">அரந்தாங்கியை மையமாகக் கொண்டு</h3><p data-lang="en">A local starting point for students and families exploring higher education.</p><p data-lang="ta">உயர்கல்வியை ஆராயும் மாணவர்கள் மற்றும் குடும்பங்களுக்கு உள்ளூர் வழிகாட்டல்.</p></article>
-      <article class="card green"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Zm0-4a6 6 0 1 0 0-12 6 6 0 0 0 0 12Zm0-4a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></svg></div><h3 data-lang="en">Student-centred counselling</h3><h3 data-lang="ta">மாணவரை மையமாகக் கொண்ட ஆலோசனை</h3><p data-lang="en">The published mission focuses on a college and course that fit each student's ambition and ability.</p><p data-lang="ta">ஒவ்வொரு மாணவரின் இலக்கு மற்றும் திறனுக்குப் பொருந்தும் கல்லூரி, பாடப்பிரிவைக் கண்டறிவதே வெளியிடப்பட்ட நோக்கம்.</p></article>
-    </div></section>
-    <section class="section"><div class="wrap grid-2">
-      <article class="card gold"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Zm0-4a6 6 0 1 0 0-12 6 6 0 0 0 0 12Zm0-4a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></svg></div><span class="eyebrow"><span data-lang="en">Our mission</span><span data-lang="ta">எங்கள் நோக்கம்</span></span><h2 style="font-size:25px;margin-top:12px" data-lang="en">Help each student find a course and college that fits their ambition, ability and future.</h2><h2 style="font-size:25px;margin-top:12px" data-lang="ta">ஒவ்வொரு மாணவரின் இலக்கு, திறன், எதிர்காலத்திற்குப் பொருந்தும் பாடப்பிரிவையும் கல்லூரியையும் கண்டறிய உதவுவது.</h2><p data-lang="en">We want families to have clear information and considered choices before they commit to an education path.</p><p data-lang="ta">கல்விப் பாதையைத் தேர்வு செய்வதற்கு முன், குடும்பங்கள் தெளிவான தகவலுடன் நிதானமாக முடிவெடுக்க உதவுவதே எங்கள் எண்ணம்.</p></article>
-      <article class="card"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10"/></svg></div><span class="eyebrow"><span data-lang="en">Our vision</span><span data-lang="ta">எங்கள் தொலைநோக்கு</span></span><h2 style="font-size:25px;margin-top:12px" data-lang="en">To be a trusted education consultancy known for transparent counselling and admission support.</h2><h2 style="font-size:25px;margin-top:12px" data-lang="ta">வெளிப்படையான ஆலோசனை மற்றும் சேர்க்கை வழிகாட்டலுக்காக நம்பப்படும் கல்வி ஆலோசனை மையமாக வளர்வது.</h2><p data-lang="en">Trust is built by explaining the process, making room for questions and being clear about what guidance can and cannot do.</p><p data-lang="ta">செயல்முறையை விளக்கி, கேள்விகளுக்கு இடமளித்து, வழிகாட்டலால் செய்யக்கூடியதும் முடியாததும் எது என்பதைத் தெளிவாகச் சொல்வதன் மூலம் நம்பிக்கை உருவாகிறது.</p></article>
-    </div></section>
-    <section class="section soft"><div class="wrap">
-      <div class="section-head"><span class="eyebrow"><span data-lang="en">How we earn trust</span><span data-lang="ta">நம்பிக்கையை உருவாக்கும் விதம்</span></span><h2 data-lang="en">Clear conversations. Thoughtful choices.</h2><h2 data-lang="ta">தெளிவான உரையாடல். நிதானமான தேர்வுகள்.</h2><p data-lang="en">Families deserve to understand the reasons behind a recommendation. Our counselling principles keep that conversation student-centred and practical.</p><p data-lang="ta">ஒரு பரிந்துரைக்கான காரணங்களைப் புரிந்து கொள்ளும் உரிமை குடும்பங்களுக்கு உண்டு. மாணவரை மையமாகவும் நடைமுறைக்கு ஏற்றதாகவும் ஆலோசனை வழங்குவதே எங்கள் கொள்கை.</p></div>
-      <div class="counselling-flow">
-        <div class="flow-heading"><span class="eyebrow"><span data-lang="en">Our counselling principles</span><span data-lang="ta">எங்கள் ஆலோசனைக் கொள்கைகள்</span></span><p data-lang="en">A clear, student-first journey from the first conversation to a confident next step.</p><p data-lang="ta">முதல் உரையாடலிலிருந்து நம்பிக்கையான அடுத்த படி வரை, மாணவரை மையமாகக் கொண்ட தெளிவான பயணம்.</p></div>
-        <ol class="flow-steps">
-          <li class="flow-step"><span class="flow-number">01</span><h3 data-lang="en">Understand the student</h3><h3 data-lang="ta">மாணவரைப் புரிந்துகொள்வோம்</h3><p data-lang="en">Listen to interests, strengths, goals and concerns.</p><p data-lang="ta">ஆர்வம், திறன், இலக்குகள், கவலைகளைக் கேட்போம்.</p></li>
-          <li class="flow-step"><span class="flow-number">02</span><h3 data-lang="en">Explore the options</h3><h3 data-lang="ta">வாய்ப்புகளை ஆராய்வோம்</h3><p data-lang="en">Explain suitable courses, colleges and eligibility clearly.</p><p data-lang="ta">பொருத்தமான பாடப்பிரிவுகள், கல்லூரிகள், தகுதிகளைத் தெளிவுபடுத்துவோம்.</p></li>
-          <li class="flow-step"><span class="flow-number">03</span><h3 data-lang="en">Discuss as a family</h3><h3 data-lang="ta">குடும்பமாகப் பேசுவோம்</h3><p data-lang="en">Make space for parents' questions and honest answers.</p><p data-lang="ta">பெற்றோரின் கேள்விகளுக்கும் நேர்மையான பதில்களுக்கும் இடமளிப்போம்.</p></li>
-          <li class="flow-step"><span class="flow-number">04</span><h3 data-lang="en">Choose the next step</h3><h3 data-lang="ta">அடுத்த படியைத் தேர்ந்தெடுங்கள்</h3><p data-lang="en">Compare the details and decide what fits best.</p><p data-lang="ta">விவரங்களை ஒப்பிட்டு, பொருத்தமானதை நீங்களே தேர்வு செய்யுங்கள்.</p></li>
-        </ol>
+    </div>
+  </div>
+  <!-- Mobile Navigation Menu -->
+  <div id="home-mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white px-6 py-4 space-y-3">
+    <a href="/index.html" class="block text-neutral-heading hover:text-brand-blue py-1">Home</a>
+    <a href="/about.html" class="block font-semibold text-brand-blue py-1">About Us</a>
+    <a href="/courses.html" class="block text-neutral-heading hover:text-brand-blue py-1">Courses</a>
+    <a href="/colleges.html" class="block text-neutral-heading hover:text-brand-blue py-1">Colleges</a>
+    <a href="/contact.html" class="block text-neutral-heading hover:text-brand-blue py-1">Contact Us</a>
+  </div>
+</header>
+
+<main class="flex-1 w-full bg-white min-h-[calc(100vh-80px)] relative overflow-hidden py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-12 flex flex-col justify-center">
+
+  <!-- Background Kalam Logo Watermark (Top) -->
+  <div class="absolute right-4 md:right-10 top-6 sm:top-10 pointer-events-none select-none">
+    <img 
+      src="/images/kalam-emblem-circle.png" 
+      alt="" 
+      class="w-[160px] sm:w-[200px] md:w-[240px] opacity-10 mix-blend-multiply"
+    />
+  </div>
+
+  <!-- Background Kalam Logo Watermark (Bottom) -->
+  <div class="absolute right-4 md:right-10 bottom-10 pointer-events-none select-none">
+    <img 
+      src="/images/kalam-emblem-circle.png" 
+      alt="" 
+      class="w-[160px] sm:w-[200px] md:w-[240px] opacity-10 mix-blend-multiply"
+    />
+  </div>
+
+  <div class="max-w-6xl w-full mx-auto relative z-10">
+    
+    <!-- Centered Header -->
+    <div class="text-center max-w-3xl mx-auto space-y-3 mb-12 sm:mb-16">
+      <span class="text-xs font-bold uppercase tracking-[0.25em] text-gray-400 block">About</span>
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight leading-[1.12]">
+        The dream team of higher education.
+      </h1>
+    </div>
+
+    <!-- 3 Modern Feature Cards (SESO Staggered Layout) -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-end">
+      
+      <!-- Card 01: Higher Education Guidance -->
+      <div class="bg-white rounded-3xl overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-all duration-300 group border border-gray-100">
+        <!-- Card Image -->
+        <div class="relative h-56 sm:h-64 w-full flex items-end justify-center pt-6 px-4 overflow-hidden">
+          <img 
+            src="/images/contact-student.png" 
+            alt="Higher Education Guidance" 
+            class="h-full w-auto object-contain object-bottom scale-105 group-hover:scale-110 transition-transform duration-300"
+          />
+        </div>
+
+        <!-- Card Content -->
+        <div class="p-6 sm:p-7 pt-4 bg-white flex-1 flex flex-col justify-between space-y-4">
+          <div>
+            <div class="bg-gray-100 inline-block px-3 py-1 rounded-md mb-3">
+              <span class="text-xs font-black text-gray-900 tracking-wider">01</span>
+            </div>
+            <h2 class="text-lg sm:text-xl font-bold text-gray-900 mb-2 leading-snug">
+              Higher Education Guidance
+            </h2>
+            <p class="text-xs sm:text-[13.5px] text-gray-600 leading-relaxed">
+              Offers higher education guidance, overseas and local job opportunities, career counseling, stream selection, and admission support.
+            </p>
+          </div>
+        </div>
       </div>
-    </div></section>
-    <section class="section"><div class="wrap grid-2" style="align-items:center">
-      <div><span class="eyebrow"><span data-lang="en">A simple promise</span><span data-lang="ta">எளிய உறுதி</span></span><h2 data-lang="en">You'll know what happens next.</h2><h2 data-lang="ta">அடுத்ததாக என்ன நடக்கும் என்பதை நீங்கள் அறிவீர்கள்.</h2><p data-lang="en">From an initial conversation to a college shortlist or application question, we explain the next step in language students and parents can use.</p><p data-lang="ta">முதல் உரையாடலிலிருந்து கல்லூரிப் பட்டியல் அல்லது விண்ணப்பக் கேள்வி வரை, மாணவர்களும் பெற்றோர்களும் புரிந்து கொள்ளும் மொழியில் அடுத்த படியை விளக்குகிறோம்.</p></div>
-      <div class="card"><div class="step"><div class="step-no">1</div><div><h3 data-lang="en">We listen</h3><h3 data-lang="ta">கேட்கிறோம்</h3><p data-lang="en">Your goals, results, preferences and concerns.</p><p data-lang="ta">உங்கள் இலக்குகள், மதிப்பெண்கள், விருப்பங்கள், கவலைகள்.</p></div></div><div class="step"><div class="step-no">2</div><div><h3 data-lang="en">We explain</h3><h3 data-lang="ta">விளக்குகிறோம்</h3><p data-lang="en">Relevant course and college options, eligibility and process.</p><p data-lang="ta">பொருத்தமான பாடப்பிரிவு, கல்லூரி, தகுதி, செயல்முறை.</p></div></div><div class="step"><div class="step-no">3</div><div><h3 data-lang="en">You choose</h3><h3 data-lang="ta">நீங்கள் தேர்வு செய்கிறீர்கள்</h3><p data-lang="en">The student and family decide what fits best.</p><p data-lang="ta">பொருத்தமானதை மாணவரும் குடும்பமும் முடிவு செய்கிறார்கள்.</p></div></div></div>
-    </div></section>
-    <section class="section soft"><div class="wrap cta"><div><h2 data-lang="en">Start with a conversation.</h2><h2 data-lang="ta">ஒரு உரையாடலுடன் தொடங்குங்கள்.</h2><p data-lang="en">Tell us where you are in your education journey. We can help you understand the next step.</p><p data-lang="ta">உங்கள் கல்விப் பயணத்தின் தற்போதைய நிலையைச் சொல்லுங்கள். அடுத்த படியைப் புரிந்து கொள்ள உதவுகிறோம்.</p></div><a class="btn gold" href="/contact.html"><span data-lang="en">Contact our team</span><span data-lang="ta">எங்கள் குழுவைத் தொடர்புகொள்ளுங்கள்</span><span aria-hidden="true">→</span></a></div></section>
-  </main>
-  <footer class="site-footer" data-site-footer></footer><a class="float-wa" href="https://wa.me/919976916786" target="_blank" rel="noopener noreferrer"><span data-lang="en">WhatsApp us</span><span data-lang="ta">WhatsApp செய்யுங்கள்</span> ↗</a>
-</body></html>
+
+      <!-- Card 02: Career Development & Counselling (Center Highlight - Taller) -->
+      <div class="bg-white rounded-3xl overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-all duration-300 group border border-gray-100 md:-mt-10">
+        <!-- Card Image -->
+        <div class="relative h-72 sm:h-80 w-full flex items-end justify-center pt-6 px-4 overflow-hidden">
+          <img 
+            src="/images/management-student.png" 
+            alt="Career Development & Counselling" 
+            class="h-full w-auto object-contain object-bottom scale-105 group-hover:scale-110 transition-transform duration-300"
+          />
+        </div>
+
+        <!-- Card Content -->
+        <div class="p-6 sm:p-7 pt-4 bg-white flex-1 flex flex-col justify-between space-y-4">
+          <div>
+            <div class="bg-blue-50 inline-block px-3 py-1 rounded-md mb-3">
+              <span class="text-xs font-black text-gray-900 tracking-wider">02</span>
+            </div>
+            <h2 class="text-lg sm:text-xl font-bold text-gray-900 mb-2 leading-snug">
+              Career Development &amp; Support
+            </h2>
+            <p class="text-xs sm:text-[13.5px] text-gray-600 leading-relaxed">
+              This is a popular local service provider located in Aranthangi that focuses on student career development and guidance.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 03: Kalam Coaching Centre (Right Side) -->
+      <div class="bg-white rounded-3xl overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-all duration-300 group border border-gray-100">
+        <!-- Card Image: 3 Students on Right Side -->
+        <div class="relative h-56 sm:h-64 w-full flex items-end justify-center pt-6 px-4 overflow-hidden">
+          <img 
+            src="/images/about-students.png" 
+            alt="Kalam Coaching Centre Students" 
+            class="h-full w-auto object-contain object-bottom group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+
+        <!-- Card Content -->
+        <div class="p-6 sm:p-7 pt-4 bg-white flex-1 flex flex-col justify-between space-y-4">
+          <div>
+            <div class="bg-amber-50 inline-block px-3 py-1 rounded-md mb-3">
+              <span class="text-xs font-black text-gray-900 tracking-wider">03</span>
+            </div>
+            <h2 class="text-lg sm:text-xl font-bold text-gray-900 mb-2 leading-snug">
+              <a href="https://www.google.com/search?kgmid=%2Fg%2F11sy410vsn" target="_blank" rel="noopener noreferrer" class="hover:text-brand-blue transition-colors inline-flex items-center gap-1">
+                <span>Kalam Coaching Centre</span>
+                <span class="material-symbols-outlined text-base text-gray-400">open_in_new</span>
+              </a>
+            </h2>
+            <p class="text-xs sm:text-[13.5px] text-gray-600 leading-relaxed mb-2">
+              A highly-rated local coaching center providing tutorial coaching for competitive exams, Class X, Class XII, IIT JEE preparation, and vocational courses.
+            </p>
+            <p class="text-[11.5px] font-medium text-gray-500 flex items-start gap-1">
+              <span class="material-symbols-outlined text-[14px] text-red-500 shrink-0 mt-0.5">location_on</span>
+              <span>Raja Street, near Veeramakaliamma Kovil Arch, Aranthangi.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RUNNING SOCIAL & PLATFORM LOGOS MARQUEE -->
+    <div class="mt-14 sm:mt-18 pt-8 border-t border-gray-100/80">
+      <div class="text-center mb-5">
+        <span class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.22em] text-gray-400">Connect &amp; Follow Us</span>
+      </div>
+      <div class="relative w-full overflow-hidden">
+        <!-- Fade gradients -->
+        <div class="absolute left-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+
+        <!-- Marquee Track (repeated for seamless loop) -->
+        <div class="animate-marquee flex items-center py-2">
+          <!-- Set 1 -->
+          <div class="flex items-center gap-10 sm:gap-14 shrink-0 px-6">
+            <!-- Justdial -->
+            <a href="https://www.justdial.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center shrink-0 hover:scale-105 transition-transform" title="Justdial">
+              <img src="/images/logos/justdial.svg" alt="Justdial" class="h-8 sm:h-9 w-auto object-contain">
+            </a>
+            <!-- Google -->
+            <a href="https://www.google.com/search?kgmid=%2Fg%2F11sy410vsn" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center shrink-0 hover:scale-105 transition-transform" title="Google Reviews">
+              <img src="/images/logos/google.svg" alt="Google" class="h-7 sm:h-8 w-auto object-contain">
+            </a>
+            <!-- WhatsApp -->
+            <a href="https://wa.me/919976916786" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 shrink-0 hover:scale-105 transition-transform" title="WhatsApp Support">
+              <svg class="w-7 h-7 fill-[#25D366] shrink-0" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+              </svg>
+              <span class="text-sm font-bold text-gray-800">WhatsApp</span>
+            </a>
+            <!-- Facebook -->
+            <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center shrink-0 hover:scale-105 transition-transform" title="Facebook">
+              <img src="/images/logos/facebook.svg" alt="Facebook" class="h-7 sm:h-8 w-auto object-contain">
+            </a>
+            <!-- YouTube -->
+            <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center shrink-0 hover:scale-105 transition-transform" title="YouTube">
+              <img src="/images/logos/youtube.svg" alt="YouTube" class="h-7 sm:h-8 w-auto object-contain">
+            </a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/kalam_educational_aranthangi/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center shrink-0 hover:scale-105 transition-transform" title="Instagram">
+              <img src="/images/logos/instagram.svg" alt="Instagram" class="h-7 sm:h-8 w-auto object-contain">
+            </a>
+          </div>
+
+          <!-- Set 2 (Exact Duplicate for seamless infinite loop) -->
+          <div class="flex items-center gap-10 sm:gap-14 shrink-0 px-6">
+            <!-- Justdial -->
+            <a href="https://www.justdial.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center shrink-0 hover:scale-105 transition-transform" title="Justdial">
+              <img src="/images/logos/justdial.svg" alt="Justdial" class="h-8 sm:h-9 w-auto object-contain">
+            </a>
+            <!-- Google -->
+            <a href="https://www.google.com/search?kgmid=%2Fg%2F11sy410vsn" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center shrink-0 hover:scale-105 transition-transform" title="Google Reviews">
+              <img src="/images/logos/google.svg" alt="Google" class="h-7 sm:h-8 w-auto object-contain">
+            </a>
+            <!-- WhatsApp -->
+            <a href="https://wa.me/919976916786" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 shrink-0 hover:scale-105 transition-transform" title="WhatsApp Support">
+              <svg class="w-7 h-7 fill-[#25D366] shrink-0" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+              </svg>
+              <span class="text-sm font-bold text-gray-800">WhatsApp</span>
+            </a>
+            <!-- Facebook -->
+            <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center shrink-0 hover:scale-105 transition-transform" title="Facebook">
+              <img src="/images/logos/facebook.svg" alt="Facebook" class="h-7 sm:h-8 w-auto object-contain">
+            </a>
+            <!-- YouTube -->
+            <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center shrink-0 hover:scale-105 transition-transform" title="YouTube">
+              <img src="/images/logos/youtube.svg" alt="YouTube" class="h-7 sm:h-8 w-auto object-contain">
+            </a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/kalam_educational_aranthangi/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center shrink-0 hover:scale-105 transition-transform" title="Instagram">
+              <img src="/images/logos/instagram.svg" alt="Instagram" class="h-7 sm:h-8 w-auto object-contain">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<footer class="w-full bg-surface-container-low text-on-surface pt-space-xl pb-space-lg">
+  <div class="max-w-7xl mx-auto px-margin">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-lg mb-space-xl">
+      <div class="lg:col-span-2 flex flex-col gap-space-sm">
+        <a href="/index.html" class="inline-flex items-center hover:opacity-90 transition-opacity mb-2">
+          <img src="/kalam-logo.jpg" alt="Dr. Kalam Educational and Employment Consultancy" class="h-12 w-auto object-contain rounded">
+        </a>
+        <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Your Future | Our Guidance. Trusted education consultancy in Aranthangi for transparent counselling and admission support.</p>
+        <div class="flex flex-col gap-space-xs mt-space-sm">
+          <a class="inline-flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="mailto:thasleemsrt.05@gmail.com">
+            <span class="material-symbols-outlined text-[16px]">mail</span>thasleemsrt.05@gmail.com
+          </a>
+          <a class="inline-flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="tel:+919976916786">
+            <span class="material-symbols-outlined text-[16px]">call</span>+91 99769 16786
+          </a>
+        </div>
+        <a class="inline-flex mt-space-sm font-body-sm text-body-sm text-brand-blue hover:underline" href="https://www.instagram.com/kalam_educational_aranthangi/" target="_blank" rel="noopener noreferrer">Follow our Instagram ↗</a>
+      </div>
+      <div class="flex flex-col gap-space-xs">
+        <span class="font-label-lg text-label-lg text-on-surface mb-space-xs">Quick Links</span>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="/index.html">Home</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="about-us" href="/about.html">About Us</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="colleges" href="/colleges.html">Colleges</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="contact-us" href="/contact.html">Contact Us</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="terms-and-conditions" href="#">Terms &amp; Conditions</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a>
+      </div>
+      <div class="flex flex-col gap-space-xs">
+        <span class="font-label-lg text-label-lg text-on-surface mb-space-xs">Services</span>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/contact.html">Admission Guidance</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/contact.html">Career Counselling</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/contact.html">College Selection</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/contact.html">Application Assistance</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/contact.html">Local Guardian Support</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/contact.html">Course Selection</a>
+      </div>
+      <div class="flex flex-col gap-space-xs">
+        <span class="font-label-lg text-label-lg text-on-surface mb-space-xs">Courses</span>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="/courses.html">MBBS</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="/courses.html">MD / MS</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="/courses.html">Management (MBA)</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="/courses.html">Engineering (B.Tech)</a>
+      </div>
+    </div>
+    <div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant">
+      <p class="font-body-sm text-body-sm">© 2026 Dr. Kalam Educational Consultancy, Aranthangi. All rights reserved.</p>
+      <p class="font-body-sm text-body-sm">Developed by Arc pair studio.</p>
+    </div>
+  </div>
+</footer>
+
+<a class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full shadow-[0_12px_28px_rgba(0,0,0,0.22)] hover:scale-110 active:scale-95 transition-transform bg-white overflow-hidden p-0.5 border-2 border-brand-blue" href="https://wa.me/919976916786" rel="noopener noreferrer" target="_blank" aria-label="Dr. Kalam Educational Consultancy">
+  <img src="/images/kalam-emblem.jpg" alt="Dr. Kalam Educational and Employment Consultancy" class="w-full h-full object-cover rounded-full">
+</a>
+
+<script>
+  (() => {
+    // Mobile navigation toggle
+    const mobileToggle = document.getElementById('home-mobile-toggle');
+    const mobileMenu = document.getElementById('home-mobile-menu');
+    mobileToggle?.addEventListener('click', () => {
+      const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+      mobileToggle.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu?.classList.toggle('hidden', expanded);
+    });
+  })();
+</script>
+<script src="/popup-form.js"></script>
+</body>
+</html>

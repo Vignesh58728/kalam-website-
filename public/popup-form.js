@@ -348,7 +348,7 @@
     const msg = `*New Admission Application - Dr. Kalam Consultancy*%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Email:* ${encodeURIComponent(email)}%0A*Qualification:* ${encodeURIComponent(qual)}%0A*State:* ${encodeURIComponent(state)}%0A*Degree of Interest:* ${encodeURIComponent(degree)}%0A*Preferred University:* ${encodeURIComponent(univ)}`;
 
     if (waDirectLink) {
-      waDirectLink.href = `https://wa.me/919976916786?text=${msg}`;
+      waDirectLink.href = `https://wa.me/916381905987?text=${msg}`;
     }
 
     // Hide form, show success view
@@ -357,7 +357,7 @@
 
     // Automatically navigate or open WhatsApp after 1.2 seconds
     setTimeout(() => {
-      window.open(`https://wa.me/919976916786?text=${msg}`, '_blank');
+      window.open(`https://wa.me/916381905987?text=${msg}`, '_blank');
     }, 1200);
   });
 })();

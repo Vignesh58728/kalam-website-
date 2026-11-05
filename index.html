@@ -199,12 +199,20 @@
     </div>
   </div>
   <!-- Mobile Navigation Menu -->
-  <div id="home-mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white px-6 py-4 space-y-3">
-    <a href="/index.html" class="block font-semibold text-brand-blue py-1">Home</a>
-    <a href="/about.html" class="block text-neutral-heading hover:text-brand-blue py-1">About Us</a>
-    <a href="/courses.html" class="block text-neutral-heading hover:text-brand-blue py-1">Courses</a>
-    <a href="/colleges.html" class="block text-neutral-heading hover:text-brand-blue py-1">Colleges</a>
-    <a href="/contact.html" class="block text-neutral-heading hover:text-brand-blue py-1">Contact Us</a>
+  <div id="home-mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white px-5 py-4 space-y-1.5 shadow-xl transition-all duration-200">
+    <a href="/index.html" class="block font-bold text-brand-blue bg-blue-50/70 py-2 px-3.5 rounded-lg transition">Home</a>
+    <a href="/about.html" class="block font-medium text-neutral-heading hover:text-brand-blue hover:bg-gray-50 py-2 px-3.5 rounded-lg transition">About Us</a>
+    <a href="/courses.html" class="block font-medium text-neutral-heading hover:text-brand-blue hover:bg-gray-50 py-2 px-3.5 rounded-lg transition">Courses</a>
+    <a href="/colleges.html" class="block font-medium text-neutral-heading hover:text-brand-blue hover:bg-gray-50 py-2 px-3.5 rounded-lg transition">Colleges</a>
+    <a href="/contact.html" class="block font-medium text-neutral-heading hover:text-brand-blue hover:bg-gray-50 py-2 px-3.5 rounded-lg transition">Contact Us</a>
+    <div class="pt-3 mt-1 border-t border-gray-100 flex items-center gap-2.5">
+      <a href="https://wa.me/916381905987" target="_blank" rel="noopener noreferrer" class="flex-1 py-2 px-3 rounded-lg bg-[#25D366] hover:bg-[#20ba5a] text-white text-xs font-semibold flex items-center justify-center gap-1.5 shadow-xs transition">
+        <span>💬 WhatsApp</span>
+      </a>
+      <a href="tel:+916381905987" class="flex-1 py-2 px-3 rounded-lg bg-brand-blue hover:bg-brand-hover text-white text-xs font-semibold flex items-center justify-center gap-1.5 shadow-xs transition">
+        <span>📞 Call Now</span>
+      </a>
+    </div>
   </div>
 </header>
 
@@ -1582,107 +1590,75 @@
 
 <script>
   (() => {
+    // Mobile navigation toggle
     const mobileToggle = document.getElementById('home-mobile-toggle');
     const mobileMenu = document.getElementById('home-mobile-menu');
-    mobileToggle?.addEventListener('click', () => {
-      const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
-      mobileToggle.setAttribute('aria-expanded', String(!expanded));
-      mobileMenu?.classList.toggle('hidden', expanded);
-    });
+    if (mobileToggle && mobileMenu) {
+      mobileToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isHidden = mobileMenu.classList.contains('hidden');
+        if (isHidden) {
+          mobileMenu.classList.remove('hidden');
+          mobileToggle.setAttribute('aria-expanded', 'true');
+          mobileToggle.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
+        } else {
+          mobileMenu.classList.add('hidden');
+          mobileToggle.setAttribute('aria-expanded', 'false');
+          mobileToggle.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>';
+        }
+      });
+
+      // Close menu on click outside
+      document.addEventListener('click', (e) => {
+        if (!mobileMenu.contains(e.target) && !mobileToggle.contains(e.target) && !mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+          mobileToggle.setAttribute('aria-expanded', 'false');
+          mobileToggle.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>';
+        }
+      });
+    }
 
     // Full-Width Hero Video Auto-Slider
     const track = document.getElementById('hero-slides-track');
     const prevBtn = document.getElementById('hero-prev-btn');
     const nextBtn = document.getElementById('hero-next-btn');
     const section = document.getElementById('hero-slider-section');
-    if (!track) return;
+    if (track) {
+      let currentIndex = 0;
+      const totalSlides = track.children.length;
+      let timer = null;
 
-    let currentIndex = 0;
-    const totalSlides = track.children.length;
-    let timer = null;
+      function goToSlide(index) {
+        currentIndex = (index + totalSlides) % totalSlides;
+        track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
+      }
 
-    function goToSlide(index) {
-      currentIndex = (index + totalSlides) % totalSlides;
-      track.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
+      function startAutoSlide() {
+        stopAutoSlide();
+        timer = setInterval(() => { goToSlide(currentIndex + 1); }, 6500);
+      }
 
-    function startAutoSlide() {
-      stopAutoSlide();
-      timer = setInterval(() => { goToSlide(currentIndex + 1); }, 6500);
-    }
+      function stopAutoSlide() {
+        if (timer) clearInterval(timer);
+      }
 
-    function stopAutoSlide() {
-      if (timer) clearInterval(timer);
-    }
-
-    nextBtn?.addEventListener('click', (e) => {
-      e.stopPropagation();
-      goToSlide(currentIndex + 1);
-      startAutoSlide();
-    });
-
-    prevBtn?.addEventListener('click', (e) => {
-      e.stopPropagation();
-      goToSlide(currentIndex - 1);
-      startAutoSlide();
-    });
-
-    section?.addEventListener('mouseenter', stopAutoSlide);
-    section?.addEventListener('mouseleave', startAutoSlide);
-
-    startAutoSlide();
-    });
-
-    prevBtn?.addEventListener('click', (e) => {
-      e.stopPropagation();
-      goToSlide(currentIndex - 1);
-      startAutoSlide();
-    });
-
-    heroDots.forEach((dot) => {
-      dot.addEventListener('click', () => {
-        const idx = parseInt(dot.getAttribute('data-index') || '0', 10);
-        goToSlide(idx);
+      nextBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        goToSlide(currentIndex + 1);
         startAutoSlide();
       });
-    });
 
-    // Sound toggle buttons
-    document.querySelectorAll('.hero-sound-btn').forEach((btn) => {
-      btn.addEventListener('click', (e) => {
+      prevBtn?.addEventListener('click', (e) => {
         e.stopPropagation();
-        const targetId = btn.getAttribute('data-target');
-        const video = targetId ? document.getElementById(targetId) : null;
-        if (!video) return;
-        video.muted = !video.muted;
-        const icon = btn.querySelector('.sound-icon');
-        const label = btn.querySelector('.sound-label');
-        if (video.muted) {
-          if (icon) icon.textContent = 'volume_off';
-          if (label) label.textContent = 'Unmute';
-        } else {
-          if (icon) icon.textContent = 'volume_up';
-          if (label) label.textContent = 'Mute';
-        }
+        goToSlide(currentIndex - 1);
+        startAutoSlide();
       });
-    });
 
-    section?.addEventListener('mouseenter', stopAutoSlide);
-    section?.addEventListener('mouseleave', startAutoSlide);
+      section?.addEventListener('mouseenter', stopAutoSlide);
+      section?.addEventListener('mouseleave', startAutoSlide);
 
-    startAutoSlide();
-    });
-
-    prevBtn?.addEventListener('click', (e) => {
-      e.stopPropagation();
-      goToSlide(currentIndex - 1);
       startAutoSlide();
-    });
-
-    section?.addEventListener('mouseenter', stopAutoSlide);
-    section?.addEventListener('mouseleave', startAutoSlide);
-
-    startAutoSlide();
+    }
 
     // FAQ Accordion Toggle
     const faqButtons = document.querySelectorAll('.faq-toggle');

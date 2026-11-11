@@ -5,10 +5,16 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="web_standard" name="shell-type">
   <title>Dr. Kalam Aranthangi | Educational Consultancy</title>
+  <meta name="description" content="Dr. Kalam Educational & Employment Consultancy, Near Aranthangi Bus Stand — 15+ years trusted free career counselling, MBBS, Engineering, Nursing, Allied Health, Arts & Law college admissions across Tamil Nadu & Bangalore.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dr. Kalam Educational &amp; Employment Consultancy | Aranthangi">
+  <meta property="og:description" content="Your Future | Our Guidance. 15+ years trusted free admission counselling &amp; 2,500+ successful placements in Medical, Engineering, Nursing, Allied Health &amp; Arts colleges.">
+  <meta property="og:image" content="/images/kalam-emblem.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/jpeg" href="/images/kalam-emblem.jpg">
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
   <style>@layer base{html,body{margin:0;padding:0}body{overscroll-behavior:none}main>:first-child{margin-top:0!important}main>:last-child{margin-bottom:0!important}}::-webkit-scrollbar{display:none}@keyframes marquee-scroll{0%{transform:translate(0)}to{transform:translate(-50%)}}.animate-marquee{width:max-content;animation:32s linear infinite marquee-scroll;display:flex}.animate-marquee:hover{animation-play-state:paused}.icon-filled{font-variation-settings:"FILL" 1}.hero-circle-bg{aspect-ratio:1;background-color:#dbeafe;border-radius:9999px}.student-crop-wrapper{border-radius:9999px;width:100%;height:100%;position:relative;overflow:hidden}.student-image{object-fit:cover;object-position:center top;width:100%;height:100%;position:absolute;top:0;left:0}
@@ -138,7 +144,8 @@
             "body-sm": ["Plus Jakarta Sans"],
             "body-lg": ["Plus Jakarta Sans"],
             "label-lg": ["Plus Jakarta Sans"],
-            "metric-display": ["Plus Jakarta Sans"]
+            "metric-display": ["Plus Jakarta Sans"],
+            "hero-serif": ["Playfair Display", "serif"]
           },
           fontSize: {
             "body-md": ["15px", { lineHeight: "24px", fontWeight: "400" }],
@@ -222,19 +229,21 @@
     <!-- BEGIN: HeroSection -->
     <section class="w-full min-h-[580px] sm:min-h-[620px] lg:min-h-[660px] flex items-center justify-center relative overflow-hidden bg-black text-white" id="hero-slider-section">
 
-      <!-- Slides Track (Full Width Horizontal Slider with Background Videos) -->
+      <!-- Slides Track (Full Width Horizontal Slider with 3-Photo Placed Student Collage) -->
       <div id="hero-slides-track" class="flex w-full h-full absolute inset-0 transition-transform duration-700 ease-in-out">
 
         <!-- Slide 1: General / Global Education -->
-        <div class="w-full h-full shrink-0 relative flex items-end md:items-center justify-center px-4 pb-6 pt-12 sm:px-12 lg:px-20 md:py-16">
-          <video autoplay muted loop playsinline preload="auto" class="absolute inset-0 w-full h-full object-contain md:object-cover object-center" style="transform: translateZ(0);">
-            <source src="/videos/hero-video-1.mp4" type="video/mp4">
-          </video>
-          <!-- Subtle Bottom Gradient on Mobile (Video Clear), Black Shadow on Desktop -->
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent md:bg-black/50 pointer-events-none"></div>
+        <div class="w-full h-full shrink-0 relative flex items-end md:items-center justify-center px-4 pb-10 pt-12 sm:px-12 lg:px-20 md:py-16">
+          <div class="absolute inset-0 grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-1 bg-black">
+            <img src="/images/placed-students/student-admission-05.png" alt="Dr. Kalam Placed Student Admission" class="w-full h-full object-cover object-top" fetchpriority="high">
+            <img src="/images/placed-students/student-admission-07.png" alt="Dr. Kalam Placed Student Admission" class="hidden md:block w-full h-full object-cover object-top" fetchpriority="high">
+            <img src="/images/placed-students/student-admission-11.png" alt="Dr. Kalam Placed Student Admission" class="hidden md:block w-full h-full object-cover object-top" fetchpriority="high">
+          </div>
+          <!-- Gradient Overlay for Text Readability -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/30 md:bg-black/55 pointer-events-none"></div>
           <!-- Content -->
           <div class="relative z-10 max-w-4xl mx-auto text-center space-y-3 md:space-y-5">
-            <h1 class="text-xl sm:text-4xl lg:text-6xl font-black text-white tracking-tight leading-[1.2] drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
+            <h1 class="font-hero-serif text-2xl sm:text-4xl lg:text-6xl font-bold text-white tracking-normal leading-[1.15] drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
               Start Your Higher Education Journey with Dr. Kalam
             </h1>
             <p class="hidden sm:block text-sm sm:text-base lg:text-lg text-white/95 font-medium max-w-2xl mx-auto leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
@@ -253,15 +262,17 @@
         </div>
 
         <!-- Slide 2: Medical & Allied Health -->
-        <div class="w-full h-full shrink-0 relative flex items-end md:items-center justify-center px-4 pb-6 pt-12 sm:px-12 lg:px-20 md:py-16">
-          <video autoplay muted loop playsinline preload="auto" class="absolute inset-0 w-full h-full object-contain md:object-cover object-center" style="transform: translateZ(0);">
-            <source src="/videos/hero-video-2.mp4" type="video/mp4">
-          </video>
-          <!-- Subtle Bottom Gradient on Mobile (Video Clear), Black Shadow on Desktop -->
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent md:bg-black/50 pointer-events-none"></div>
+        <div class="w-full h-full shrink-0 relative flex items-end md:items-center justify-center px-4 pb-10 pt-12 sm:px-12 lg:px-20 md:py-16">
+          <div class="absolute inset-0 grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-1 bg-black">
+            <img src="/images/placed-students/student-admission-08.png" alt="Dr. Kalam Medical Admission Student" class="w-full h-full object-cover object-top">
+            <img src="/images/placed-students/student-admission-13.png" alt="Dr. Kalam Medical Admission Student" class="hidden md:block w-full h-full object-cover object-top">
+            <img src="/images/placed-students/student-admission-20.png" alt="Dr. Kalam Medical Admission Student" class="hidden md:block w-full h-full object-cover object-top">
+          </div>
+          <!-- Gradient Overlay for Text Readability -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/30 md:bg-black/55 pointer-events-none"></div>
           <!-- Content -->
           <div class="relative z-10 max-w-4xl mx-auto text-center space-y-3 md:space-y-5">
-            <h2 class="text-xl sm:text-4xl lg:text-6xl font-black text-white tracking-tight leading-[1.2] drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
+            <h2 class="font-hero-serif text-2xl sm:text-4xl lg:text-6xl font-bold text-white tracking-normal leading-[1.15] drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
               Premier MBBS, BDS &amp; Allied Health Guidance
             </h2>
             <p class="hidden sm:block text-sm sm:text-base lg:text-lg text-white/95 font-medium max-w-2xl mx-auto leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
@@ -278,6 +289,41 @@
           </div>
         </div>
 
+        <!-- Slide 3: Proven Admissions Record -->
+        <div class="w-full h-full shrink-0 relative flex items-end md:items-center justify-center px-4 pb-10 pt-12 sm:px-12 lg:px-20 md:py-16">
+          <div class="absolute inset-0 grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-1 bg-black">
+            <img src="/images/placed-students/student-admission-18.png" alt="Dr. Kalam Student Placement Moment" class="w-full h-full object-cover object-top">
+            <img src="/images/placed-students/student-admission-24.png" alt="Dr. Kalam Student Placement Moment" class="hidden md:block w-full h-full object-cover object-top">
+            <img src="/images/placed-students/student-admission-28.jpg" alt="Dr. Kalam Student Placement Moment" class="hidden md:block w-full h-full object-cover object-top">
+          </div>
+          <!-- Gradient Overlay for Text Readability -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/30 md:bg-black/55 pointer-events-none"></div>
+          <!-- Content -->
+          <div class="relative z-10 max-w-4xl mx-auto text-center space-y-3 md:space-y-5">
+            <h2 class="font-hero-serif text-2xl sm:text-4xl lg:text-6xl font-bold text-white tracking-normal leading-[1.15] drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
+              2,500+ Successful Admissions Across Top Colleges
+            </h2>
+            <p class="hidden sm:block text-sm sm:text-base lg:text-lg text-white/95 font-medium max-w-2xl mx-auto leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+              Engineering, Nursing, Allied Health, Arts &amp; Science, Law, and MBA placements across Coimbatore, Chennai, Trichy &amp; Bangalore.
+            </p>
+            <div class="pt-1 md:pt-3 flex flex-wrap items-center justify-center gap-3 md:gap-4">
+              <a href="/colleges.html" class="px-4 py-2 sm:px-8 sm:py-3.5 rounded-full bg-brand-blue hover:bg-brand-hover text-white font-semibold text-xs sm:text-base transition-all duration-200 shadow-xl hover:scale-105 active:scale-95">
+                View Partner Colleges
+              </a>
+              <a href="/contact.html" class="px-4 py-2 sm:px-8 sm:py-3.5 rounded-full bg-white/20 hover:bg-white/30 text-white border border-white/40 font-semibold text-xs sm:text-base backdrop-blur-md transition-all duration-200 shadow-lg">
+                Apply for Admission
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Slider Dots -->
+      <div id="hero-dots" class="absolute bottom-3.5 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
+        <button type="button" data-slide="0" aria-label="Slide 1" class="hero-dot h-2 w-6 rounded-full bg-white transition-all duration-300 cursor-pointer"></button>
+        <button type="button" data-slide="1" aria-label="Slide 2" class="hero-dot h-2 w-2 rounded-full bg-white/50 hover:bg-white/80 transition-all duration-300 cursor-pointer"></button>
+        <button type="button" data-slide="2" aria-label="Slide 3" class="hero-dot h-2 w-2 rounded-full bg-white/50 hover:bg-white/80 transition-all duration-300 cursor-pointer"></button>
       </div>
 
     </section>
@@ -1530,8 +1576,81 @@
         </div>
       </div>
     </section>
+    <!-- VISIT OUR ARANTHANGI OFFICE: GOOGLE MAPS & WORKING HOURS -->
+    <section class="w-full py-16 sm:py-20 bg-white border-t border-border-subtle" id="office-location">
+      <div class="max-w-7xl mx-auto px-margin">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-blue-50 text-brand-blue text-xs font-bold uppercase tracking-wider mb-3">Visit Us in Aranthangi</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-trust-navy tracking-tight">Office Location &amp; Working Hours</h2>
+          <p class="text-sm text-on-surface-variant mt-2">அறந்தாங்கி பேருந்து நிலையம் அருகில் நேரடியாக வந்து இலவச கல்வி ஆலோசனை பெறலாம்.</p>
+        </div>
 
-    
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+          <!-- Left: Office Details Card -->
+          <div class="lg:col-span-5 bg-surface-container-lowest rounded-3xl border border-gray-200/80 shadow-xs p-6 sm:p-8 flex flex-col justify-between space-y-6">
+            <div class="space-y-5">
+              <div class="flex items-start gap-3.5">
+                <div class="w-10 h-10 rounded-xl bg-red-50 text-red-600 flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-[20px]">location_on</span>
+                </div>
+                <div>
+                  <h3 class="text-sm font-bold text-trust-navy">Office Address</h3>
+                  <p class="text-xs sm:text-sm text-on-surface-variant mt-1 leading-relaxed">
+                    Dr. Kalam Educational Consultancy,<br>
+                    Near Aranthangi Bus Stand, Aranthangi,<br>
+                    Pudukkottai Dist., Tamil Nadu – 614616
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3.5">
+                <div class="w-10 h-10 rounded-xl bg-blue-50 text-brand-blue flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-[20px]">schedule</span>
+                </div>
+                <div>
+                  <h3 class="text-sm font-bold text-trust-navy">Office Working Hours</h3>
+                  <p class="text-xs sm:text-sm text-on-surface-variant mt-1">Mon – Sat: <span class="font-bold text-trust-navy">9:30 AM – 6:30 PM</span></p>
+                  <p class="text-xs text-gray-500 mt-0.5">Sunday: By Prior Appointment</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3.5">
+                <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-[20px]">call</span>
+                </div>
+                <div>
+                  <h3 class="text-sm font-bold text-trust-navy">Phone &amp; Email</h3>
+                  <a href="tel:+916381905987" class="text-xs sm:text-sm font-semibold text-brand-blue hover:underline mt-1 inline-block">+91 63819 05987</a>
+                  <p class="text-xs text-gray-500 mt-0.5">thasleemsrt.05@gmail.com</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-gray-100 flex flex-wrap gap-3">
+              <a href="https://www.google.com/maps/search/?api=1&query=Aranthangi+Bus+Stand+Aranthangi+Tamil+Nadu+614616" target="_blank" rel="noopener noreferrer" class="flex-1 min-w-[150px] inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-brand-blue hover:bg-brand-hover text-white font-bold text-xs sm:text-sm shadow-sm transition-all">
+                <span class="material-symbols-outlined text-[18px]">directions</span>
+                <span>Get Directions</span>
+              </a>
+              <a href="https://wa.me/916381905987" target="_blank" rel="noopener noreferrer" class="flex-1 min-w-[140px] inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-xs sm:text-sm shadow-sm transition-all">
+                <span>WhatsApp Us</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Google Map -->
+          <div class="lg:col-span-7 bg-white rounded-3xl border border-gray-200 shadow-xs overflow-hidden min-h-[320px] sm:min-h-[380px]">
+            <iframe
+              title="Dr. Kalam Educational Consultancy Location - Near Aranthangi Bus Stand"
+              src="https://maps.google.com/maps?q=Aranthangi%20Bus%20Stand%2C%20Aranthangi%2C%20Tamil%20Nadu%20614616&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              class="w-full h-full min-h-[320px] sm:min-h-[380px] border-0"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </div>
 </main>
@@ -1546,50 +1665,50 @@
         </div>
         <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Your Future | Our Guidance. Trusted education consultancy in Aranthangi for transparent counselling and admission support.</p>
         <div class="flex flex-col gap-space-xs mt-space-sm">
-          <a class="inline-flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="mailto:studywala202226@gmail.com">
-            <span class="material-symbols-outlined text-[16px]">mail</span>studywala202226@gmail.com
+          <a class="inline-flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="mailto:thasleemsrt.05@gmail.com">
+            <span class="material-symbols-outlined text-[16px]">mail</span>thasleemsrt.05@gmail.com
           </a>
           <a class="inline-flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="tel:+916381905987">
             <span class="material-symbols-outlined text-[16px]">call</span>+91 63819 05987
           </a>
         </div>
         <div class="flex items-center gap-space-xs mt-space-sm">
-          <a class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:bg-primary-container hover:text-on-primary transition-colors" href="#">
+          <a class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:bg-primary-container hover:text-on-primary transition-colors" href="https://www.google.com/search?kgmid=%2Fg%2F11sy410vsn" target="_blank" rel="noopener noreferrer" aria-label="Google Profile">
             <span class="material-symbols-outlined text-[16px]">public</span>
           </a>
-          <a class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:bg-primary-container hover:text-on-primary transition-colors" href="#">
+          <a class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:bg-primary-container hover:text-on-primary transition-colors" href="https://www.instagram.com/kalam_educational_aranthangi/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <span class="material-symbols-outlined text-[16px]">photo_camera</span>
           </a>
         </div>
       </div>
       <div class="flex flex-col gap-space-xs">
         <span class="font-label-lg text-label-lg text-on-surface mb-space-xs">Quick Links</span>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="#">Home</a>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="about-us" href="#">About Us</a>
-                <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="colleges" href="#">Colleges</a>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="contact-us" href="#">Contact Us</a>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="terms-and-conditions" href="#">Terms &amp; Conditions</a>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="/index.html">Home</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="about-us" href="/about.html">About Us</a>
+                <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="colleges" href="/colleges.html">Colleges</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="contact-us" href="/contact.html">Contact Us</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="/courses.html">Courses</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="office-location" href="#office-location">Office Location</a>
       </div>
       <div class="flex flex-col gap-space-xs">
         <span class="font-label-lg text-label-lg text-on-surface mb-space-xs">Services</span>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Admission Guidance</a>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Career Counselling</a>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">College Selection</a>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Application Assistance</a>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Local Guardian Support</a>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Course Selection</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/contact.html">Admission Guidance</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/contact.html">Career Counselling</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/colleges.html">College Selection</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/contact.html">Application Assistance</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/about.html">Local Guardian Support</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="/courses.html">Course Selection</a>
       </div>
       <div class="flex flex-col gap-space-xs">
         <span class="font-label-lg text-label-lg text-on-surface mb-space-xs">Courses</span>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="#">MBBS</a>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="#">MD / MS</a>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="#">Management (MBA)</a>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="#">Engineering (B.Tech)</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="/courses.html">MBBS</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="/courses.html">MD / MS</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="/courses.html">Management (MBA)</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="courses" href="/courses.html">Engineering (B.Tech)</a>
       </div>
     </div>
     <div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant">
-      <p class="font-body-sm text-body-sm">-� 2026 Dr. Kalam Educational Consultancy, Aranthangi. All rights reserved.</p>
+      <p class="font-body-sm text-body-sm">&copy; 2026 Dr. Kalam Educational Consultancy, Aranthangi. All rights reserved.</p>
       <p class="font-body-sm text-body-sm">Developed by Arc pair studio.</p>
     </div>
   </div>
@@ -1629,29 +1748,52 @@
       });
     }
 
-    // Full-Width Hero Video Auto-Slider
+    // Full-Width Hero Photo Collage Auto-Slider
     const track = document.getElementById('hero-slides-track');
     const prevBtn = document.getElementById('hero-prev-btn');
     const nextBtn = document.getElementById('hero-next-btn');
     const section = document.getElementById('hero-slider-section');
+    const dots = document.querySelectorAll('.hero-dot');
     if (track) {
       let currentIndex = 0;
       const totalSlides = track.children.length;
       let timer = null;
 
+      function updateDots() {
+        dots.forEach((dot, idx) => {
+          const isActive = idx === currentIndex;
+          dot.classList.toggle('w-6', isActive);
+          dot.classList.toggle('bg-white', isActive);
+          dot.classList.toggle('w-2', !isActive);
+          dot.classList.toggle('bg-white/50', !isActive);
+        });
+      }
+
       function goToSlide(index) {
         currentIndex = (index + totalSlides) % totalSlides;
         track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
+        updateDots();
       }
 
       function startAutoSlide() {
         stopAutoSlide();
-        timer = setInterval(() => { goToSlide(currentIndex + 1); }, 6500);
+        timer = setInterval(() => { goToSlide(currentIndex + 1); }, 5000);
       }
 
       function stopAutoSlide() {
         if (timer) clearInterval(timer);
       }
+
+      dots.forEach((dot) => {
+        dot.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const idx = Number(dot.getAttribute('data-slide'));
+          if (!Number.isNaN(idx)) {
+            goToSlide(idx);
+            startAutoSlide();
+          }
+        });
+      });
 
       nextBtn?.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -1668,6 +1810,7 @@
       section?.addEventListener('mouseenter', stopAutoSlide);
       section?.addEventListener('mouseleave', startAutoSlide);
 
+      updateDots();
       startAutoSlide();
     }
 

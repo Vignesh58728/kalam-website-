@@ -376,8 +376,21 @@
                   <option value="Diploma / Polytechnic">Diploma / Polytechnic</option>
                   <option value="Law (LLB / BA.LLB)">Law (LLB / BA.LLB)</option>
                   <option value="Agriculture & Education">Agriculture & Education</option>
+                  <option value="General Enquiry / Other">General Enquiry / Other</option>
                 </select>
               </div>
+            </div>
+
+            <!-- Extra Enquiry Input (shown when General Enquiry / Other is selected) -->
+            <div id="custom-enquiry-wrapper" class="hidden space-y-1.5">
+              <label for="customEnquiry" class="block text-xs font-semibold text-gray-700">What would you like to enquire about?</label>
+              <input
+                type="text"
+                id="customEnquiry"
+                name="customEnquiry"
+                placeholder="e.g. Admission process, fee structure, hostel, other course..."
+                class="w-full bg-transparent border-0 border-b border-gray-300 pb-2 pt-1 px-0 text-gray-900 placeholder-gray-400 text-sm focus:ring-0 focus:border-brand-blue transition-colors"
+              />
             </div>
 
             <!-- Row 4: Message -->
@@ -502,6 +515,55 @@
         }
       });
     }
+
+    // Contact form: toggle custom enquiry input & submit via WhatsApp
+    const contactForm = document.getElementById('contact-form');
+    const courseSelect = document.getElementById('course');
+    const customEnquiryWrapper = document.getElementById('custom-enquiry-wrapper');
+    const customEnquiryInput = document.getElementById('customEnquiry');
+    const formFeedback = document.getElementById('form-feedback');
+
+    courseSelect?.addEventListener('change', () => {
+      const isGeneral = courseSelect.value === 'General Enquiry / Other';
+      if (customEnquiryWrapper && customEnquiryInput) {
+        customEnquiryWrapper.classList.toggle('hidden', !isGeneral);
+        customEnquiryInput.required = isGeneral;
+        if (isGeneral) {
+          customEnquiryInput.focus();
+        } else {
+          customEnquiryInput.value = '';
+        }
+      }
+    });
+
+    contactForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const firstName = document.getElementById('firstName')?.value.trim() || '';
+      const lastName = document.getElementById('lastName')?.value.trim() || '';
+      const postalCode = document.getElementById('postalCode')?.value.trim() || '';
+      const email = document.getElementById('emailAddress')?.value.trim() || '';
+      const phone = document.getElementById('phone')?.value.trim() || '';
+      const course = courseSelect?.value || '';
+      const customEnquiry = customEnquiryInput?.value.trim() || '';
+      const message = document.getElementById('message')?.value.trim() || '';
+
+      const fullName = [firstName, lastName].filter(Boolean).join(' ');
+      const courseLabel = customEnquiry ? `${course} - ${customEnquiry}` : course;
+      const lines = [
+        '*New Contact Enquiry - Dr. Kalam Consultancy*',
+        '',
+        `*Name:* ${fullName}`,
+        `*Phone:* ${phone}`,
+        `*Email:* ${email}`,
+        postalCode ? `*City / Pincode:* ${postalCode}` : '',
+        courseLabel ? `*Course / Enquiry:* ${courseLabel}` : '',
+        message ? `*Message:* ${message}` : ''
+      ].filter(Boolean);
+
+      formFeedback?.classList.remove('hidden');
+      const waUrl = `https://wa.me/916381905987?text=${encodeURIComponent(lines.join('\n'))}`;
+      window.open(waUrl, '_blank', 'noopener,noreferrer');
+    });
   })();
 </script>
 <script src="/popup-form.js"></script>

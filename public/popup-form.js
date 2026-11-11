@@ -16,14 +16,15 @@
       </button>
 
       <!-- Left Column: Video Section (Side-by-side like desktop) -->
-      <div id="kalam-video-container" class="relative w-[36%] sm:w-[38%] md:w-[40%] shrink-0 overflow-hidden bg-black flex items-center justify-center">
+      <div id="kalam-video-container" class="relative w-[42%] sm:w-[40%] md:w-[40%] shrink-0 overflow-hidden bg-black flex items-center justify-center">
         <video 
           id="kalam-popup-video"
-          class="w-full h-full object-cover object-center" 
+          class="w-full h-full object-contain md:object-cover object-center" 
           autoplay 
           muted 
           loop 
           playsinline
+          preload="auto"
         >
           <source src="/videos/popup-video.mp4" type="video/mp4">
           Your browser does not support the video tag.
@@ -37,7 +38,7 @@
       </div>
 
       <!-- Right Column: Interactive Lead Capture Form (Side-by-side like desktop) -->
-      <div class="relative w-[64%] sm:w-[62%] md:w-[60%] bg-white p-2.5 sm:p-4 md:p-6 flex flex-col justify-between overflow-y-auto max-h-[90vh]">
+      <div class="relative w-[58%] sm:w-[60%] md:w-[60%] bg-white p-2.5 sm:p-4 md:p-6 flex flex-col justify-between overflow-y-auto max-h-[90vh]">
         
         <div>
           <!-- Heading -->
@@ -168,6 +169,7 @@
                     <option value="Polytechnic / Diploma">Polytechnic / Diploma</option>
                     <option value="Law / Agriculture">Law / Agriculture</option>
                     <option value="Overseas Education">Overseas Education</option>
+                    <option value="General Enquiry / Other">General Enquiry / Other</option>
                   </select>
                   <span class="absolute right-1 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
                     <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">

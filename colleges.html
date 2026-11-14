@@ -1986,965 +1986,388 @@
         </div>
       </div>
     
-        <!-- ================= EXTRA COLLEGES (DOCUMENT TABLE FORMAT AS IN UPLOADED IMAGES) ================= -->
-        <div id="extra-colleges" class="mt-8 mb-20 scroll-mt-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        
+        <!-- ================= EXTRA COLLEGES (EXACT DOCUMENT TABLE FORMAT) ================= -->
+        <div id="extra-colleges" class="mt-4 mb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           
           <!-- Section Heading -->
-          <div class="text-center mb-8">
-            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 text-brand-blue font-bold text-xs uppercase tracking-wider mb-3">
-              📑 Document Reference List
-            </span>
-            <h3 class="text-2xl sm:text-4xl font-extrabold text-neutral-heading tracking-tight mb-2">
+          <div class="text-center mb-6">
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-neutral-heading tracking-tight mb-1">
               Extra Colleges List
             </h3>
-            <p class="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">
-              கோயம்புத்தூர் (32) &amp; சென்னை (33) முன்னணி கல்வி நிறுவனங்கள் பட்டியல் — டாக்டர் கலாம் கல்வி மையம் அதிகாரப்பூர்வ சேர்க்கை வழிகாட்டல்.
+            <p class="text-xs sm:text-sm text-gray-500 max-w-xl mx-auto">
+              கோயம்புத்தூர் (32) &amp; சென்னை (33) முன்னணி கல்வி நிறுவனங்கள் பட்டியல்
             </p>
           </div>
 
-          <!-- Controls: Tabs & Live Search -->
-          <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-4 sm:p-5 mb-8">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-              
-              <!-- Tab Buttons -->
-              <div class="inline-flex p-1.5 rounded-xl bg-gray-100/90 border border-gray-200 w-full md:w-auto" id="extra-college-tabs">
-                <button type="button" onclick="switchExtraTab('both')" id="tab-btn-both" class="flex-1 md:flex-none px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all shadow-xs bg-brand-blue text-white">
-                  All Colleges (65)
-                </button>
-                <button type="button" onclick="switchExtraTab('coimbatore')" id="tab-btn-coimbatore" class="flex-1 md:flex-none px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all text-gray-600 hover:text-brand-blue">
-                  Coimbatore (32)
-                </button>
-                <button type="button" onclick="switchExtraTab('chennai')" id="tab-btn-chennai" class="flex-1 md:flex-none px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all text-gray-600 hover:text-brand-blue">
-                  Chennai (33)
-                </button>
-              </div>
-
-              <!-- Live Search Bar -->
-              <div class="relative w-full md:w-80">
-                <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
-                  <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-                </span>
-                <input type="text" id="extra-college-search" placeholder="Search college name..." onkeyup="filterExtraColleges()" class="w-full pl-9 pr-4 py-2 text-xs sm:text-sm bg-gray-50 border border-gray-300 rounded-xl focus:bg-white focus:border-brand-blue focus:ring-2 focus:ring-blue-100 outline-none transition" />
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Tables Grid (Side-by-Side on LG screens, stacked on Mobile/Tablet) -->
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8" id="extra-tables-container">
+          <!-- Tables Grid (Matching Document Images Exactly) -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             
             <!-- Table 1: Coimbatore Region (32 Institutions) -->
-            <div id="wrapper-coimbatore" class="extra-table-wrapper bg-white rounded-xl border-2 border-gray-300 shadow-md overflow-hidden">
-              <div class="bg-slate-800 text-white px-4 py-3 flex items-center justify-between border-b border-gray-300">
-                <div class="flex items-center gap-2">
-                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
-                  <h4 class="font-bold text-sm sm:text-base tracking-wide uppercase">Coimbatore Region Institutions</h4>
-                </div>
-                <span class="text-xs bg-slate-700 px-2.5 py-0.5 rounded-full font-bold">32 Colleges</span>
-              </div>
-              <div class="overflow-x-auto max-h-[700px] overflow-y-auto">
-                <table class="w-full text-left border-collapse">
+            <div class="bg-white border-2 border-gray-300 shadow-sm overflow-hidden">
+              <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse border border-gray-300">
                   <thead>
-                    <tr class="bg-[#3B82F6] text-white text-xs sm:text-sm uppercase tracking-wider font-bold sticky top-0 z-10 shadow-xs">
-                      <th class="py-3 px-3 sm:px-4 text-center w-16 border-r border-blue-400">S.No</th>
-                      <th class="py-3 px-3 sm:px-5 border-r border-blue-400">Name of Institution</th>
-                      <th class="py-3 px-3 sm:px-4 text-center w-24">Page No</th>
+                    <tr class="bg-[#4A90E2] text-white text-xs sm:text-sm uppercase tracking-wide font-bold">
+                      <th class="py-2.5 px-3 text-center w-16 border border-gray-300">S.No</th>
+                      <th class="py-2.5 px-4 text-center border border-gray-300">Name of Institution</th>
+                      <th class="py-2.5 px-3 text-center w-20 sm:w-24 border border-gray-300">Page No</th>
                     </tr>
                   </thead>
-                  <tbody class="divide-y divide-gray-200 bg-white">
+                  <tbody class="bg-white">
                     
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="karpagam group of institutions">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">1</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Karpagam Group of Institutions</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Karpagam%20Group%20of%20Institutions" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">1</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="dhanalakshmi srinivasan college of engineering">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">2</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Dhanalakshmi Srinivasan College of Engineering</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Dhanalakshmi%20Srinivasan%20College%20of%20Engineering" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">7</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="rathinam group of institutions">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">3</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Rathinam Group of Institutions</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Rathinam%20Group%20of%20Institutions" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">9</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="hindusthan college of engineering and technology">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">4</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Hindusthan College of Engineering and Technology</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Hindusthan%20College%20of%20Engineering%20and%20Technology" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">13</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="study world college of engineering">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">5</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Study World College of Engineering</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Study%20World%20College%20of%20Engineering" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">19</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="easa college of engineering and technology">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">6</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>EASA College of Engineering and Technology</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20EASA%20College%20of%20Engineering%20and%20Technology" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">21</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="sree sakthi engineering college">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">7</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Sree Sakthi Engineering College</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Sree%20Sakthi%20Engineering%20College" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">22</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="kit-kalaingar karunanidhi institute of technology">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">8</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Kit-Kalaingar Karunanidhi Institute Of Technology</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Kit-Kalaingar%20Karunanidhi%20Institute%20Of%20Technology" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">23</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="dr. n.g.p institute of technology">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">9</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Dr. N.G.P Institute of Technology</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Dr.%20N.G.P%20Institute%20of%20Technology" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">24</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="kgisl institute of technology">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">10</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>KGiSL Institute of Technology</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20KGiSL%20Institute%20of%20Technology" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">25</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="nehru institute of engineering and technology">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">11</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Nehru Institute of Engineering and Technology</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Nehru%20Institute%20of%20Engineering%20and%20Technology" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">27</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="rvs college of engineering and technology">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">12</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>RVS College of Engineering and Technology</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20RVS%20College%20of%20Engineering%20and%20Technology" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">33</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="sri ranganathar institute of engineering and technology">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">13</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Sri Ranganathar Institute of Engineering and Technology</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Sri%20Ranganathar%20Institute%20of%20Engineering%20and%20Technology" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">36</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="ppg institute of technology">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">14</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>PPG Institute of Technology</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20PPG%20Institute%20of%20Technology" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">37</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="info institute of engineering">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">15</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Info Institute of Engineering</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Info%20Institute%20of%20Engineering" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">43</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="adithya institute of technology">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">16</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Adithya Institute of Technology</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Adithya%20Institute%20of%20Technology" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">44</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="akshaya college of engineering and technology">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">17</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Akshaya College of Engineering and Technology</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Akshaya%20College%20of%20Engineering%20and%20Technology" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">45</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="suguna college of engineering">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">18</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Suguna College Of Engineering</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Suguna%20College%20Of%20Engineering" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">46</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="jct college of engineering & technology">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">19</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>JCT College Of Engineering & Technology</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20JCT%20College%20Of%20Engineering%20%26%20Technology" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">47</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="ciet (coimbatore institute of engineering and technology)">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">20</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>CIET (Coimbatore Institute of Engineering and Technology)</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20CIET%20(Coimbatore%20Institute%20of%20Engineering%20and%20Technology)" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">51</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="united institute of technology">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">21</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>United Institute of Technology</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20United%20Institute%20of%20Technology" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">52</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="sree abirami college of nursing, coimbatore.">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">22</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Sree Abirami College of Nursing, Coimbatore.</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Sree%20Abirami%20College%20of%20Nursing%2C%20Coimbatore." target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">55</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="jansons institute of technology">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">23</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Jansons Institute of Technology</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Jansons%20Institute%20of%20Technology" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">57</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="sri lakshmi group of institutions">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">24</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Sri Lakshmi Group Of InstituTions</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Sri%20Lakshmi%20Group%20Of%20InstituTions" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">58</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="sns college of engineering">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">25</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>SNS College of Engineering</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20SNS%20College%20of%20Engineering" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">59</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="cms college of engineering and technology">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">26</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>CMS College of Engineering and Technology</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20CMS%20College%20of%20Engineering%20and%20Technology" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">62</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="christ the king engineering college">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">27</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Christ The King Engineering College</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Christ%20The%20King%20Engineering%20College" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">63</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="kathir college of engineering (autonomous)">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">28</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Kathir College of Engineering (Autonomous)</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Kathir%20College%20of%20Engineering%20(Autonomous)" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">64</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="sasurie group of institutions">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">29</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Sasurie Group of Institutions</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Sasurie%20Group%20of%20Institutions" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">66</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="dhaanish ahmed institute of technology">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">30</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Dhaanish Ahmed Institute Of Technology</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Dhaanish%20Ahmed%20Institute%20Of%20Technology" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">70</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="vsb college of engineering">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">31</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>VSB College Of Engineering</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20VSB%20College%20Of%20Engineering" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">71</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="coimbatore" data-name="arjun college of technology">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">32</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Arjun College Of Technology</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Arjun%20College%20Of%20Technology" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">72</td>
-                </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">1</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Karpagam Group of Institutions</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">1</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">2</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Dhanalakshmi Srinivasan College of Engineering</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">7</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">3</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Rathinam Group of Institutions</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">9</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">4</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Hindusthan College of Engineering and Technology</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">13</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">5</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Study World College of Engineering</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">19</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">6</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">EASA College of Engineering and Technology</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">21</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">7</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Sree Sakthi Engineering College</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">22</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">8</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Kit-Kalaingar Karunanidhi Institute Of Technology</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">23</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">9</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Dr. N.G.P Institute of Technology</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">24</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">10</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">KGiSL Institute of Technology</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">25</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">11</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Nehru Institute of Engineering and Technology</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">27</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">12</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">RVS College of Engineering and Technology</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">33</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">13</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Sri Ranganathar Institute of Engineering and Technology</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">36</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">14</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">PPG Institute of Technology</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">37</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">15</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Info Institute of Engineering</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">43</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">16</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Adithya Institute of Technology</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">44</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">17</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Akshaya College of Engineering and Technology</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">45</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">18</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Suguna College Of Engineering</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">46</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">19</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">JCT College Of Engineering & Technology</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">47</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">20</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">CIET (Coimbatore Institute of Engineering and Technology)</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">51</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">21</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">United Institute of Technology</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">52</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">22</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Sree Abirami College of Nursing, Coimbatore.</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">55</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">23</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Jansons Institute of Technology</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">57</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">24</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Sri Lakshmi Group Of InstituTions</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">58</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">25</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">SNS College of Engineering</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">59</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">26</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">CMS College of Engineering and Technology</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">62</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">27</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Christ The King Engineering College</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">63</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">28</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Kathir College of Engineering (Autonomous)</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">64</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">29</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Sasurie Group of Institutions</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">66</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">30</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Dhaanish Ahmed Institute Of Technology</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">70</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">31</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">VSB College Of Engineering</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">71</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">32</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Arjun College Of Technology</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">72</td>
+                  </tr>
                   </tbody>
                 </table>
-              </div>
-              <div class="p-3 bg-gray-50 border-t border-gray-200 text-center">
-                <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20am%20interested%20in%20Coimbatore%20colleges%20admission" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-blue hover:underline">
-                  <span>💬 Enquire for Coimbatore Colleges Admission →</span>
-                </a>
               </div>
             </div>
 
             <!-- Table 2: Chennai Region (33 Institutions) -->
-            <div id="wrapper-chennai" class="extra-table-wrapper bg-white rounded-xl border-2 border-gray-300 shadow-md overflow-hidden">
-              <div class="bg-slate-800 text-white px-4 py-3 flex items-center justify-between border-b border-gray-300">
-                <div class="flex items-center gap-2">
-                  <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
-                  <h4 class="font-bold text-sm sm:text-base tracking-wide uppercase">Chennai &amp; Surrounding Institutions</h4>
-                </div>
-                <span class="text-xs bg-slate-700 px-2.5 py-0.5 rounded-full font-bold">33 Colleges</span>
-              </div>
-              <div class="overflow-x-auto max-h-[700px] overflow-y-auto">
-                <table class="w-full text-left border-collapse">
+            <div class="bg-white border-2 border-gray-300 shadow-sm overflow-hidden">
+              <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse border border-gray-300">
                   <thead>
-                    <tr class="bg-[#3B82F6] text-white text-xs sm:text-sm uppercase tracking-wider font-bold sticky top-0 z-10 shadow-xs">
-                      <th class="py-3 px-3 sm:px-4 text-center w-16 border-r border-blue-400">S.No</th>
-                      <th class="py-3 px-3 sm:px-5 border-r border-blue-400">Name of Institution</th>
-                      <th class="py-3 px-3 sm:px-4 text-center w-24">Page No</th>
+                    <tr class="bg-[#4A90E2] text-white text-xs sm:text-sm uppercase tracking-wide font-bold">
+                      <th class="py-2.5 px-3 text-center w-16 border border-gray-300">S.No</th>
+                      <th class="py-2.5 px-4 text-center border border-gray-300">Name of Institution</th>
+                      <th class="py-2.5 px-3 text-center w-20 sm:w-24 border border-gray-300">Page No</th>
                     </tr>
                   </thead>
-                  <tbody class="divide-y divide-gray-200 bg-white">
+                  <tbody class="bg-white">
                     
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="srm university, kattankulathur, chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">1</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>SRM University, Kattankulathur, Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20SRM%20University%2C%20Kattankulathur%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">1</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="srm university, ramapuram, chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">2</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>SRM University, Ramapuram, Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20SRM%20University%2C%20Ramapuram%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">3</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="srm university, vadapalani, chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">3</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>SRM University, Vadapalani, Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20SRM%20University%2C%20Vadapalani%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">4</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="dhanalakshmi srinivasan university, chengalpattu">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">4</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Dhanalakshmi Srinivasan University, Chengalpattu</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Dhanalakshmi%20Srinivasan%20University%2C%20Chengalpattu" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">5</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="dhanalakshmi srinivasan college of engineering & technology – ecr, chengalpattu">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">5</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Dhanalakshmi Srinivasan College of Engineering & Technology – Ecr, Chengalpattu</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Dhanalakshmi%20Srinivasan%20College%20of%20Engineering%20%26%20Technology%20%E2%80%93%20Ecr%2C%20Chengalpattu" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">7</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="saveetha university, chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">6</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Saveetha University, Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Saveetha%20University%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">8</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="chettinad academy of research and education, chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">7</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Chettinad Academy of Research and Education, Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Chettinad%20Academy%20of%20Research%20and%20Education%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">10</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="kalasalingam academy of research and education, chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">8</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Kalasalingam Academy of Research and Education, Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Kalasalingam%20Academy%20of%20Research%20and%20Education%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">11</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="vinayaka mission's research foundation, chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">9</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Vinayaka Mission's Research Foundation, Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Vinayaka%20Mission's%20Research%20Foundation%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">12</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="vel tech rangarajan dr. sagunthala r&d institute of science and technology, chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">10</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology, Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Vel%20Tech%20Rangarajan%20Dr.%20Sagunthala%20R%26D%20Institute%20of%20Science%20and%20Technology%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">14</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="vels institute of science, technology and advanced studies, chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">11</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Vels Institute of Science, Technology and Advanced Studies, Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Vels%20Institute%20of%20Science%2C%20Technology%20and%20Advanced%20Studies%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">15</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="dr. m.g.r. educational and research institute university, chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">12</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Dr. M.G.R. Educational and Research Institute University, Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Dr.%20M.G.R.%20Educational%20and%20Research%20Institute%20University%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">18</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="takshashila university, villupuram">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">13</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Takshashila University, Villupuram</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Takshashila%20University%2C%20Villupuram" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">22</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="sree balaji institute of science and technology, chromepet, chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">14</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Sree Balaji Institute of Science and Technology, Chromepet, Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Sree%20Balaji%20Institute%20of%20Science%20and%20Technology%2C%20Chromepet%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">25</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="bharath institute of higher education and research, chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">15</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Bharath Institute of Higher Education and Research, Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Bharath%20Institute%20of%20Higher%20Education%20and%20Research%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">26</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="jeppiaar university, chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">16</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Jeppiaar University, Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Jeppiaar%20University%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">29</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="amet university, chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">17</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>AMET University, Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20AMET%20University%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">30</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="agni college of technology, chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">18</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Agni College of Technology, Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Agni%20College%20of%20Technology%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">31</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="anand institute of higher technology, chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">19</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Anand Institute of Higher Technology, Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Anand%20Institute%20of%20Higher%20Technology%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">32</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="sri balaji arts & science college (co-education), chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">20</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Sri Balaji Arts & Science College (Co-Education), Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Sri%20Balaji%20Arts%20%26%20Science%20College%20(Co-Education)%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">33</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="dhanalakshmi college of engineering, chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">21</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Dhanalakshmi College of Engineering, Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Dhanalakshmi%20College%20of%20Engineering%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">34</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="new prince shri bhavani college of engineering and technology, chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">22</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>New Prince Shri Bhavani College of Engineering and Technology, Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20New%20Prince%20Shri%20Bhavani%20College%20of%20Engineering%20and%20Technology%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">35</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="peri institute of technology, chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">23</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Peri Institute of Technology, Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Peri%20Institute%20of%20Technology%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">36</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="sri venkateswara college of technology, chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">24</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Sri Venkateswara College of Technology, Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Sri%20Venkateswara%20College%20of%20Technology%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">38</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="dhaanish college of engineering, chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">25</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Dhaanish College of Engineering, Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Dhaanish%20College%20of%20Engineering%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">39</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="j.n.n institute of engineering, chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">26</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>J.N.N Institute of Engineering, Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20J.N.N%20Institute%20of%20Engineering%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">40</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="sri muthukumaran institute of technology, chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">27</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Sri Muthukumaran Institute of Technology, Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Sri%20Muthukumaran%20Institute%20of%20Technology%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">41</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="gkm group of educational institutions, chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">28</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>GKM Group of Educational Institutions, Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20GKM%20Group%20of%20Educational%20Institutions%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">42</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="p.b. college of engineering, chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">29</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>P.B. College of Engineering, Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20P.B.%20College%20of%20Engineering%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">43</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="rrase college of engineering, chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">30</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>RRASE College of Engineering, Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20RRASE%20College%20of%20Engineering%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">44</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="loyola institute of technology, chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">31</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Loyola Institute of Technology, Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Loyola%20Institute%20of%20Technology%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">45</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="nellai nadar college of engineering & technology, chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">32</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Nellai Nadar College of Engineering & Technology, Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Nellai%20Nadar%20College%20of%20Engineering%20%26%20Technology%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">46</td>
-                </tr>
-                <tr class="extra-college-row border-b border-gray-200/90 hover:bg-blue-50/60 transition-colors" data-region="chennai" data-name="sikshaa institute of advanced technologies, chennai">
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-700 text-xs sm:text-sm border-r border-gray-200/90">33</td>
-                  <td class="py-2.5 px-3 sm:px-5 font-semibold text-gray-900 text-xs sm:text-sm border-r border-gray-200/90">
-                    <div class="flex items-center justify-between gap-2">
-                      <span>Sikshaa Institute of Advanced Technologies, Chennai</span>
-                      <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20would%20like%20admission%20details%20for%3A%20Sikshaa%20Institute%20of%20Advanced%20Technologies%2C%20Chennai" target="_blank" rel="noopener noreferrer" class="opacity-0 group-hover:opacity-100 sm:opacity-70 hover:opacity-100 text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded transition shrink-0 hidden sm:inline-flex items-center gap-1" title="Enquire for admission via WhatsApp">
-                        <span>💬 Enquire</span>
-                      </a>
-                    </div>
-                  </td>
-                  <td class="py-2.5 px-3 sm:px-4 text-center font-bold text-gray-800 text-xs sm:text-sm">47</td>
-                </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">1</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">SRM University, Kattankulathur, Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">1</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">2</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">SRM University, Ramapuram, Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">3</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">3</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">SRM University, Vadapalani, Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">4</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">4</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Dhanalakshmi Srinivasan University, Chengalpattu</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">5</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">5</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Dhanalakshmi Srinivasan College of Engineering & Technology – Ecr, Chengalpattu</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">7</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">6</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Saveetha University, Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">8</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">7</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Chettinad Academy of Research and Education, Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">10</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">8</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Kalasalingam Academy of Research and Education, Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">11</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">9</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Vinayaka Mission's Research Foundation, Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">12</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">10</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology, Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">14</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">11</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Vels Institute of Science, Technology and Advanced Studies, Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">15</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">12</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Dr. M.G.R. Educational and Research Institute University, Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">18</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">13</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Takshashila University, Villupuram</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">22</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">14</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Sree Balaji Institute of Science and Technology, Chromepet, Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">25</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">15</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Bharath Institute of Higher Education and Research, Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">26</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">16</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Jeppiaar University, Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">29</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">17</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">AMET University, Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">30</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">18</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Agni College of Technology, Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">31</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">19</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Anand Institute of Higher Technology, Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">32</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">20</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Sri Balaji Arts & Science College (Co-Education), Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">33</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">21</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Dhanalakshmi College of Engineering, Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">34</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">22</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">New Prince Shri Bhavani College of Engineering and Technology, Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">35</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">23</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Peri Institute of Technology, Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">36</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">24</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Sri Venkateswara College of Technology, Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">38</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">25</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Dhaanish College of Engineering, Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">39</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">26</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">J.N.N Institute of Engineering, Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">40</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">27</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Sri Muthukumaran Institute of Technology, Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">41</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">28</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">GKM Group of Educational Institutions, Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">42</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">29</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">P.B. College of Engineering, Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">43</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">30</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">RRASE College of Engineering, Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">44</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">31</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Loyola Institute of Technology, Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">45</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">32</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Nellai Nadar College of Engineering & Technology, Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">46</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50/50 transition-colors">
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-16">33</td>
+                    <td class="py-2 px-4 font-semibold text-gray-900 text-xs sm:text-sm border border-gray-300">Sikshaa Institute of Advanced Technologies, Chennai</td>
+                    <td class="py-2 px-3 text-center font-bold text-gray-800 text-xs sm:text-sm border border-gray-300 w-20 sm:w-24">47</td>
+                  </tr>
                   </tbody>
                 </table>
               </div>
-              <div class="p-3 bg-gray-50 border-t border-gray-200 text-center">
-                <a href="https://wa.me/916381905987?text=Hello%20Dr.%20Kalam%20Consultancy%2C%20I%20am%20interested%20in%20Chennai%20colleges%20admission" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-blue hover:underline">
-                  <span>💬 Enquire for Chennai Colleges Admission →</span>
-                </a>
-              </div>
             </div>
 
-          </div>
-
-          <!-- Bottom Callout Card -->
-          <div class="mt-8 bg-gradient-to-r from-blue-900 to-indigo-900 rounded-2xl p-6 sm:p-8 text-white text-center shadow-lg relative overflow-hidden">
-            <div class="relative z-10 max-w-3xl mx-auto">
-              <h4 class="text-xl sm:text-2xl font-extrabold mb-2">Need Direct Admission in Any of These Institutions?</h4>
-              <p class="text-blue-100 text-xs sm:text-sm mb-5">
-                Contact Dr. Kalam Educational Consultancy for fee structure, merit/management quota guidance, scholarships, and verified admission process.
-              </p>
-              <div class="flex flex-wrap items-center justify-center gap-3">
-                <a href="https://wa.me/916381905987" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-white text-xs sm:text-sm font-bold shadow transition-all hover:scale-105 inline-flex items-center gap-2">
-                  <span>💬 WhatsApp Us Now</span>
-                </a>
-                <a href="tel:+916381905987" class="px-5 py-2.5 rounded-xl bg-white text-blue-900 hover:bg-blue-50 text-xs sm:text-sm font-bold shadow transition-all hover:scale-105 inline-flex items-center gap-2">
-                  <span>📞 Call: +91 63819 05987</span>
-                </a>
-                <a href="/contact.html" class="px-5 py-2.5 rounded-xl bg-blue-800/80 hover:bg-blue-800 text-white text-xs sm:text-sm font-semibold border border-blue-400/40 transition">
-                  <span>Office Address &amp; Directions</span>
-                </a>
-              </div>
-            </div>
           </div>
 
         </div>
 
-        <script>
-          function switchExtraTab(tab) {
-            const wrapCoimbatore = document.getElementById('wrapper-coimbatore');
-            const wrapChennai = document.getElementById('wrapper-chennai');
-            const btnBoth = document.getElementById('tab-btn-both');
-            const btnCoimbatore = document.getElementById('tab-btn-coimbatore');
-            const btnChennai = document.getElementById('tab-btn-chennai');
-            const container = document.getElementById('extra-tables-container');
-
-            // Reset buttons
-            [btnBoth, btnCoimbatore, btnChennai].forEach(btn => {
-              btn.className = 'flex-1 md:flex-none px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all text-gray-600 hover:text-brand-blue';
-            });
-
-            if (tab === 'coimbatore') {
-              wrapCoimbatore.style.display = 'block';
-              wrapChennai.style.display = 'none';
-              container.className = 'grid grid-cols-1 gap-8';
-              btnCoimbatore.className = 'flex-1 md:flex-none px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all shadow-xs bg-brand-blue text-white';
-            } else if (tab === 'chennai') {
-              wrapCoimbatore.style.display = 'none';
-              wrapChennai.style.display = 'block';
-              container.className = 'grid grid-cols-1 gap-8';
-              btnChennai.className = 'flex-1 md:flex-none px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all shadow-xs bg-brand-blue text-white';
-            } else {
-              wrapCoimbatore.style.display = 'block';
-              wrapChennai.style.display = 'block';
-              container.className = 'grid grid-cols-1 lg:grid-cols-2 gap-8';
-              btnBoth.className = 'flex-1 md:flex-none px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all shadow-xs bg-brand-blue text-white';
-            }
-          }
-
-          function filterExtraColleges() {
-            const query = (document.getElementById('extra-college-search').value || '').toLowerCase().trim();
-            const rows = document.querySelectorAll('.extra-college-row');
-            rows.forEach(row => {
-              const name = row.getAttribute('data-name') || '';
-              if (!query || name.includes(query)) {
-                row.style.display = '';
-              } else {
-                row.style.display = 'none';
-              }
-            });
-          }
-        </script>
 </section>
   </main>
 

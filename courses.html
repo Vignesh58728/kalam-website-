@@ -414,8 +414,122 @@
 
           </div>
 
-          <!-- Right: 3 Girls Image (Large & Prominent on Desktop) -->
-          <div class="lg:col-span-6 xl:col-span-6 flex items-center justify-center lg:justify-end pt-4 lg:pt-0 w-full">
+          <!-- Mobile College Logos Section (Shown on Mobile Instead of 3 Girls Image) -->
+          <div class="block lg:hidden w-full pt-4 pb-2">
+            <div class="bg-gradient-to-br from-blue-50/90 via-white to-sky-50/90 border border-blue-100 rounded-2xl p-4 sm:p-5 shadow-xs">
+              
+              <div class="flex items-center justify-between mb-3 pb-2.5 border-b border-blue-100/70">
+                <div class="flex items-center gap-2">
+                  <span class="w-6 h-6 rounded-full bg-brand-blue text-white flex items-center justify-center text-xs font-bold shadow-xs">🏛️</span>
+                  <div>
+                    <h3 class="text-sm font-bold text-neutral-heading">Top Partner Colleges</h3>
+                    <p class="text-[11px] text-gray-500">முன்னணி கல்லூரிகள் சேர்க்கை வழிகாட்டல்</p>
+                  </div>
+                </div>
+                <a href="/colleges.html" class="text-[11px] font-bold text-brand-blue hover:underline bg-white px-2.5 py-1 rounded-full border border-blue-200">
+                  View All →
+                </a>
+              </div>
+
+              <!-- Sliding College Logos Marquee for Mobile -->
+              <div class="relative overflow-hidden w-full py-2">
+                <div class="animate-marquee flex items-center gap-6 hover:[animation-play-state:paused]" style="animation-duration: 22s;">
+                  <!-- Set 1 -->
+                  <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-2 py-1 group">
+                    <img src="/images/logos/srm.png" alt="SRM University" class="h-9 w-auto max-w-[100px] object-contain">
+                    <span class="text-[10px] font-semibold text-gray-700 mt-1 truncate max-w-[90px]">SRM University</span>
+                  </a>
+                  <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-2 py-1 group">
+                    <img src="/images/logos/vit.png" alt="VIT Chennai" class="h-9 w-auto max-w-[100px] object-contain">
+                    <span class="text-[10px] font-semibold text-gray-700 mt-1 truncate max-w-[90px]">VIT Chennai</span>
+                  </a>
+                  <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-2 py-1 group">
+                    <img src="/images/logos/psg.png" alt="PSG Tech" class="h-9 w-auto max-w-[100px] object-contain">
+                    <span class="text-[10px] font-semibold text-gray-700 mt-1 truncate max-w-[90px]">PSG Tech</span>
+                  </a>
+                  <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-2 py-1 group">
+                    <img src="/images/logos/skcet.png" alt="SKCET Coimbatore" class="h-9 w-auto max-w-[100px] object-contain">
+                    <span class="text-[10px] font-semibold text-gray-700 mt-1 truncate max-w-[90px]">SKCET</span>
+                  </a>
+                  <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-2 py-1 group">
+                    <img src="/images/logos/kct.png" alt="Kumaraguru KCT" class="h-9 w-auto max-w-[100px] object-contain">
+                    <span class="text-[10px] font-semibold text-gray-700 mt-1 truncate max-w-[90px]">KCT</span>
+                  </a>
+                  <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-2 py-1 group">
+                    <img src="/images/logos/krct.png" alt="KRCT Trichy" class="h-9 w-auto max-w-[100px] object-contain">
+                    <span class="text-[10px] font-semibold text-gray-700 mt-1 truncate max-w-[90px]">KRCT</span>
+                  </a>
+                  <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-2 py-1 group">
+                    <img src="/images/logos/dsec.png" alt="DSEC" class="h-9 w-auto max-w-[100px] object-contain">
+                    <span class="text-[10px] font-semibold text-gray-700 mt-1 truncate max-w-[90px]">DSEC</span>
+                  </a>
+                  <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-2 py-1 group">
+                    <img src="/images/logos/karpagam.png" alt="Karpagam" class="h-9 w-auto max-w-[100px] object-contain">
+                    <span class="text-[10px] font-semibold text-gray-700 mt-1 truncate max-w-[90px]">Karpagam</span>
+                  </a>
+                  <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-2 py-1 group">
+                    <img src="/images/logos/rathinam.png" alt="Rathinam" class="h-9 w-auto max-w-[100px] object-contain">
+                    <span class="text-[10px] font-semibold text-gray-700 mt-1 truncate max-w-[90px]">Rathinam</span>
+                  </a>
+                  <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-2 py-1 group">
+                    <img src="/images/logos/ciet.png" alt="CIET" class="h-9 w-auto max-w-[100px] object-contain">
+                    <span class="text-[10px] font-semibold text-gray-700 mt-1 truncate max-w-[90px]">CIET</span>
+                  </a>
+
+                  <!-- Set 2 (Duplicate for seamless loop) -->
+                  <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-2 py-1 group">
+                    <img src="/images/logos/srm.png" alt="SRM University" class="h-9 w-auto max-w-[100px] object-contain">
+                    <span class="text-[10px] font-semibold text-gray-700 mt-1 truncate max-w-[90px]">SRM University</span>
+                  </a>
+                  <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-2 py-1 group">
+                    <img src="/images/logos/vit.png" alt="VIT Chennai" class="h-9 w-auto max-w-[100px] object-contain">
+                    <span class="text-[10px] font-semibold text-gray-700 mt-1 truncate max-w-[90px]">VIT Chennai</span>
+                  </a>
+                  <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-2 py-1 group">
+                    <img src="/images/logos/psg.png" alt="PSG Tech" class="h-9 w-auto max-w-[100px] object-contain">
+                    <span class="text-[10px] font-semibold text-gray-700 mt-1 truncate max-w-[90px]">PSG Tech</span>
+                  </a>
+                  <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-2 py-1 group">
+                    <img src="/images/logos/skcet.png" alt="SKCET Coimbatore" class="h-9 w-auto max-w-[100px] object-contain">
+                    <span class="text-[10px] font-semibold text-gray-700 mt-1 truncate max-w-[90px]">SKCET</span>
+                  </a>
+                  <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-2 py-1 group">
+                    <img src="/images/logos/kct.png" alt="Kumaraguru KCT" class="h-9 w-auto max-w-[100px] object-contain">
+                    <span class="text-[10px] font-semibold text-gray-700 mt-1 truncate max-w-[90px]">KCT</span>
+                  </a>
+                  <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-2 py-1 group">
+                    <img src="/images/logos/krct.png" alt="KRCT Trichy" class="h-9 w-auto max-w-[100px] object-contain">
+                    <span class="text-[10px] font-semibold text-gray-700 mt-1 truncate max-w-[90px]">KRCT</span>
+                  </a>
+                  <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-2 py-1 group">
+                    <img src="/images/logos/dsec.png" alt="DSEC" class="h-9 w-auto max-w-[100px] object-contain">
+                    <span class="text-[10px] font-semibold text-gray-700 mt-1 truncate max-w-[90px]">DSEC</span>
+                  </a>
+                  <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-2 py-1 group">
+                    <img src="/images/logos/karpagam.png" alt="Karpagam" class="h-9 w-auto max-w-[100px] object-contain">
+                    <span class="text-[10px] font-semibold text-gray-700 mt-1 truncate max-w-[90px]">Karpagam</span>
+                  </a>
+                  <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-2 py-1 group">
+                    <img src="/images/logos/rathinam.png" alt="Rathinam" class="h-9 w-auto max-w-[100px] object-contain">
+                    <span class="text-[10px] font-semibold text-gray-700 mt-1 truncate max-w-[90px]">Rathinam</span>
+                  </a>
+                  <a href="/contact.html" class="flex flex-col items-center justify-center shrink-0 px-2 py-1 group">
+                    <img src="/images/logos/ciet.png" alt="CIET" class="h-9 w-auto max-w-[100px] object-contain">
+                    <span class="text-[10px] font-semibold text-gray-700 mt-1 truncate max-w-[90px]">CIET</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="mt-2 pt-2 border-t border-blue-100/60 flex items-center justify-between text-[11px] text-gray-600">
+                <span class="font-medium">🎓 65+ Partner Colleges</span>
+                <a href="/contact.html" class="font-bold text-brand-blue hover:underline">Admission Inquiry →</a>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right: 3 Girls Image (Desktop Only - Large & Prominent on Desktop) -->
+          <div class="hidden lg:flex lg:col-span-6 xl:col-span-6 items-center justify-center lg:justify-end pt-4 lg:pt-0 w-full">
             <img 
               src="/images/courses-students-clean.png?v=3" 
               alt="Engineering, Medical, Science Students - Dr. Kalam Educational Consultancy" 
